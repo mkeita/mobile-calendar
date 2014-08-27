@@ -336,17 +336,67 @@ The Head which is not; according to the Sepher Yetzirah, the Admirable of Hidden
             sephiroh[6] = ["Netzach",
             7,
             "Victory",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
+            "the Sepher Yetzirah gives the Sephirah the title of 'The Occult Intelligence'. Also, Eternity; Triumph; Firmness. ",
+            "the planet Venus",
+            "the Vision of Beauty Triumphant.",
+            "the Experience of Beauty Triumphant",
+            "Unselfishness; Love, but of a sexual nature; beauty of form, and the appreciation of that beauty; the emotions of \n\
+            the conscious level of our being; women; music; selg-indulgence; extravagance. Also on the mundane level, this influence governs \n\
+            all material and sensual affaires; music; arts; the theater; any form of behavior or expression that supports sensuality. \n\
+            It is also a very fortunitious influence under which to begin any new enterprise or project, whether sensual or business in nature. \n\
+            It is also an excellent influence in which to make new acquaintances, but only those that are met through spontaneous social contact. \n\
+            It is also a very favorable incluence for entering into marriage, to borrow or loan money, and to host social gatherings and parties, \n\
+            but onlu those affairs that are meant for pure enjoyment. It is very positive for speculating in stocks, bonds, or in any new business \n\
+            proposition. It is important to note here that due to the Venusian planetary influence of this Sephirah, almost any activity or action \n\
+            that is begun or ended while this influence is in operation, will bear very significant, desirable, or fortunate results. \n\
+            It is an influence that, in effect, blesses and magnifies activities of almost any kind, but epecially those of a sensual and material nature. \n\
+            There are a few very adverse aspect of this influence, such as dealing with social underlings or subordinates; beginning longs trips \n\
+            to remote locations; using social means to harm enemies or competitors, or to attempt using social functions as a means of gaining a \n\
+            business or personal advantage at the expense of a collaborator or fellow worker.",
+            "green",
+            "In Atziluth, amber. In Briah, emerald. In Yetzirah, bright yellow-green. In Assuah, olive, flecked with gold.",
+            "Fire",
+            "Masculine, positive",
+            "the Four Sevens of the Lesser Arcana of the deck",
+            ""];
+        
+        
+            sephiroh[7] = ["Hod",
+            8,
+            "Splendor",
+            "Glory; the Yetziratic text calls Hod the 'Absolute or Perfect Intelligence'",
+            "the planet Mercury",
+            "the Vision of Splendor",
+            "once again, according to the Yetziratic Text, Hod is called the Perfect Intellifence because it is power in a state of equilibrium. \n\
+            For the individual to experience this state is to attain the peak experience of this Sephirah.",
+            "On the higher levels, Truthfulness and Honesty are two of the blessings of this Sephirah, along with the philosophic \n\
+            and laboratory pursuit of Alchemy. On the more mundane levels, this Mercurial influence is very positve for dealing with \n\
+            intellectual discernments, scientific thought; mathematics; writing of all kinds; logic; reaon; using and accelerating \n\
+            the analytical faculty of the conscious self; thinking; speaking, whether in public or private. Additionally, as with Netzach \n\
+            and Venus, the Mercurial influence of Hod is very beneficial for art, music, and and the theater; for literary work of any kind; \n\
+            to design or begin new advertising efforts; to plan new projects or involvements; to launch new business plans; \n\
+            to make new acquaintances in business or academic circles, and to begin new business relationships. It is a excellent influence \n\
+            under which one can successfully initiate contracts, but short-term ones only. It is also an excellent time for reading or buying new books \n\
+            that can be of great help to the individual in an intellectual life-sustaining, or life-enhancing way; also for dealing with business \n\
+            or academic journal, papers, or researching documents, such as land and property Title and Deed searches. This influence also facors \n\
+            educational matters of every type, as well as the buying and selling of printed material. It imparts a very benefic influence \n\
+            for taking any medicine or beginning any system of mental cure. It is an excellent influence for mystical, metaphysical, or \n\
+            magical study, under which profound insight into occult, esoteric, mystical, or magical concepts can be achieved, the esence of \n\
+            which can be then used for intellectual growth, the attainment of considerable material benefit or both. It is also a positve  influence \n\
+            for speculating and taking chances in a business or proposition that at other times may appear unsound or chancy. \n\
+            This is also an excellent influence under which important letters can be written. This Mercurial influence has some serious negative aspects \n\
+            as well, such as dealing with ennemies in any legal manner; entering into marriage, or seeking favors from people in authoriry. \n\
+            It is equally adverse for either purchasing or selling real estate holdings, and is a period in which the individual can become \n\
+            the target of fraudulent or even illegal schemes. In general, it is an influence under which the truthfulness of all statements coming \n\
+            from anyone must be carefully evalueted, despite the overall positive aspects this influence exerts. ",
+            "orange",
+            "In Atziluth, a violet-purple. In Briah, orange. In Yetzirah, a russet-red. In Assiah, a yellowish-black or brown flecked whith white.",
+            "Water (feminine, creative, passive, negative)",
+            "Negative(feminine)",
+            "The Four Eights of the Lesser Arcana of the deck",
             ""];   
+        
+        
 //            sephiroh[2] = ["Chesed",
 //            3,
 //            "Wisdom",
