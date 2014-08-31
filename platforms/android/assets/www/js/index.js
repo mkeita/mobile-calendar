@@ -22,23 +22,119 @@ var map;
 var marker;
 var watchID;
 
-$(document).ready(function() {
+document.addEventListener("deviceready", onDeviceReady, false);
+
+jQuery(document).ready(function() {
     //document.addEventListener("deviceready", onDeviceReady, false);
-        //uncomment for testing in Chrome browser
+    //uncomment for testing in Chrome browser
     //onDeviceReady();
-    var db = new DBService(true);
-    db.initialize();
-    
+        
 });
 
 function onDeviceReady() {
-    $(window).unbind();
-    $(window).bind('pageshow resize orientationchange', function(e) {
-        max_height();
-    });
-    max_height();
-    google.load("maps", "3.8", {"callback": map, other_params: "sensor=true&language=en"});
+    
+    superFunctionTest();
+    
+    var times = SunCalc.getTimes(new Date(),50.3,4);
+    console.log(times);
+    
+    var db = new DBService(true);
+    //db.initialize();
+    
+    jQuery('#currentDate').html(new Date());   
+
+//    $(window).unbind();
+//    $(window).bind('pageshow resize orientationchange', function(e) {
+//        max_height();
+//    });
+//    max_height();
+//    google.load("maps", "3.8", {"callback": map, other_params: "sensor=true&language=en"});
 }
+
+
+// Method to open the About dialog
+function refresh() {
+        
+    var currentDate = new Date();
+    var currentDateInMilliSecondes = currentDate.getTime();
+    
+    jQuery('#currentDate').html(currentDate);
+    
+    var currentDay = currentDate.getDay();
+    
+    var db = new DBService(false);
+    db.updateShephirahOfTheDay(currentDay+1);
+    
+    //Get the day ephemeris
+    var lat = 50.833;
+    var lng = 4.333;
+
+    var times = SunCalc.getTimes(currentDate, lat, lng);
+    console.log(times);
+    
+    var sunrise = times.sunrise;        
+    var sunset = times.sunset;
+    
+    var dayStepInMilliSecondes = (sunset.getTime()  - sunrise.getTime())/12;    
+    var nightStepInMilliSecondes = 7200000 - dayStepInMilliSecondes;
+    
+    var hoursRulers = new Array("Saturn","Jupiter","Mars","Sun","Venus","Mercury","Moon",
+    "Jupiter","Mars","Sun","Venus","Mercury","Moon"); 
+    
+    var daysIndexes = new Array(3,6,2,5,1,4,0);
+    var startIndex = daysIndexes[currentDay];
+    
+    var start = sunrise.getTime();
+    var end = start;
+    var currentLineStyle = "";
+    jQuery('#dayTableContent').html("");
+    for(var i=0;i<12;i++){
+        end +=dayStepInMilliSecondes;
+        
+        if(currentDateInMilliSecondes>start && currentDateInMilliSecondes<end){
+            currentLineStyle = "style=\"background-color:#FF0000; color:#FFFFFF;\"";
+        }else {
+            currentLineStyle ="";
+        }
+        
+        var sDate = new Date(start); 
+        var sEnd = new Date(end); 
+
+        var row = '<tr '+currentLineStyle+'>'+
+                    '<td>'+sDate.getHours()+':'+sDate.getMinutes()+'</td>'+
+                    '<td>'+sEnd.getHours()+':'+sEnd.getMinutes()+'</td>'+
+                    '<td>'+hoursRulers[startIndex + i%6]+'</td>'+
+                  '</tr>';
+        jQuery('#dayTableContent').append(row);
+        start=end;  
+    }
+    
+    jQuery('#dayTableContent').append('<tr><td/><td/><td/><tr/>');
+    
+    var start = sunset.getTime();
+    var end = start;
+    for(var i=0;i<12;i++){
+        end +=nightStepInMilliSecondes;
+        
+        if(currentDateInMilliSecondes>start && currentDateInMilliSecondes<end){
+            currentLineStyle = "style=\"background-color:#FF0000; color:#FFFFFF;\"";
+        }else {
+            currentLineStyle ="";
+        }
+        
+        var sDate = new Date(start); 
+        var sEnd = new Date(end); 
+
+        var row = '<tr '+currentLineStyle+'>'+
+                    '<td>'+sDate.getHours()+':'+sDate.getMinutes()+'</td>'+
+                    '<td>'+sEnd.getHours()+':'+sEnd.getMinutes()+'</td>'+
+                    '<td>'+hoursRulers[startIndex + i%6]+'</td>'+
+                  '</tr>';
+        jQuery('#dayTableContent').append(row);
+        start=end;  
+    }
+    
+};
 
 function max_height() {
     var h = $('div[data-role="header"]').outerHeight(true);

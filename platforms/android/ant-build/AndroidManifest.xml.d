@@ -1,2 +1,2 @@
-D:\NetBeans_Mobile\MobileApp1\platforms\android\ant-build\AndroidManifest.xml : \
-D:\NetBeans_Mobile\MobileApp1\platforms\android\AndroidManifest.xml \
+D:\NetBeans_Mobile\mobile-calendar\platforms\android\ant-build\AndroidManifest.xml : \
+D:\NetBeans_Mobile\mobile-calendar\platforms\android\AndroidManifest.xml \

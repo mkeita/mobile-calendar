@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-//(function () {
+(function () { 'use strict';
     
     function ok ()
     {
@@ -21,111 +21,115 @@
         this.db = openDatabase("MyDB", "1.0", "MyDB", 2 * 1024 * 1024);
         
         if(reset){
-            this.db.transaction (function (transaction) 
-            {
-              var sql = "DROP TABLE status";
-              transaction.executeSql (sql, undefined, ok, error);
-            });
+            this.dropTable("status");
+            this.dropTable("sephirah");
+            this.dropTable("path");
+            this.dropTable("weekdays");
+        }
             
+        this.db.transaction (function (transaction) 
+        {
+            var sql = "SELECT name FROM sqlite_master WHERE type='table' AND name='status'";
+            transaction.executeSql(sql, undefined,
+            function(transaction, result){
+                if(result.rows.length==0){                      
+                    var sql = "CREATE TABLE IF NOT EXISTS status " +
+                          " (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, " +
+                          "property VARCHAR(100) NOT NULL, " + 
+                          "value VARCHAR(100) NOT NULL)";
+                      transaction.executeSql (sql, undefined, ok, error);
+                }
+            }
+            , error);
+        });
+
+        this.db.transaction (function (transaction) 
+        {
+            var sql = "SELECT name FROM sqlite_master WHERE type='table' AND name='sephirah'";
+            transaction.executeSql(sql, undefined,
+            function(transaction, result){
+                if(result.rows.length==0){                      
+                    var sql = "CREATE TABLE IF NOT EXISTS sephirah " +
+                            " (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, " +
+                            "name VARCHAR(100) NOT NULL, " + 
+                            "number INTEGER NOT NULL, " + 
+                            "primary_title VARCHAR(100), " +
+                            "other_titles TEXT, " +
+                            "intelligible_qualities TEXT, " +
+                            "human_experience TEXT, " +
+                            "sensible_qualities TEXT, " +
+                            "color_tree VARCHAR(100), " +
+                            "color_scale VARCHAR(100), " +
+                            "elemental_attribution VARCHAR(100), " +
+                            "polarity VARCHAR(100), " +
+                            "tarot_card VARCHAR(100), " +
+                            "commentary TEXT)";
+                    transaction.executeSql (sql, undefined, ok, error);
+                }
+            }
+            , error);
+        });
+        
+        this.db.transaction (function (transaction) 
+        {
+            var sql = "SELECT name FROM sqlite_master WHERE type='table' AND name='path'";
+            transaction.executeSql(sql, undefined,
+            function(transaction, result){
+                if(result.rows.length==0){                      
+                    var sql = "CREATE TABLE IF NOT EXISTS path " +
+                    " (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, " +
+                    "number INTEGER NOT NULL, " + 
+                    "sephirah_1 INTEGER NOT NULL, " + 
+                    "sephirah_2 INTEGER NOT NULL, " + 
+                    "name VARCHAR(100) NOT NULL, " +
+                    "alphabet_position INTEGER, " +
+                    "symbolic_meaning TEXT, " +
+                    "occult_concept TEXT, " +
+                    "attribute TEXT, " +
+                    "tarot_attribution TEXT " +
+                    ")";
+                    transaction.executeSql (sql, undefined, ok, error);
+                }
+            }
+            , error);
+        });
+
+       this.db.transaction (function (transaction) 
+        {
+            var sql = "SELECT name FROM sqlite_master WHERE type='table' AND name='weekdays'";
+            transaction.executeSql(sql, undefined,
+            function(transaction, result){
+                if(result.rows.length==0){                      
+                    var sql = "CREATE TABLE IF NOT EXISTS weekdays " +
+                    " (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, " +
+                    "name VARCHAR(100) NOT NULL, " + 
+                    "planet VARCHAR(100) NOT NULL, " + 
+                    "sephirah VARCHAR(100) NOT NULL)";
+                    transaction.executeSql (sql, undefined, ok, error);
+                }
+            }
+            , error);
+        });
+    };
+    
+    DBService.prototype.dropTable = function(name){
+        if(name!=undefined){
             this.db.transaction (function (transaction) 
             {
-              var sql = "DROP TABLE sephirah";
-              transaction.executeSql (sql, undefined, ok, error);
-            });
-            
-            this.db.transaction (function (transaction) 
-            {
-              var sql = "DROP TABLE path";
-              transaction.executeSql (sql, undefined, ok, error);
-            });
-            
-            this.db.transaction (function (transaction) 
-            {
-              var sql = "DROP TABLE weekdays";
-              transaction.executeSql (sql, undefined, ok, error);
-            });
-            
-            this.db.transaction (function (transaction) 
-            {
-              var sql = "DROP TABLE ephemeris";
-              transaction.executeSql (sql, undefined, ok, error);
+                var sql = "SELECT name FROM sqlite_master WHERE type='table' AND name='"+name+"'";
+                transaction.executeSql(sql, undefined,
+                function(transaction, result){
+                    if(result.rows.length>0){
+                        var sql = "DROP TABLE "+name;
+                        transaction.executeSql (sql, undefined, ok, error);
+                    }
+                }
+                , error);
             });
         }
-        
-        
-        //Create the status table
-        this.db.transaction (function (transaction) 
-        {
-          var sql = "CREATE TABLE IF NOT EXISTS status " +
-              " (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, " +
-              "property VARCHAR(100) NOT NULL, " + 
-              "value VARCHAR(100) NOT NULL)";
-          transaction.executeSql (sql, undefined, ok, error);
-        });
+    }
 
-        //Create the spherira table
-        this.db.transaction (function (transaction) 
-        {
-          var sql = "CREATE TABLE IF NOT EXISTS sephirah " +
-              " (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, " +
-              "name VARCHAR(100) NOT NULL, " + 
-              "number INTEGER NOT NULL, " + 
-              "primary_title VARCHAR(100), " +
-              "other_titles TEXT, " +
-              "intelligible_qualities TEXT, " +
-              "human_experience TEXT, " +
-              "sensible_qualities TEXT, " +
-              "color_tree VARCHAR(100), " +
-              "color_scale VARCHAR(100), " +
-              "elemental_attribution VARCHAR(100), " +
-              "polarity VARCHAR(100), " +
-              "tarot_card VARCHAR(100), " +
-              "commentary TEXT)";
-          transaction.executeSql (sql, undefined, ok, error);
-        });
 
-        //Create the paths table
-        this.db.transaction (function (transaction) 
-        {
-          var sql = "CREATE TABLE IF NOT EXISTS path " +
-              " (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, " +
-              "number INTEGER NOT NULL, " + 
-              "sephirah_1 INTEGER NOT NULL, " + 
-              "sephirah_2 INTEGER NOT NULL, " + 
-              "name VARCHAR(100) NOT NULL, " +
-              "alphabet_position INTEGER, " +
-              "symbolic_meaning TEXT, " +
-              "occult_concept TEXT, " +
-              "attribute TEXT, " +
-              "tarot_attribution TEXT " +
-              ")";
-          transaction.executeSql (sql, undefined, ok, error);
-        });
-
-        //Create the status table
-        this.db.transaction (function (transaction) 
-        {
-          var sql = "CREATE TABLE IF NOT EXISTS weekdays " +
-              " (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, " +
-              "name VARCHAR(100) NOT NULL, " + 
-              "planet VARCHAR(100) NOT NULL, " + 
-              "sephirah VARCHAR(100) NOT NULL)";
-          transaction.executeSql (sql, undefined, ok, error);
-        });
-
-        //Create the ephemeris table
-        this.db.transaction (function (transaction) 
-        {
-          var sql = "CREATE TABLE IF NOT EXISTS ephemeris " +
-              " (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, " +
-              "date TEXT NOT NULL, " + 
-              "sunrise TEXT NOT NULL, " +
-              "sunset TEXT NOT NULL)";
-          transaction.executeSql (sql, undefined, ok, error);
-        });
-
-    };
-        
     DBService.prototype.fillDB = function (){
 
         //Can retrieve information from a distant db my synchronization..
@@ -396,25 +400,91 @@ The Head which is not; according to the Sepher Yetzirah, the Admirable of Hidden
             "The Four Eights of the Lesser Arcana of the deck",
             ""];   
         
+            sephiroh[8] = ["Yesod",
+            9,
+            "the Foundation",
+            "the Anima Mundi, or the Soul of the World; also the 'Pure Intelligence or Clear Intelligence",
+            "the Moon (Luna)",
+            "the Divine Cognition of working of the universe",
+            "the Vision or Experience of the working of the universe",
+            "according to the Yetziratic Text, Yesod purifies the emanations received from the other Sephiroth, as it is the receptable of all of \n\
+            the emanations from the other eight spheres above it. Additionally, since Yesod is the sole focusof the other Sephiroth emanations, \n\
+            it is the sole projector of those forces into the world of matter: the physical plane of Malkuth. It is also the Astral Plane of \n\
+            occultism, and the realm of the Astral Light. It is the sphere of Magic as well, as all operations of a magical nature that intended \n\
+            to produce an effect in Malkuth, have their foundations in this Sephirah. On the daily, more pragmatic level, the planetary attribution \n\
+            of yesod, the Moon, takes the correspondences of, and produces its influence upon: women; the personality; modifications; rapid changes ;\n\
+            fluid conditions, ever cycling between extremes. As with Hod's projection, Mercury, educational efforts of all kinds are also ruled by \n\
+            the Moon, it being the projection of Yesod into our universe. Additionally, this lunar influence provides a positive impulse for the planting \n\
+            of seeds, beginning journeys by water, or making new aquaintances in a social, business, or academic setting. It is also an excellent \n\
+            influence for all literary work, for entering into the sacrament of marriage, for taking any medecine, or to begin any mystical or metaphysical \n\
+            system of body or mind treatment in which a direct, complete cure is sought. This Lunar influence of Yesod is also very positive for surgery of \n\
+            all types, and for dealing with metaphysical, mystical and magical studies. This fluid, creative, Lunar influence provides an energy dynamic backdrop \n\
+            against which most activities and aspirations indulged in during the time of its reign will prove both prolific and productive.",
+            "purple",
+            "In Atziluth, indigo. In Briah, violet. In Yetzirah, a very dark purple. In Assiah, a citrine flecked with azure.",
+            "As with Tiphareth, the elemental attribution of Yesod is Air, owing to its position on the Middle Pillar of the Tree.",
+            "Neutral",
+            "the Four Nines of the Lesser Arcana of the deck",
+            "Notice, that as with Yesod and the other Sephirah on the Middle Pillar, Kether also takes the elemental attribution of Air as well. \n\
+            This is thought to be due to the impulsive, ever-changing, fluid, potential-to-kinetic and back again dynamics of the Air element, \n\
+            but in its most pure, rarefied, and complete form in the case of Kether. In Yesod however, these transitional properties of the Air \n\
+            Element can be seen as being reflected directly into Malkuth, where they become more stable by virtue of their appearance in the densest, \n\
+            most material form of matter -- the physical matter which is found in Malkuth. "];  
+                    
+            sephiroh[9] = ["Malkuth",
+            10,
+            "the Kingdom",
+            "the World of the Four Elements -- Air, Earth, Water, and Fire; the 'Resplendent Intelligence', because as Fortune has reflected, \n\
+            it is exalted above every head and sits upon the Throne of Binah. Also, The Gate of Justice; the Gate of the Daughter of the Mighty One; \n\
+            the Gate of Prayer; the Gate of the Shadow of Death and od Death itself; the Gate of the Garden of Eden; the Queen; the Bride; the Inferior Mother.",
+            "the Element, Earth, but divided into four quadrants, representing the World of the Four Elements: Air, Earth, Water, and Fire. \n\
+            That is, matter in its entirety, yet not simply the gross form that composes matter as we perceive it with our five senses. The orher \n\
+            subtle psychic qualities of the Four Elements are also included in this attribution, namely, the subtle, psychic aspects of Air, Earth, \n\
+            Water, and Fire. These too are encompassed by Malkuth.",
+            "the Existence and Projection of the Psychic and Mundane Essences of Four Elements into the realm of Malkuth.",
+            "the Vision of the Holy Guardian Angel.",
+            "discernement; astuteness; acute sensory perception of ordinary matter. The physical performance of Abramelin Operation, leading to the \n\
+            Vision of the HGA, and the Attainment of the Knowledge and Conversation of the HGA while the individual is yet in human form.",
+            "the tenth Sephirah is divided by an 'X' into four equal sections in order to bisect the sphere. The colors oliven, russet, citrine, and black \n\
+            are then assigned, one color to each of the four equal sections.",
+            "In the Atziluthic World, a clear yellow. In Briatic World, olive, russet, citrine, and black. In the Yetziratic World, olive, russet, \n\
+            citrine, and black, flecked with gold. In the Assiatic World, black, rayed with yellow.",
+            "Earth (as described above)",
+            "Neutral. The grounding-point of the purified emanations from all of the other Sephiroth, radiating from Yesod into Malkuth.",
+            "the Four Tens of the Lesser Arcana of the deck.",
+            "There is a difficult point here regarding the mystical relationship between Tiphareth and Malkuth of the Middle Pillar, which some readers \n\
+            may need to understand clearly for their Kabbalistic studies and beyond. Specifically, it involves the concept of the 'True Will', the \n\
+            HGA, and the Attainment of the Knowledge and Conversation (K&C) of the HGA through the magical working of the Abramelin Operation.\n\
+            The True Will of the individual; that is, the Will of God for the individual, is identified with the Chiah. In turn, the Chiah is the \n\
+            essential energy of that part of the self which is eternal. But the realm of the HGA who delivers the True Will to the individual, is that \n\
+            of Tiphareth. Here, the HGA is considered by some to be the Higher Self: a type of pure consciousness so exalted as to be above the everyday \n\
+            reach of the individual. Fortune said of it, '...it is an intensification of awareness...' and from it '...comes a peculiar power of insight \n\
+            and penetration which is of the nature of hyper-developed intuition.'. \n\
+            Thus, in some occult circles and magical societies, it is conceived of as the elevation of the individual's highest qualities, raised to the nth level, \n\
+            yet partaking of divine qualities by its very definition. While the Experience of the HGA most certainly does exhibit this divine state that \n\
+            does lie beyoung ecstasy -- which quickly transforms into an Experience of Divine Love and Beauty beyoung description -- it is my opinion that \n\
+            Fortune's viewpoint is far, far, from the sum total of the experience of Attaining the Knowledge and Conversation of the HGA. \n\
+            In point of fact, the HGA is an individual being with its own universe, holding an utterly profound and nebulous personal consciousness of its own, \n\
+            yet with a conscious awareness of the individual human being over which it presides. Hence, it is through the Abramelin Operation, conducted \n\
+            physically in Malkuth according to the Abramelin text, that the individual does attain to the actual, physical Vision of the HGA, which is \n\
+            then immediately followed by the Attainment to the full K&C of this being. \n\
+            In other words, both Fortune's view of the HGA's nature and the individual's experience of it as I have laid down herein, are valid in my opinion. \n\
+            That is, through the classical performance of the Abramelin Operation, the individual calls down the True Will from Chockmah into Malkuth, as that True \n\
+            Will has manifested in the centralized focus of Tiphareth, and through the being of the HGA. Through the intervention of the Holy Guardian Angel in \n\
+            Tiphareth. \n\
+            At the same time, Manhood, existing in Malkuth, is elevated into Godhead, through the agencu of the HGA, in Tiphareth. And so the ancient admonition, \n\
+            'Bring Godhead down into manhood, and elevate manhood in Godhead,' is fulfilled. It is a fundamental error to think however, as Dion Fortune herselt \n\
+            so unfortunately states later on in her classic book on Kabbalah, that HGA '... consists neither in voices nor visions, but is pure consciousness...'. \n\
+            Why is this error so dangerous? Because the state of the individual's subjective synthesis is effected thereby, precluding the actual Vision of the HGA. \n\
+            This occurs through the very acceptance of her point of view: an attitude engendered, projected, and maintained by mainstream New Age Magick. \n\
+            As a result of accepting this limiting viewpoint, the individual can only attain to a partial experience of the HGA; a partial result  that ends more \n\
+            often than not in hallucinations regarding the experience, and confusion as to the individual's full True Will. \n\
+            In more applicable terms, this error in understanding can cause difficulties in the diligent individual's formation of his or her \n\
+            subjective state; one that can produce subconscious errors in the use of the Kabbalistic Cyles System. \n\
+            There is no need for an either-or scenario as so many magical schools, occult circles, want-to-bees, self-professed magicians, and occultists \n\
+            insist, all as a result of never having attempted the Abramelin Operation, let alone having Attained to the full K&C of the HGA, and this by \n\
+            attaining to the Vision of this being in Malkuth, that this simple understanding can become known. "];       
         
-//            sephiroh[2] = ["Chesed",
-//            3,
-//            "Wisdom",
-//            "",
-//            "",
-//            "",
-//            "",
-//            "",
-//            "",
-//            "",
-//            "",
-//            "",
-//            "",
-//            ""];       
-        //sephiroh[1] = ["Chokmah",2,"Sagesse"];
-        //sephiroh[2] = ["Binah",3,"Compréhension"];
-        //sephiroh[3] = ["Chesed",4,"Compassion"];
-        ///sephiroh[4] = ["Geburah",5,"Sévérité"];
         
         //Here just put the data hardcoded..
         var name,number,primary_title,other_titles,intelligible_qualities,
@@ -581,42 +651,10 @@ The Head which is not; according to the Sepher Yetzirah, the Admirable of Hidden
 
     };
     
-    
-     DBService.prototype.syncEphemerisDB = function (){
-       
-        var ephemeris = new Array();
-        ephemeris[0] = ["24/04/2014",
-                    "06:40",
-                    "20:35"
-                ];
-        ephemeris[1] = ["25/04/2014",
-                    "06:28",
-                    "20:54"
-                ];
-        ephemeris[2] = ["26/04/2014",
-                    "06:26",
-                    "20:55"
-                ];
-                
-         var date,sunrise,sunset;
-        
-        this.db.transaction (function (transaction) 
-        {
-            for (var i=0;i<ephemeris.length;i++){
-                date = ephemeris[i][0];
-                sunrise = ephemeris[i][1];
-                sunset = ephemeris[i][2];
-                
-                var sql = "INSERT INTO ephemeris (date, sunrise,sunset"+
-                        ") VALUES (?,?,?)";
-                transaction.executeSql (sql, [date,sunrise, sunset],ok, error);
-            }                    
-        });
-     };
-    
     DBService.prototype.initialize = function(){
-        var current = this;
         
+        var current = this;
+                
         this.db.transaction (function (transaction) 
         {
             var sql = "SELECT value FROM status WHERE property=?";
@@ -635,7 +673,7 @@ The Head which is not; according to the Sepher Yetzirah, the Admirable of Hidden
     };
 
     DBService.prototype.updateShephirahOfTheDay = function (day){
-        $('#dayRuler').html("");
+        jQuery('#dayRuler').html("");
         
         var day;
         var sephirah;
@@ -656,7 +694,7 @@ The Head which is not; according to the Sepher Yetzirah, the Admirable of Hidden
                         if (result.rows.length){
                             sephirah = result.rows.item(0);
                             console.log(sephirah);
-                            $('#dayRuler').html(sephirah.name + '('+day.planet+')');
+                            jQuery('#dayRuler').html(sephirah.name + '('+day.planet+')');
                         }
                     }, error);
                 }
@@ -665,5 +703,9 @@ The Head which is not; according to the Sepher Yetzirah, the Admirable of Hidden
         return;
     };
     
+    // export as AMD module / Node module / browser variable
+    if (typeof define === 'function' && define.amd) define(DBService);
+    else if (typeof module !== 'undefined') module.exports = DBService;
+    else window.DBService = DBService;
     
-//}());
+}());

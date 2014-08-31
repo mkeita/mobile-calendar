@@ -22,43 +22,61 @@ var map;
 var marker;
 var watchID;
 
-$(document).ready(function() {
+document.addEventListener("deviceready", onDeviceReady, false);
+
+jQuery(document).ready(function() {
     //document.addEventListener("deviceready", onDeviceReady, false);
     //uncomment for testing in Chrome browser
     //onDeviceReady();
-    var db = new DBService(true);
-    db.initialize();
-    db.syncEphemerisDB();
-    
-    $('#currentDate').html(new Date());     
+        
 });
+
+function onDeviceReady() {
+    
+    superFunctionTest();
+    
+    var times = SunCalc.getTimes(new Date(),50.3,4);
+    console.log(times);
+    
+    var db = new DBService(true);
+    //db.initialize();
+    
+    jQuery('#currentDate').html(new Date());   
+
+//    $(window).unbind();
+//    $(window).bind('pageshow resize orientationchange', function(e) {
+//        max_height();
+//    });
+//    max_height();
+//    google.load("maps", "3.8", {"callback": map, other_params: "sensor=true&language=en"});
+}
 
 
 // Method to open the About dialog
 function refresh() {
-    
+        
     var currentDate = new Date();
-    var currentDateToSecond = currentDate.getHours()*3600+ currentDate.getMinutes()*60+currentDate.getSeconds();
+    var currentDateInMilliSecondes = currentDate.getTime();
     
-    $('#currentDate').html(currentDate);
+    jQuery('#currentDate').html(currentDate);
     
     var currentDay = currentDate.getDay();
     
-    var db = new DBService();
+    var db = new DBService(false);
     db.updateShephirahOfTheDay(currentDay+1);
     
+    //Get the day ephemeris
+    var lat = 50.833;
+    var lng = 4.333;
+
+    var times = SunCalc.getTimes(currentDate, lat, lng);
+    console.log(times);
     
-    var sunrise = "06:24";    
-    var hour1 = parseInt(sunrise.substring(0,2));
-    var minute1 = parseInt(sunrise.substring(3,5));
-    var sunriseToSecond = (hour1*60+minute1)*60;
+    var sunrise = times.sunrise;        
+    var sunset = times.sunset;
     
-    var sunset = "20:57";
-    var hour2 = parseInt(sunset.substring(0,2));
-    var minute2 = parseInt(sunset.substring(3,5));
-    
-    var dayStepInSecondes = ((hour2*60+minute2) - (hour1*60+minute1))*60/12;    
-    var nightStepInSecondes = 7200 - dayStepInSecondes;
+    var dayStepInMilliSecondes = (sunset.getTime()  - sunrise.getTime())/12;    
+    var nightStepInMilliSecondes = 7200000 - dayStepInMilliSecondes;
     
     var hoursRulers = new Array("Saturn","Jupiter","Mars","Sun","Venus","Mercury","Moon",
     "Jupiter","Mars","Sun","Venus","Mercury","Moon"); 
@@ -66,51 +84,57 @@ function refresh() {
     var daysIndexes = new Array(3,6,2,5,1,4,0);
     var startIndex = daysIndexes[currentDay];
     
-    var start = sunriseToSecond;
+    var start = sunrise.getTime();
     var end = start;
     var currentLineStyle = "";
-    $('#dayTableContent').html("");
+    jQuery('#dayTableContent').html("");
     for(var i=0;i<12;i++){
-        end +=dayStepInSecondes;
+        end +=dayStepInMilliSecondes;
         
-        if(currentDateToSecond>start && currentDateToSecond<end){
+        if(currentDateInMilliSecondes>start && currentDateInMilliSecondes<end){
             currentLineStyle = "style=\"background-color:#FF0000; color:#FFFFFF;\"";
         }else {
             currentLineStyle ="";
         }
         
-        var sH = Math.floor(start/3600);
-        var sM = Math.floor((start/3600 - sH)*60);
-
-        var eH = Math.floor(end/3600);
-        var eM = Math.floor((end/3600 - eH)*60);
+        var sDate = new Date(start); 
+        var sEnd = new Date(end); 
 
         var row = '<tr '+currentLineStyle+'>'+
-                    '<td>'+sH+':'+sM+'</td>'+
-                    '<td>'+eH+':'+eM+'</td>'+
+                    '<td>'+sDate.getHours()+':'+sDate.getMinutes()+'</td>'+
+                    '<td>'+sEnd.getHours()+':'+sEnd.getMinutes()+'</td>'+
                     '<td>'+hoursRulers[startIndex + i%6]+'</td>'+
                   '</tr>';
-        $('#dayTableContent').append(row);
+        jQuery('#dayTableContent').append(row);
         start=end;  
     }
-    //var nightStep =;
     
+    jQuery('#dayTableContent').append('<tr><td/><td/><td/><tr/>');
+    
+    var start = sunset.getTime();
+    var end = start;
+    for(var i=0;i<12;i++){
+        end +=nightStepInMilliSecondes;
+        
+        if(currentDateInMilliSecondes>start && currentDateInMilliSecondes<end){
+            currentLineStyle = "style=\"background-color:#FF0000; color:#FFFFFF;\"";
+        }else {
+            currentLineStyle ="";
+        }
+        
+        var sDate = new Date(start); 
+        var sEnd = new Date(end); 
 
-    //$('#currentDate').html(currentDate);
-    
+        var row = '<tr '+currentLineStyle+'>'+
+                    '<td>'+sDate.getHours()+':'+sDate.getMinutes()+'</td>'+
+                    '<td>'+sEnd.getHours()+':'+sEnd.getMinutes()+'</td>'+
+                    '<td>'+hoursRulers[startIndex + i%6]+'</td>'+
+                  '</tr>';
+        jQuery('#dayTableContent').append(row);
+        start=end;  
+    }
     
 };
-
-
-
-function onDeviceReady() {
-    $(window).unbind();
-    $(window).bind('pageshow resize orientationchange', function(e) {
-        max_height();
-    });
-    max_height();
-    google.load("maps", "3.8", {"callback": map, other_params: "sensor=true&language=en"});
-}
 
 function max_height() {
     var h = $('div[data-role="header"]').outerHeight(true);

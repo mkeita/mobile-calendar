@@ -22,33 +22,56 @@
         <meta charset="utf-8" />
         <meta name="format-detection" content="telephone=no" />
         <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <!--meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" /-->
         <link rel="stylesheet" type="text/css" href="css/index.css" />
-        
-        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jquery-mobile/1.4.2/jquery.mobile.js"/>
-        
-        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.js"></script>
-        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-mobile/1.4.2/jquery.mobile.min.js"></script>
+        <link rel="stylesheet" href="js/jquery.mobile/jquery.mobile-1.4.3.min.css"/>
+
+        <script type="text/javascript" src="js/jquery/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="js/jquery.mobile/jquery.mobile-1.4.3.min.js"></script>
         
         <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+
+        <script type="text/javascript" src="js/services/prototype.js"></script>
+        <script type="text/javascript" src="js/services/DBService.js"></script>
+        <script type="text/javascript" src="js/services/SunCalc.js"></script>
+
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+
+        <!--
         
-        <title>Hello World</title>
+
+        -->
+        
+        <title>Tree of Life</title>
     </head>
     <body>
         
         <div data-dom-cache="false" data-role="page" id="mylocation">
             <div data-role="header" data-theme="b">
-                <h1 id="header">Searching for GPS</h1>
+                <h1 id="header">Day Influences</h1>
+                <a data-role="button" class="ui-btn-left" onclick="refresh()">Refresh</a>
                 <a data-role="button" class="ui-btn-right" onclick="showAbout()">About</a>
             </div>
             
             <div data-role="content" style="padding:0;">
-                <div id="map" style="width:100%;height:100%; z-index:50">
-                </div>
-
+                <h3><label id="currentDate"></label></h3>
+                <h4><label id="dayRuler"></label></h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>start</th>
+                            <th>end</th>
+                            <th>Ruler</th>
+                        </tr>
+                    </thead>
+                    <tbody id="dayTableContent">
+                        
+                    </tbody>
+                </table>
             </div>
             <div data-role="footer" data-theme="b" data-position="fixed" >
-                <h4>Google Maps</h4>
+                <h4>Influences</h4>
             </div>
         </div>
         <div data-dom-cache="false" data-role="page" id="about">
@@ -61,9 +84,6 @@
                 <h4>Created with NetBeans IDE</h4>
             </div>
         </div>
-        
-        <script type="text/javascript" src="js/services/DBservice.js"></script>
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
+             
     </body>
 </html>
