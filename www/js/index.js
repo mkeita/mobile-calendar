@@ -22,33 +22,32 @@ var map;
 var marker;
 var watchID;
 
+//var lat = 50.833;
+//var lng = 4.333;
+var lat = 4.333;
+var lng = 44.333;
+
 document.addEventListener("deviceready", onDeviceReady, false);
 
 jQuery(document).ready(function() {
     //document.addEventListener("deviceready", onDeviceReady, false);
     //uncomment for testing in Chrome browser
-    //onDeviceReady();
+    onDeviceReady();
         
 });
 
 function onDeviceReady() {
     
-    superFunctionTest();
-    
-    var times = SunCalc.getTimes(new Date(),50.3,4);
-    console.log(times);
-    
     var db = new DBService(true);
-    //db.initialize();
-    
-    jQuery('#currentDate').html(new Date());   
-
-//    $(window).unbind();
-//    $(window).bind('pageshow resize orientationchange', function(e) {
-//        max_height();
-//    });
-//    max_height();
-//    google.load("maps", "3.8", {"callback": map, other_params: "sensor=true&language=en"});
+   
+    navigator.geolocation.getCurrentPosition(function(position) {
+        lat = position.coords.latitude;
+        lng = position.coords.longitude;
+        refresh();
+    }, function(error) {
+        alert('code: '    + error.code    + '\n' +
+              'message: ' + error.message + '\n');
+    });
 }
 
 
@@ -56,6 +55,11 @@ function onDeviceReady() {
 function refresh() {
         
     var currentDate = new Date();
+    var previousDate = new Date();
+    previousDate.setDate(currentDate.getDate() -1);
+    var nextDate = new Date();
+    nextDate.setDate(currentDate.getDate() -1);
+    
     var currentDateInMilliSecondes = currentDate.getTime();
     
     jQuery('#currentDate').html(currentDate);
@@ -66,23 +70,33 @@ function refresh() {
     db.updateShephirahOfTheDay(currentDay+1);
     
     //Get the day ephemeris
-    var lat = 50.833;
-    var lng = 4.333;
-
+    console.log(lat+ "  " + lng);
     var times = SunCalc.getTimes(currentDate, lat, lng);
     console.log(times);
     
     var sunrise = times.sunrise;        
     var sunset = times.sunset;
     
+    var stillPrevious = 0;
+    if(sunrise.getTime()>currentDateInMilliSecondes){
+        times = SunCalc.getTimes(previousDate, lat, lng);
+    
+        sunrise = times.sunrise;        
+        sunset = times.sunset;
+        
+        stillPrevious=6;
+    }    
+    
     var dayStepInMilliSecondes = (sunset.getTime()  - sunrise.getTime())/12;    
     var nightStepInMilliSecondes = 7200000 - dayStepInMilliSecondes;
     
     var hoursRulers = new Array("Saturn","Jupiter","Mars","Sun","Venus","Mercury","Moon",
-    "Jupiter","Mars","Sun","Venus","Mercury","Moon"); 
+                                "Saturn","Jupiter","Mars","Sun","Venus","Mercury","Moon",
+                                "Saturn","Jupiter","Mars","Sun","Venus","Mercury","Moon",
+                                "Saturn","Jupiter","Mars","Sun","Venus","Mercury","Moon"); 
     
     var daysIndexes = new Array(3,6,2,5,1,4,0);
-    var startIndex = daysIndexes[currentDay];
+    var startIndex = daysIndexes[currentDay+stillPrevious];
     
     var start = sunrise.getTime();
     var end = start;
@@ -103,7 +117,7 @@ function refresh() {
         var row = '<tr '+currentLineStyle+'>'+
                     '<td>'+sDate.getHours()+':'+sDate.getMinutes()+'</td>'+
                     '<td>'+sEnd.getHours()+':'+sEnd.getMinutes()+'</td>'+
-                    '<td>'+hoursRulers[startIndex + i%6]+'</td>'+
+                    '<td>'+hoursRulers[startIndex + i%7]+'</td>'+
                   '</tr>';
         jQuery('#dayTableContent').append(row);
         start=end;  
@@ -113,6 +127,7 @@ function refresh() {
     
     var start = sunset.getTime();
     var end = start;
+    startIndex += 5;
     for(var i=0;i<12;i++){
         end +=nightStepInMilliSecondes;
         
@@ -128,7 +143,7 @@ function refresh() {
         var row = '<tr '+currentLineStyle+'>'+
                     '<td>'+sDate.getHours()+':'+sDate.getMinutes()+'</td>'+
                     '<td>'+sEnd.getHours()+':'+sEnd.getMinutes()+'</td>'+
-                    '<td>'+hoursRulers[startIndex + i%6]+'</td>'+
+                    '<td>'+hoursRulers[startIndex + i%7]+'</td>'+
                   '</tr>';
         jQuery('#dayTableContent').append(row);
         start=end;  
@@ -171,29 +186,4 @@ function map() {
 // Method to open the About dialog
 function showAbout() {
     showAlert("Google Maps", "Created with NetBeans 7.4");
-}
-;
-
-function showAlert(message, title) {
-    if (window.navigator.notification) {
-        window.navigator.notification.alert(message, null, title, 'OK');
-    } else {
-        alert(title ? (title + ": " + message) : message);
-    }
-}
-
-function gotPosition(position) {
-    map.setCenter(new google.maps.LatLng(position.coords.latitude, position.coords.longitude));
-
-    var point = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
-    if (!marker) {
-        //create marker
-        marker = new google.maps.Marker({
-            position: point,
-            map: map
-        });
-    } else {
-        //move marker to new position
-        marker.setPosition(point);
-    }
 }
