@@ -788,12 +788,46 @@ The Head which is not; according to the Sepher Yetzirah, the Admirable of Hidden
 
         influences.push([   
                     6,
-                    9,
-                    "Negative",
-                    "<b>Exemple of Use 1:</b> \n\
-                    <b>Exemple of Use 2:</b> .",
-                    25,
-                    14
+                    4,
+                    "Positive",
+                    "<b>Exemple of Use 1:</b> You have been looking for a chance to get in on the ground floor of a new business, or jump \n\
+                    to a new position in your firm, or go off on your own and found your own company. Or maybe you have an opportunity \n\
+                    to unload that old building or acre of ground that has been in your family for generations, and is now yours to do with \n\
+                    as you please. It's a Sunday, and although no one usually concerns themselves with such matters on this day, a situation \n\
+                    arises during the Jupiter Hour that will enable you to get started in this new direction you want to take. You have to deal \n\
+                    with another individual to do so however, and a meeting is set between the two of you during a Sun Hour later in the \n\
+                    evening, and the 20th Path of the Hermit is invoked thereby (because the issue began in a Jupiter hour.)\n\
+                    What can you expect? First of all, your sense of caution will be alerted. It may be a tone in the other person's voice; or a \n\
+                    slight skepticism you thought you noticed when you told him the price for the old building, or piece of ground; \n\
+                    or that you are interested in jumping to the new position in the firm; or the like. The two of you finally meet \n\
+                    during the Sun Hour, and both of you are a bit edgy: him for his reasons, you for yours. The meeting seems to go \n\
+                    well, and you walk away content. Have you succeeded? I mean, have you gotten your way fully? Will your way \n\
+                    truly work out in your best interests? The answer? Yes, to all. \n\
+                    In fact, when you look back over the situation, you will see that it was your very caution that prompted you to act \n\
+                    this way or that, say just the right thing or keep your mouth shut at just the right moment, or in some manner communicate \n\
+                    a non-verbal message, in a certain way, that brought you the success you wanted in the matter. Count on it. You have a new \n\
+                    desirable situation on your hands now, and one that will bear the mark of permanency. \n\
+                    <br/><b>Exemple of Use 2:</b> Your've let it be known that you're interest in running for a local office, or for a position \n\
+                    in your hobby club, church, or some organization in which you sincerely feel you can do more good than the individual who \n\
+                    now occupies that chair. Nothing has come of your declaration over the months, and you've all but forgotten about it. \n\
+                    Suddenly, on a Sunday evening, during a Jupiter Hour, you get a telephone call from the chief organizer or head of your group, \n\
+                    organization, church or town council.\n\
+                    Unknown to you, the right people have decided that you are the right man or woman for the job, and the voice on the other \n\
+                    end of the telephone asks you to write a letter to so-and-so tonight, formally stating your qualifications, and outlining \n\
+                    your plans for improving the club or organization. A note of caution rears up in your mind, principally because no one \n\
+                    made you aware that they took the statements you made months ago seriously. But you are also aware of the planetary and Path \n\
+                    influences, and that while such matters are typically negative under a Sun Day influence, this influence is moderated by the \n\
+                    authority of the Jupiter Hour to a fourfold extent, while the Path influence provides an eightfold positive effect on the \n\
+                    issue because of the Tarot Trump IX being in the upright position. \n\
+                    So you courteously thank the caller, hang up, and set to work under this hour to produce the best written proposal that \n\
+                    you can. Never mind it takes you half the night. The important thing is that you began the action under this influence, \n\
+                    and as such, your written declaration will carry the imprint of the influence being exerted at this time. Will you get the \n\
+                    position? Without question. In fact, it is amazing to note that your writing exercice will be coolly directed by the cautionary \n\
+                    notee this Path influence produces. That is, the Path influence will act in such a way as to others, and that they ring true \n\
+                    about who you are and what you have accomplished to date. And always, your projected image will be in the best possible light. \n\
+                    In fact you will find that you are appointed to the position in question.",
+                    20,
+                    9
         ]);
 
         //Moon Day
@@ -944,6 +978,140 @@ The Head which is not; according to the Sepher Yetzirah, the Admirable of Hidden
                     card influence.",
                     19,
                     8
+        ]);
+        
+        
+        influences.push([   
+                    4,
+                    6,
+                    "Positive",
+                    "<b>Exemple of Use 1:</b> You have been looking for a chance to get in on the ground floor of a new business, or jump \n\
+                    to a new position in your firm, or go off on your own and found your own company. Or maybe you have an opportunity \n\
+                    to unload that old building or acre of ground that has been in your family for generations, and is now yours to do with \n\
+                    as you please. It's a Thursday, during a Sun Hour. Flow is up the Tree, and Card IX is therefore in the reversed position. \n\
+                    What will happen? There is a feeling of cautiousness within you. This is normal for you of course, but somehow this time \n\
+                    it seems excessive. You're really on guard. Try as you might, you can't put your finger on it exactly, but somehow, \n\
+                    you are very suspicious of the individual and this upcoming meeting. Nevertheless you and he meet. What will the \n\
+                    outcome be for you? \n\
+                    You will find that the excessive state of caution will completely destroy your best efforts. Your expectations in this \n\
+                    matter will come to naught. Not immediately or in a direct manner, but rather slowly, over a lengthy period of time. \n\
+                    This is the worst part of the upward movement of flow on this Path. A significant amount of time is lost in 'appearance', \n\
+                    causing other opportunities to be lost by virtue of your occupation with the matters at hand that began under the auspices \n\
+                    of this influence. Like all upward flow movements along the Paths, this movement should be strictly avoided. \n\
+                    <b>Exemple of Use 2:</b> Your've let it be known that you're interest in running for a local office, or for a position \n\
+                    in your hobby club, church, or some organization in which you sincerely feel you can do more good than the individual who \n\
+                    now occupies that chair. Nothing has come of your declaration over the months, and you've all but forgotten about it. \n\
+                    Suddenly, on a Sunday evening, during a Jupiter Hour, you get a telephone call from the chief organizer or head of your group, \n\
+                    organization, church or town council.\n\
+                    Unknown to you, the right people have decided that you are the right man or woman for the job, and the voice on the other \n\
+                    end of the telephone asks you to write a letter to so-and-so tonight, formally stating your qualifications, and outlining \n\
+                    your plans for improving the club or organization. You set to work during this hour. The result? As always, the upward flow \n\
+                    will damn your best efforts. In this instance, that overly cautions attitude of yours will wind its way into your letter, \n\
+                    and in some way, strike a discordant note within the mind of the reader. This note of disbelief will color his mind. \n\
+                    As in other reversed examples, you will fail to obtain what you want, but only after a lengthy period of time in which other \n\
+                    genuine opportunities presented themselves, and which have been lost due to the delaying aspect of this influence.",
+                    20,
+                    9
+        ]);
+
+        influences.push([   
+                    4,
+                    7,
+                    "Negative",
+                    "<b>Exemple of Use 1:</b> It's a Thurday. You've intend to relax by going out for the night. \n\
+                     Maybe it will be dinner, some shopping, and a movie. You're feeling 'expansive' -- if a bit fluid -- but generally, pretty good.\n\
+                    And you are paging through a self-help book as you're having an impromptu dinner out, trying to have your Friday a day \n\
+                    early because of the other commitments tomorrow night. To your delight, a stranger suddenly walks up to you and say, 'Excuse me! I couldn't help notice \n\
+                    that book you're reading! I've been doing my best to understand it, but I'm hung up on a few points, and don't know anyone else \n\
+                    who's reading it. Do you mind if I ask you a question or two?' \n\
+                    But you notice that it's a Venus Hour, and flow is up the Tree. Card X The Wheel of Fortune is reversed. Does this mean that the oh! \n\
+                    so tempting situation is doomed ot abject failure, and will fall apart before you've had a chance to fantasize undtil your heart's content ?\n\
+                    Surprise! In this case, not exactly so! What do I mean?  It is strange, but this card is so powerful, that even in its reversed position \n\
+                    -- that is, in a flow up the Tree from a Venus Hour into a Jupiter Day -- the card produces indirect beneficent results. How can this \n\
+                    happen in this idealized example?\n\
+                    The beautiful woman or handsome man will either be with a friend, or will introduce you to his or spitting image, or will suggest the \n\
+                    two of you go shopping together, take in that movie, or any of a host of possibilities in which you will end up having the same \n\
+                    experience you did in the downward flow. In any event, it will be through his or her influence that you will be encouraged to either \n\
+                    go somewhere you would not normally go yourself, or change the established sequence of doing things you had originally planned to do \n\
+                    that night, or some such variation on the theme. And it will be through such changes that the good of this card will come to you \n\
+                    even through the flow is upward. In short, the benefits of the card will flow to you -- albeit indirectly -- as though the flow were \n\
+                    downward on the Tree and the card were in the upright position. That is, from the Hour into the Day. \n\
+                    Why is this the case here? I put it down to a 'Tension of Creation' as I term it, in which the Great Benefic Jupiter interects with a very \n\
+                    earthy, mundane Venus, in order to bring about a new creation, regardless of the direction of flow. Yet, as you saw, the upward \n\
+                    flow does have a skewing effect, in that it complicates and blinds the initial force flowing from Jupiter. Still, the combination of these \n\
+                    two planets ever pushing toward physical pleasure, completion, and beneficence in the material world, overcomes the normally deleterious \n\
+                    effect of the upward flow, although in an indirect and sometimes very confusing manner. \n\
+                    The admonition to the reader in such a case of reversed flow, is to be exceptionally alert to the events issuing from the initial condition \n\
+                    that arises under this reversed card influence.\n\
+                    \n\
+                    <br/><b>Exemple of Use 2:</b> You want to beautify your home. Too long have you lived in a dingy, shabby square or retangle, the ceiling \n\
+                    of which you rarely look at, and whose floors you try your best to ignore. The dirty, worn out carpeting has really been bothering \n\
+                    you for years. With age, you've come to understand that your surroundings have a definite, powerful bearing upon your mood and emotions. \n\
+                    And in turn, thesse emotions have a direct effect upon you feelings about yourself, your life, and -- come to think of it -- \n\
+                    how you feel about others, even after you leave that closed geometry you call home. \n\
+                    You decide to do all the shopping on Thursday, during a Venus Hour. The flow is against you. Nevertheless, you will experience the same good \n\
+                    results as when the flow is downward, but in an indirect way. It may be that you have to visit more stores, can't quite find what you're looking \n\
+                    for, have to make changes in the original designs you had your heart set on, or any of the infinite possibilites that underlie any \n\
+                    experience. But still, as hard as it may be for you to believe right now, you will wind up with the very same beneficial results. \n\
+                    Results that will produce the exact same effects in you as those that were generated by the easy experience when the flow wad down the Path. \n\
+                    It's just the way it works.",
+                    21,
+                    10
+        ]);
+
+
+        //Venus Day
+        influences.push([   
+                    7,
+                    4,
+                    "Positive",
+                    "<b>Exemple of Use 1:</b> It's a Friday. You've put in a hard week, and intend to relax by going out for the night. \n\
+                     Maybe it will be dinner, some shopping, and a movie. You're in a very positive frame of mind, and enjoy being around people, \n\
+                    perhaps more on this day, than on any other. You're enjoying your dinner, paging through a self-help book you've been trying \n\
+                    to get through for the last month, when a stranger suddenly walks up to you and say, 'Excuse me! I couldn't help notice \n\
+                    that book you're reading! I've been doing my best to understand it, but I'm hung up on a few points, and don't know anyone else \n\
+                    who's reading it. Do you mind if I ask you a question or two?' \n\
+                    Surprised, you look at the very attractive woman or man standing at your side. The smile is infectious, and you are beginning to \n\
+                    feel something in the pit of your stomach that you haven't felt since your high school days -- butterflies! \n\
+                    'Why, I'd be delighted to help if I can! Won't you join me? It would make matters a lot simpler for both of us!' \n\
+                    The adorable woman (or handsome man) smiles broadly, and almost too eagerly replies, 'Thank you, I'd love to!'.\n\
+                    As he or she slides onto the seat across from you, you happen to glance at that small Kabbalistic Cycles chart you've \n\
+                    been using as a makeshift book mark, and find that it's Jupiter Hour! That's right! Card X the Wheel of Fortune is at work \n\
+                    with all of the joy, excitement, and fulfillment that it brings, and of course, it's in the upright position. What are the \n\
+                    details of this happy situation, how do they unfold, and where do they lead? \n\
+                    I'll let the reader fill the blanks from this point on. But I will say that such a situation will turn out splendidly for both \n\
+                    of you, in all areas of life, even so far as eventually making the situation permanent. An idealized example? \n\
+                    Something you only find in the movies or in a book? Don't count on it! Not when it comes to the downward flow of a Jupiter \n\
+                    Hour into a Venus Day! The most amazing, charming, happy and exciting events are realized under this influence. On this you can count!\n\
+                    \n\
+                    <b>Exemple of Use 2:</b> You want to beautify your home. Too long have you lived in a dingy, shabby square or retangle, the ceiling \n\
+                    of which you rarely look at, and whose floors you try your best to ignore. The dirty, worn out carpeting has really been bothering \n\
+                    you for years. With age, you've come to understand that your surroundings have a definite, powerful bearing upon your mood and emotions. \n\
+                    And in turn, thesse emotions have a direct effect upon you feelings about yourself, your life, and -- come to think of it -- \n\
+                    how you feel about others, even after you leave that closed geometry you call home. \n\
+                    So now you are going to do something about it, and not in some cheap, slipshod way, either! You've been saving for awhile, getting ideas, \n\
+                    and really making a concerted effort to change your world from the outside in, instead of only the inside out, as has been your \n\
+                    philosophy until now. This time you pull out your trusty, Jim-dandy Kabbalistic Cycles chart and consciously decide on the time to go \n\
+                    shopping and spend all that hard earned money to make your dwelling a place you can truly live in. \n\
+                    And guess what time you select? Of course! A Friday, during a Jupiter Hour, when the flow is down the Tree, an the Wheel of Fortune \n\
+                    Tarot Trump is in the upright position! Just the influence needed to make you feel luxurious, and to attract those fineries that extend \n\
+                    this luxury to your home by selecting just the right items for your new décor. The shopping spree begins as planned, and last throughout \n\
+                    the day. Of course, you are aware by now that the important influence is the one under which an activity begins, since that influence is \n\
+                    carried through to successive hours as long as the intent is there.\n\
+                    While you're hard at work selecting this and paying for that, an art print catches your eye. You thought of buying a few inexpensive \n\
+                    pictures to brighten up those dark, empty spaces on your walls, but you had no idea you would find such a beautiful, delightful  print \n\
+                    that simply brings out the very best in your emotional nature. It is breathtaking and -- you can afford it! You happily add it to your \n\
+                    swelling collection, and after a hard ten or so hours shopping, you head home and spend the next two days putting your new treasures in place. \n\
+                    As the weeks pass, you notice not simply an improvement in your overall attitude toward yourself and others, but a calmness and peace of mind \n\
+                    that refreshes you from the outside in, and the inside out. You sleep more soundly, have more energy, and are much more positive and optimistic. \n\
+                    As if this wasn't enough, you notice you are more creative, think more clearly, and appreciate Life in all of its manifestations more than \n\
+                    you ever have before. Is all this possible? Can all of these benefits truly sping from doing something as simple as redecorating, and doing \n\
+                    it under the auspices of this planatery combination / Path influence? You better believe it is!\n\
+                    The long and the short of it is this. You can either work with the forces of the Tree and Nature, or work against them, according to that famous \n\
+                    of all rationalization: 'I'll do what I want when I want. I have absolute Free Will!'. Either way you will get results. The question is, what kind? \n\
+                    The answer to that you will know and be more than happy with if you follow the Kabbalistic Cycles System being taught here. ",
+                    21,
+                    10
         ]);
 
         //Saturne Day
