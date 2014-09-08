@@ -19,11 +19,13 @@
     var DBService = function (reset){
 
         this.db = openDatabase("MyDB", "1.0", "MyDB", 2 * 1024 * 1024);
-        
+        this.dbLoadStatus = 0;
         if(reset){
             this.dropTable("status");
+            this.dropTable("influences");
             this.dropTable("sephirah");
             this.dropTable("path");
+            this.dropTable("tarots");
             this.dropTable("weekdays");
         }
             
@@ -32,7 +34,7 @@
             var sql = "SELECT name FROM sqlite_master WHERE type='table' AND name='status'";
             transaction.executeSql(sql, undefined,
             function(transaction, result){
-                if(result.rows.length==0){                      
+                if(result.rows.length===0){                      
                     var sql = "CREATE TABLE IF NOT EXISTS status " +
                           " (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, " +
                           "property VARCHAR(100) NOT NULL, " + 
@@ -48,7 +50,7 @@
             var sql = "SELECT name FROM sqlite_master WHERE type='table' AND name='sephirah'";
             transaction.executeSql(sql, undefined,
             function(transaction, result){
-                if(result.rows.length==0){                      
+                if(result.rows.length===0){                      
                     var sql = "CREATE TABLE IF NOT EXISTS sephirah " +
                             " (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, " +
                             "name VARCHAR(100) NOT NULL, " + 
@@ -75,7 +77,7 @@
             var sql = "SELECT name FROM sqlite_master WHERE type='table' AND name='path'";
             transaction.executeSql(sql, undefined,
             function(transaction, result){
-                if(result.rows.length==0){                      
+                if(result.rows.length===0){                      
                     var sql = "CREATE TABLE IF NOT EXISTS path " +
                     " (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, " +
                     "number INTEGER NOT NULL, " + 
@@ -94,12 +96,31 @@
             , error);
         });
 
+        this.db.transaction (function (transaction) 
+        {
+            var sql = "SELECT name FROM sqlite_master WHERE type='table' AND name='tarots'";
+            transaction.executeSql(sql, undefined,
+            function(transaction, result){
+                if(result.rows.length===0){                      
+                    var sql = "CREATE TABLE IF NOT EXISTS tarots " +
+                    " (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, " +
+                    "name VARCHAR(100) NOT NULL, " +
+                    "path INTEGER NOT NULL, " + 
+                    "sensible_meaning_upward TEXT," + 
+                    "sensible_meaning_reversed TEXT,"+
+                    "commentary TEXT)";
+                    transaction.executeSql (sql, undefined, ok, error);
+                }
+            }
+            , error);
+        });
+
        this.db.transaction (function (transaction) 
         {
             var sql = "SELECT name FROM sqlite_master WHERE type='table' AND name='weekdays'";
             transaction.executeSql(sql, undefined,
             function(transaction, result){
-                if(result.rows.length==0){                      
+                if(result.rows.length===0){                      
                     var sql = "CREATE TABLE IF NOT EXISTS weekdays " +
                     " (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, " +
                     "name VARCHAR(100) NOT NULL, " + 
@@ -110,10 +131,37 @@
             }
             , error);
         });
+        
+        this.db.transaction (function (transaction) 
+        {
+            var sql = "SELECT name FROM sqlite_master WHERE type='table' AND name='influences'";
+            transaction.executeSql(sql, undefined,
+            function(transaction, result){
+                if(result.rows.length===0){                      
+                    var sql = "CREATE TABLE IF NOT EXISTS influences " +
+                    " (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, " +
+                    "daySephiroth INTEGER NOT NULL, " + 
+                    "hourSephiroth INTEGER NOT NULL, " +
+                    "polarity VARCHAR(100) NOT NULL," +
+                    "description TEXT NOT NULL, " + 
+                    "path INTEGER, " + 
+                    "tarot INTEGER, " + 
+                    "FOREIGN KEY(daySephiroth) REFERENCES sephirah(id), "+ 
+                    "FOREIGN KEY(hourSephiroth) REFERENCES sephirah(id))";
+                    transaction.executeSql (sql, undefined, ok, error);
+                }
+            }
+            , error);
+        });
+        
+        
+        if(reset){        
+            this.fillDB();            
+        }
     };
     
     DBService.prototype.dropTable = function(name){
-        if(name!=undefined){
+        if(name!==undefined){
             this.db.transaction (function (transaction) 
             {
                 var sql = "SELECT name FROM sqlite_master WHERE type='table' AND name='"+name+"'";
@@ -522,7 +570,7 @@ The Head which is not; according to the Sepher Yetzirah, the Admirable of Hidden
 
         //Fill the paths
         var path = new Array();
-        path[0] = [11,
+        path.push([11,
                     1,
                     2,
                     "Aleph(A), meaning, the head of an Ox.",
@@ -532,9 +580,9 @@ The Head which is not; according to the Sepher Yetzirah, the Admirable of Hidden
                     into a creative core.",
                     "the Element, Air",
                     "Tarot Trump, Zero (O)-- The Fool"
-                ];
+                ]);
                 
-        path[1] = [12,
+        path.push([12,
                     1,
                     3,
                     "Beth (B), meaning, House.",
@@ -550,18 +598,47 @@ The Head which is not; according to the Sepher Yetzirah, the Admirable of Hidden
                     force that holds all of Creation together, from the subtlest of matter to its most material form.",
                     "the planet, Mercury, nut with the understanding given above.",
                     "Tarot Trump, One(I) --- The Magician."
-                ];
+                ]);
 
-//        path[1] = [11,
-//                    1,
-//                    2,
-//                    "",
-//                    1,
-//                    "",
-//                    "",
-//                    "",
-//                    ""
-//                ];
+
+
+        path.push([17,
+                    3,
+                    6,
+                    "Beth (B), meaning, House.",
+                    2,
+                    "The Transparent Intelligence",
+                    "the combined natures of the Sephiroth Chokmah and Hod are reflected by this Path. \n\
+                    Their properties are Mercurial, here, in an alchemical sense of Universal Mercury, \n\
+                    as hinted at in the section Hod. That is, due to the higher octave of this Path, \n\
+                    the Mercurial nature expressed herer is more in line with the Intelligible Quality found \n\
+                    in  the Mercury of the Philosophers, which can be reached through the higher aspects of \n\
+                    the Sensible Qualities of Hod; Initiated working in the realms of Philosophic and Laboratory \n\
+                    Alchemy. This Mercurial Principe is therefore that living ever-changing Principe of cohesive \n\
+                    force that holds all of Creation together, from the subtlest of matter to its most material form.",
+                    "the planet, Mercury, nut with the understanding given above.",
+                    "Tarot Trump, One(I) --- The Magician."
+                ]);
+
+        path.push([18,
+                    3,
+                    5,
+                    "Beth (B), meaning, House.",
+                    2,
+                    "The Transparent Intelligence",
+                    "the combined natures of the Sephiroth Chokmah and Hod are reflected by this Path. \n\
+                    Their properties are Mercurial, here, in an alchemical sense of Universal Mercury, \n\
+                    as hinted at in the section Hod. That is, due to the higher octave of this Path, \n\
+                    the Mercurial nature expressed herer is more in line with the Intelligible Quality found \n\
+                    in  the Mercury of the Philosophers, which can be reached through the higher aspects of \n\
+                    the Sensible Qualities of Hod; Initiated working in the realms of Philosophic and Laboratory \n\
+                    Alchemy. This Mercurial Principe is therefore that living ever-changing Principe of cohesive \n\
+                    force that holds all of Creation together, from the subtlest of matter to its most material form.",
+                    "the planet, Mercury, nut with the understanding given above.",
+                    "Tarot Trump, One(I) --- The Magician."
+                ]);
+
+
 
        var number,sephirah_1,sephirah_2,name,alphabet_position,
                 symbolic_meaning,occult_concept,attribute, tarot_attribution;
@@ -641,6 +718,319 @@ The Head which is not; according to the Sepher Yetzirah, the Admirable of Hidden
                 transaction.executeSql (sql, [name,planet, sephirah],ok, error);
             }                    
         });
+        
+        var tarots = new Array();
+        tarots.push(["The Lovers (VI)",   
+                    17,
+                    "A trial in life or an experiment of a personal nature that you will successfully conclude; the emergence of \n\
+                    a new affection or object of devotion, whether it be a person or a new interest of some type.",
+                    "A failed life-trial or experiment; the loss of affection for a person or interest",
+                    ""]);
+        tarots.push(["The Chariot (VII)",   
+            18,
+            "Victory, conquest, overcoming odds and obstructions, but only after battle.",
+            "Defeat after battle; obstructions to plans and actions; plans and actions defeated by either internal or external \n\
+            obstructions and obstacles, but once again, only after battle.",
+            "This card, and card XVI -- The tower, Path 27, Peh -- are the most difficult cards of the Greater Arcana. \n\
+            With either card, the plans made, the opportunities that arise, and the actions taken under their influence, \n\
+            have an extremely grim, major component to them. Of the two cards however, this card (VII) The Chariot, is \n\
+            perhaps surprisingly the hardest of the two to work with, even in its upright position, for it bespeaks \n\
+            of a long, arduous struggle which will take a heavt toll on the individual, even though he or she will become \n\
+            victorious (when it is in the upright position)."]);
+        
+//        tarots[0] = [   
+//            0,
+//            "",
+//            "",
+//            ""];
+                    "name VARCHAR(100) NOT NULL, " +
+                    "path INTEGER NOT NULL, " + 
+                    "sensible_meaning_upward TEXT," + 
+                    "sensible_meaning_reversed TEXT,"+
+                    "commentary TEXT)";
+        //fill the influences
+        var name,path,sensible_meaning_upward,sensible_meaning_reversed,commentary;             
+        this.db.transaction (function (transaction) 
+        {
+            for (var i=0;i<influences.length;i++){
+                name = tarots[i][0];
+                path = tarots[i][1];
+                sensible_meaning_upward = tarots[i][2];
+                sensible_meaning_reversed = tarots[i][3];
+                commentary = tarots[i][4];
+                
+                var sql = "INSERT INTO tarots (name, path,sensible_meaning_upward, sensible_meaning_reversed,commentary "+
+                        ") VALUES (?,?,?,?,?)";
+                transaction.executeSql (sql, [name,path,sensible_meaning_upward, sensible_meaning_reversed ,commentary],ok, error);
+            }                    
+        });
+
+
+        //Fill the paths
+        var influences = new Array();
+
+        //Sun Day
+        influences.push([   
+                    6,
+                    3,
+                    "Positive",
+                    "<b>Exemple of Use 1</b>: You are looking to make a real estate investment. Someone approaches you out of the blue, \n\
+                    on -- curiously enough -- a Sunday, during a Saturn Hour with what sounds like a ideal offer. Should you take it? \n\
+                    Yes! The downward flow of the heavy-handed but stabilizing influence of Saturn will blend with the growth desires \n\
+                    stimulated by the Sun, to make this a very profitable investment indeed. The Path's influence will powerfully serve \n\
+                    to bring about a very sucessful conclusio to the transaction, one you will long remember and grateful for. <br/>\n\
+                    <b>Exemple of Use 2:</b>  You make a plan for personal growth. You can use the heavy-handed, stabilizing influence of \n\
+                    the Saturn Hour during this new Sunday to not only detail your plans, but to set down the steps necessary to hurl \n\
+                    them at the world during the upcoming week. And you will succeed. Take that to the bank!",
+                    17,
+                    6
+        ]);
+
+        influences.push([   
+                    6,
+                    9,
+                    "Negative",
+                    "<b>Exemple of Use 1:</b> \n\
+                    <b>Exemple of Use 2:</b> .",
+                    25,
+                    14
+        ]);
+
+        //Moon Day
+        influences.push([   
+                    9,
+                    6,
+                    "Positive",
+                    "<b>Exemple of Use 1:</b> \n\
+                    <b>Exemple of Use 2:</b> .",
+                    25,
+                    14
+        ]);
+
+        //Mars Day
+        influences.push([   
+                    5,
+                    3,
+                    "Positive",
+                    "<b>Exemple of Use 1:</b> it's Tuesday, and things at your place of employment have not been going well. The economy is still \n\
+                     spiraling downward, despite the inflated figures and the grinning, lying-through-their-teeth reassurances the anchors of the \n\
+                    Nightly Business Report have been feeding you for the past five years. You get to work, and your boss calls you into his office. \n\
+                    You notice it's during an hour ruled by Saturn. He asks you to sit down, and then drops the bomb: a cutback is coming, \n\
+                    and you will probably be among those who gets a pink slip, with no chance of being called back to the company. There is no \n\
+                    employment left in your area, all the companies have been laying people off for the past year. This means a move with money \n\
+                    you don't have, to another city where new employment is a crapshoot at best, and immediate bills that cannot be paid. \n\
+                    You weekly paycheck was only thing keeping you (and perhaps your family) marginally afloat. You realize all of this words \n\
+                    are sounding like hollow echoes in your ears, and you panic. \n\
+                    Somehow, through all the terror coursing through your mind and emotions, you recall this Path influence. You know you stand a chance \n\
+                    -- but only a chance -- if you can turn it around. You calm your mind and emotions, take a deep breath, and say, 'What if I make \n\
+                    myself more valuable to the company? Like, maybe learning two others jobs that are now done by others who will be getting cut? \n\
+                    I'm also willing to put in ten more hours a week without pay, if that will help! I'm stretched so thin now, I'd go under for sure \n\
+                    if I lose this job!'\n\
+                    He looks at you, realizing that the others who will be laid off are in the same situation you're in. But he is not talking to them \n\
+                    during this hour. He is talking to you. The Path influence is attenuating the raw, destructive energy of Mars ruling the day, \n\
+                    and bolstering the fourfold more powerful Saturn influence of 'this being a good influencee for bringing issues to the attention \n\
+                    of those who have the power to decide an outcome favorable to the petitioner.' He looks at you carefully, and says, \n\
+                    'OK, I'll tell you what. You start learning those other two jobs today, and be prepared for fifty-hour week. If you show me \n\
+                    that you can cut the mustard, I'll try to keep you on.' He continues, stressing the point, 'Understand this: there are no guarantees, \n\
+                    but I'll do the best I can to keep you on. Agreed?' At this point, you must agree.\n\
+                    You will struggle, and for a long, very unstable, extremely emotional upsetting time. But -- and this is the important point and the \n\
+                    influence of this Path -- he will keep you, while all those around you are worrying about their unemployment insurance running out. \n\
+                    Further, after the business storm clears, you will be the one that will not only receive a very significant raise in pay, but \n\
+                    will be promoted to boot. That is if the company can stay afloat during this period. Now do you see how this Path works, even \n\
+                    when its positive influence is in effect? I trust you do, because this is as clear as I can make it.\n\
+                    <br/><b>Exemple of Use 2:</b> You have taken a hard loog at your-self in that new full-length mirror you recently purchased, and you \n\
+                    definitely did not like what you saw. You still can't believe that your belly actually does arrive at a destination five minutes \n\
+                    before you do, with your jowls a close second. And that slight pallor about you looks none too good either. You knew you \n\
+                    were out of shape, but still, you have been taking nightly walks. Well, sort of frequent walks,a nd watching your carbohydrates, \n\
+                    and eating less. Surely all of that activity and care should have helped to keep the physique in decent shape, but obviously it didn't! \n\
+                    You are aware you're getting older and you know the excess weight is not good for your health. It's a Tuesday, and a Saturn Hour \n\
+                    is in force. Flow is down the Tree, from the Hour into the Day. You've had enough. The cideo you sent for on that wiz bang home \n\
+                    home exercice machine that promises a complete workout in twenty minutes a day, four times a week, is staring you in the face again. \n\
+                    Or maybe it's the memory of that new gym that opened up down the block that keeps popping back into mind. So you go for it. You \n\
+                    order the machine or sign up for a year's membership during this hour. \n\
+                    Since you now plan for important matters using your newly acquired knowledge of Kabbalistic Cycles System, you begin your \n\
+                    grim workout regimen under a similar or different set of favorable influences. Guess what? Yes, you will struggle. You will see \n\
+                    just how hard keeping to a workout schedule really is, and how determined you have to be in order to recapture something of \n\
+                    your human figure. But I have news for you. After this battle, you will be victorious! \n\
+                    You will become the new you -- imagined by the aggressive energetic influence of Mars, and the grimly determined impulse \n\
+                    of Saturn during your hour of decision. And yes, the Path influence represented by Card VII The Chariot, dit turn out to be \n\
+                    correct. It was a struggle to say the least. But you succeeded, and through the overall influences of the Sephiroth and their \n\
+                    Path connection, you also learned something more about about yourself, something you didn't anticipate when you took responsibility \n\
+                    for your health and appearance. That is, as with all things in this life: it's up to you, and no one else. You've gained \n\
+                    immeasurably with you insight into self-motivation, and self-discipline. So the hard fought battle gave you more than you \n\
+                    bargained for -- but at a price no one who has not taken to this Path influence could ever understand.",
+                    18,
+                    7
+        ]);
+
+        influences.push([   
+                    5,
+                    4,
+                    "Positive",
+                    "<b>Exemple of Use 1:</b> Your are deeply involved in a money making project that if successful, will put you on easy \n\
+                    street for the rest of your life, or at least provide the financial freedom you have always wanted. The project has required \n\
+                    an enormous amount of your time, physical stick-to-it-ness as well as mental exertion, more nights without sleep than you \n\
+                    care to remember, and has drained all of your liquid assets. You are at the end of your rope. You've had enough. No one cares \n\
+                    enough about your new project to even look at it, let alone take it and you seriously, and you are about to throw in the \n\
+                    towel and chalk the entire matter up to a hard earned lesson in life. \n\
+                    It's a Tuesday during an hour ruled by Jupiter, and you receive a phone call from someone who heard of your new invention, \n\
+                    product, process, or software, take your pick. He wants you to be at his office or plant the following Monday morning, bright \n\
+                    and early, to give him demonstration and full explanation. You know this is the break you've been waiting for,  but \n\
+                    you are beyond physical and mental exhaustion. You have to go to your regular job tomorrow, and take care of a hundred other \n\
+                    duties this weekend, which you have already put off much to long. To top it all off, this new prospect is in the next state. \n\
+                    You are flat broke. You can't even afford an airline ticket, and certainly don't have the time to drive the distance to meet him.\n\
+                    Yet you know that this downward flow on the Tree, through the Path of Strength, is marshaling an inner strength you never \n\
+                    knew you possessed, and it is propelling you to somehow overcome what you are certain is the last obstacle standing between \n\
+                    you and your dreams fulfilled. You realize that the beyond physical strength welling up from some hidden depth within you is indeed \n\
+                    that strength through which the Holy warrior battles against overwhelming odds, and victoriously subdues and overcomes a great threat. \n\
+                    It is truly rooted in some genuine spiritual power or psychic force within you. \n\
+                    Through your own will and determination, and yet by way of something else you sense surging through your nature, you find \n\
+                    yourself 'in mode' to fight one. You call in sick at work the next day, throw together a presentation Friday night and \n\
+                    Saturday, borrow the money you need for the airline ticket, and find yourself at this prospective client's office at 8:15 AM \n\
+                    on Monday morning. Will you succeed? Of course! \n\
+                    You'll have to do your best, as there are no sure things in anything in life without one's best efforts, but with the forces \n\
+                    of these planets and their Path behind you, succeed you will, in a way beyond simple emotional gratification. It has also \n\
+                    honed your psychic faculties, and you experience new depths and power in your own genuine, spiritual nature. A strange \n\
+                    inner transformation, precipitated by a series of mundane concerns and events, has occurred. You are the winner on all Fronts!\n\
+                    <br/><b>Exemple of Use 2:</b> You have been thinking seriously about ways to advance yourself or about advancing some  personal \n\
+                    interest of yours -- one that requires a long term commitment. You realize such an effort will demand a great deal of expended \n\
+                    physical energy over time, and even more mental energy. Say you are thinking of going back to college to finish your degree \n\
+                    or acquire an advanced one, or of making of a long term contract of either a business or personal nature, such as marriage. \n\
+                    It's a Tuesday, during the Jupiter Hour, and what you consider to be the perfect opportunity to fulfill this inner need \n\
+                    presents itself to you. Flow is down the Tree, and the Strength card of the 19th Path is thus invoked. Should you go for it? \n\
+                    Absolutely. While the more mundane influences of Mars and Jupiter will most certainly enter into the matter very strongly, \n\
+                    the balance of this 19th Path will mediate their incluences in such a way, that the source of real energy behind the venture --- \n\
+                    the psychic force or spiritual power --- will guide and support you throughout the entire project: from its wishful \n\
+                    beginning, through to its successful conclusion.",
+                    19,
+                    8
+        ]);
+
+        //Mercury Day
+        influences.push([   
+                    8,
+                    6,
+                    "Positive",
+                    "<b>Exemple of Use 1:</b> \n\
+                    <b>Exemple of Use 2:</b> .",
+                    25,
+                    14
+        ]);
+        
+        
+        //Jupiter Day
+        influences.push([   
+                    4,
+                    5,
+                    "Negative",
+                    "<b>Exemple of Use 1:</b> You have a difficult project and you have no more strength. Someone finally calls you for a meeting. \n\
+                    Here the flow is up the Tree. That is, from the Mars Hour into the Jupiter Day. Tarot Card VIII Strength is in the reversed position \n\
+                    due to the upward flow. In this reversed position, the card stands for power and strength, but physical in nature. It \n\
+                    highlights endurance and determination in matters, but those matters that require physical strength and physical prowess \n\
+                    through which the qualities of endurance and determination are sustained. \n\
+                    Since the physical aspects are stressed here, your preparations for this meeting may contain the same elements as in \n\
+                    the previous example, but they will lack the psychic or spiritual component needed to close the deal, and you will feel \n\
+                    his lack during the preparations. Besides your preparations harboring this void, the delivery of that presentation  and \n\
+                    the response of your interested client, will also be missing this key ingredient. While you may not lose out immediately, \n\
+                    the client will express a somewhat feigned, halfhearted interest at first, which you will clearly sense. At some point, \n\
+                    the deal will eventually fall through, in which case, you may very well have abandon you further efforts to get this project \n\
+                    off the ground. A very tenuous aspect always appears with the Strength card in the reversed position, but I have given you \n\
+                    about as clear example of its strange influence as I can in this instance.\n\
+                    <b>Exemple of Use 2:</b> You want to begin new study or upgrade your degree. The opportunity presents itself during a Jupiter Day, \n\
+                    during a Mars Hour. As such, flow is up the Tree, and Card VIII Strength of the Tarots is in the reversed position. As occurred in \n\
+                    Exemple of Use 1 , the occasion that presents itself will be filled with purely physical energy and drive, but lacking any \n\
+                    appreciable spiritual energy or psychic content whatsoever. Thus it will eventually fail outright over time or produce \n\
+                    such unfavorable results that you wind up dropping the matter or backing out of it in some way. Again, use care with this reversed \n\
+                    card influence.",
+                    19,
+                    8
+        ]);
+
+        //Saturne Day
+        influences.push([   
+                    3,
+                    5,
+                    "Negative",
+                    "<b>Exemple of Use 1:</b> It's a Saturday, you're are going to loose you job and the situation of the company is desastrous. \n\
+                     Knowing this, you decided to go into your office on your own time, and clear up some paperwork. It's really a self-reassuring \n\
+                    attempt on your part meant to ease your fears of your impending -- perhaps inevitable ? --discharge. You are not looking for praise \n\
+                    or accolades from anyone. You are just concerned about the stabily of your employment, and in the back of your mind your are thinking \n\
+                    that such actions just might help your situation. \n\
+                    Coincidentally, your boss is in his office. He hears you come in, and seizes the opportunity to have a private talk with you. \n\
+                    Beacuse of the day and hour, and the fact that the flow is up the Tree, and the Card VII of the Tarot, The Chariot, is reversed. \n\
+                    Do yourself a favor. Listen to him politely, immediately return home, and start preparing for what is now inevitable unemployment. \n\
+                    It doesn't matter one iota that your boss told you the same things he (would have) told you that Tuesday during a Saturn Hour into a \n\
+                    Mars Day. In this example, it occured with a Mars Hour flowing into Saturn Day, and the card is reversed. You will lose your job. \n\
+                    The best thing you can do in this situation is try to get over the shock as soon as you can, and get a jump on all those others \n\
+                    who will be trying to find employment in the area in which you live. Start looking for new work on Monday.\n\
+                    <b>Exemple of Use 2:</b> You see your body in a mirror and you're disgusted. It's a Saturn Day, Mars Hour, and the flow is \n\
+                    up the Tree. In other words, the negative aspect of Card VII The Chariot applies, since the card occupies the reversed position. \n\
+                    In this case, you would simply note the impulses, forget about the exercice machine or club memship, and wait until a more favorable \n\
+                    day and time set of influences, and explore this pressing issue again. If you do this, you will be surprised to find that \n\
+                    some completely new idea for effectively dealing with your unhealthy situation just seems to pop into your mind, or that \n\
+                    you just happened to see some new device on television that targets your problem. And you can count on the decision/action \n\
+                    combination you take at that time to succeed, because it will!",
+                    18,
+                    7
+        ]);
+        
+        
+        influences.push([   
+                    3,
+                    6,
+                    "Negative",
+                    "Exemple of Use 1: You are looking to make a real estate investment. Someone approaches you out of the blue, \n\
+                    on -- curiously enough -- a Saterday, during a Sun Hour with what sounds like a ideal offer. \n\
+                    The flow is up the Tree, and hence the Tarot Card, the Lovers, is reversed. Should you now enter into this deal? \n\
+                    Run from this offer as fast as you can because some new variable will be operating in the background that will bring \n\
+                    total and complete failure to the venture, and total loss of your investment. <br/>\n\
+                    Exemple of Use 2: You make plans for personal growth and go to work on them during a Saturday during an hour ruled \n\
+                    by the Sun. See the problem? Of course you do. There is an upward flow from the planet ruling the hour, into the planet \n\
+                    ruling the day. Result: about as good as when you evolved your ideas during the Mercury Hour of this day, which was \n\
+                    another upward flow. They will fail, for one reaon or another.",
+                    17,
+                    6
+        ]);
+        
+        
+
+//        influences[1] = [   
+//                    3,
+//                    6,
+//                    "Negative<br/>\n\
+//                    <b>Influences of the Planets connected by the Path</b><br/>\n\
+//                    ",
+//                    17,
+//                    6
+//        ];
+
+                
+//        influences[0] = [   1,
+//                            1,
+//                            "",
+//                            0,
+//                            0
+//                ];
+        
+        //fill the influences
+        var daySephiroth,hourSephiroth,polarity,description,path,tarot;             
+        this.db.transaction (function (transaction) 
+        {
+            for (var i=0;i<influences.length;i++){
+                daySephiroth = influences[i][0];
+                hourSephiroth = influences[i][1];
+                polarity = influences[i][2];
+                description = influences[i][3];
+                path = influences[i][4];
+                tarot = influences[i][5];
+                
+                var sql = "INSERT INTO influences (daySephiroth, hourSephiroth,polarity,description, path,tarot "+
+                        ") VALUES (?,?,?,?,?,?)";
+                transaction.executeSql (sql, [daySephiroth,hourSephiroth,polarity,description, path ,tarot],ok, error);
+            }                    
+        });
+        
+        
 
         //Set the data status
         this.db.transaction (function (transaction) 
@@ -675,19 +1065,17 @@ The Head which is not; according to the Sepher Yetzirah, the Admirable of Hidden
     DBService.prototype.updateShephirahOfTheDay = function (day){
         jQuery('#dayRuler').html("");
         
-        var day;
         var sephirah;
         
         this.db.transaction (function (transaction) 
         {
             var sql = "SELECT * FROM weekdays WHERE id=?";
 
-            transaction.executeSql (sql, [day],
+            transaction.executeSql (sql, [day+1],
             function(transaction, result){
                 if (result.rows.length){
                     day = result.rows.item(0);
-                    
-                    console.log(day);
+                
                     sql = "SELECT * FROM sephirah WHERE name=?";
                     transaction.executeSql (sql, [day.sephirah],
                     function(transaction, result){
@@ -702,6 +1090,27 @@ The Head which is not; according to the Sepher Yetzirah, the Admirable of Hidden
         });
         return;
     };
+    
+    DBService.prototype.updateInfluence = function (daySephirah, hourSephirah, callback){
+        jQuery('#influence').html("");
+                
+                
+        console.log(daySephirah + " --- " + hourSephirah);     
+        this.db.transaction (function (transaction) 
+        {
+            var sql = "SELECT * FROM influences WHERE daySephiroth=? and hourSephiroth=?";
+
+            transaction.executeSql (sql, [daySephirah, hourSephirah],
+            function(transaction, result){
+                if (result.rows.length){
+                    var influence = result.rows.item(0);
+                    callback(influence);
+                }
+            }, error);
+        });
+        return;
+    };
+        
     
     // export as AMD module / Node module / browser variable
     if (typeof define === 'function' && define.amd) define(DBService);

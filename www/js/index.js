@@ -53,40 +53,42 @@ function onDeviceReady() {
 
 // Method to open the About dialog
 function refresh() {
-        
+    //var currentDate = new Date(2014,8,6,3,15,0);
     var currentDate = new Date();
-    var previousDate = new Date();
-    previousDate.setDate(currentDate.getDate() -1);
-    var nextDate = new Date();
-    nextDate.setDate(currentDate.getDate() -1);
+    var calculationUTCDate = new Date(  currentDate.getFullYear(), 
+                                    currentDate.getMonth(), 
+                                    currentDate.getDate(),
+                                    0,-currentDate.getTimezoneOffset(),0);
     
     var currentDateInMilliSecondes = currentDate.getTime();
-    
     jQuery('#currentDate').html(currentDate);
-    
     var currentDay = currentDate.getDay();
-    
-    var db = new DBService(false);
-    db.updateShephirahOfTheDay(currentDay+1);
     
     //Get the day ephemeris
     console.log(lat+ "  " + lng);
-    var times = SunCalc.getTimes(currentDate, lat, lng);
-    console.log(times);
-    
+    var times = SunCalc.getTimes(calculationUTCDate, lat, lng);    
     var sunrise = times.sunrise;        
     var sunset = times.sunset;
     
-    var stillPrevious = 0;
-    if(sunrise.getTime()>currentDateInMilliSecondes){
-        times = SunCalc.getTimes(previousDate, lat, lng);
+    var calculationDay = currentDay;
     
+    if(sunrise.getTime()>currentDate.getTime()){
+        var previousCalculationUTCDate = new Date(calculationUTCDate.getTime());
+        previousCalculationUTCDate.setDate(calculationUTCDate.getDate() -1);
+        times = SunCalc.getTimes(previousCalculationUTCDate, lat, lng);
+        
         sunrise = times.sunrise;        
         sunset = times.sunset;
         
-        stillPrevious=6;
+        calculationDay=previousCalculationUTCDate.getDay();
     }    
-    
+
+    console.log(sunrise);
+    console.log(sunset);
+
+    var db = new DBService(false);
+    db.updateShephirahOfTheDay(calculationDay);
+ 
     var dayStepInMilliSecondes = (sunset.getTime()  - sunrise.getTime())/12;    
     var nightStepInMilliSecondes = 7200000 - dayStepInMilliSecondes;
     
@@ -96,17 +98,20 @@ function refresh() {
                                 "Saturn","Jupiter","Mars","Sun","Venus","Mercury","Moon"); 
     
     var daysIndexes = new Array(3,6,2,5,1,4,0);
-    var startIndex = daysIndexes[currentDay+stillPrevious];
+    var startIndex = daysIndexes[calculationDay];
     
     var start = sunrise.getTime();
     var end = start;
     var currentLineStyle = "";
     jQuery('#dayTableContent').html("");
+    
+    var hourSephirahRuler ="";
     for(var i=0;i<12;i++){
         end +=dayStepInMilliSecondes;
         
         if(currentDateInMilliSecondes>start && currentDateInMilliSecondes<end){
             currentLineStyle = "style=\"background-color:#FF0000; color:#FFFFFF;\"";
+            hourSephirahRuler = hoursRulers[startIndex + i%7];
         }else {
             currentLineStyle ="";
         }
@@ -133,6 +138,7 @@ function refresh() {
         
         if(currentDateInMilliSecondes>start && currentDateInMilliSecondes<end){
             currentLineStyle = "style=\"background-color:#FF0000; color:#FFFFFF;\"";
+            hourSephirahRuler = hoursRulers[startIndex + i%7];
         }else {
             currentLineStyle ="";
         }
@@ -148,6 +154,22 @@ function refresh() {
         jQuery('#dayTableContent').append(row);
         start=end;  
     }
+    
+    //Load the exemples...
+    var daySephiroth = new Array(6,9,5,8,4,7,3);
+    var hourSepheroth = new Array ();
+    hourSepheroth["Sun"]=6;
+    hourSepheroth["Moon"]=9;
+    hourSepheroth["Mars"]=5;
+    hourSepheroth["Mercury"]=8;
+    hourSepheroth["Jupiter"]=4;
+    hourSepheroth["Venus"]=7;
+    hourSepheroth["Saturn"]=3;
+    
+    db.updateInfluence(daySephiroth[calculationDay],hourSepheroth[hourSephirahRuler],function(influence){
+      jQuery('#exemples_content').html('<b>'+influence.polarity+'</b><br/>'+influence.description); 
+    });
+    
     
 };
 
@@ -187,3 +209,29 @@ function map() {
 function showAbout() {
     showAlert("Google Maps", "Created with NetBeans 7.4");
 }
+
+// Navigate to the next page on swipeleft
+jQuery(document).on( "swipeleft", ".ui-page", function( event ) {
+
+    // Prevent the usual navigation behavior
+    event.preventDefault();
+
+    // Get the filename of the next page. We stored that in the data-next
+    // attribute in the original markup.
+    var next = jQuery( this ).jqmData( "next" );
+
+    jQuery.mobile.navigate("#"+next);
+
+});
+
+// The same for the navigating to the previous page
+jQuery( document ).on( "swiperight", ".ui-page", function( event ) {
+
+     // Prevent the usual navigation behavior
+    event.preventDefault();
+    var prev = jQuery( this ).jqmData( "prev" );
+
+    jQuery.mobile.navigate("#"+prev);
+
+});
+    
