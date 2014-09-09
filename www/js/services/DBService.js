@@ -830,6 +830,70 @@ The Head which is not; according to the Sepher Yetzirah, the Admirable of Hidden
                     9
         ]);
 
+
+        influences.push([   
+                    6,
+                    5,
+                    "Positive",
+                    "<b>Exemple of Use 1:</b><i> Note: Please pay special attention to this example. It contians a number of elements that are all too \n\
+                    often found in challenging life-situations. While the example might sound obtuse at first, your careful study of it will probably \n\
+                    reveal that it is more characteristic of 'sudden happenings' than you might like to readily admit. Be aware also, that  the general \n\
+                    components of this example are applicable to many different situations in which you are forced to cooperate or act, usually \n\
+                    against your will or better judgment.</i> \n\
+                    You were about to embark on a new program designed to increase your psychic faculties. Yes, you were going to choose a more \n\
+                    obvious, favorable time in which to begin this lengthy program of inner self-development, but some circumstance or another \n\
+                    has literally forced you to begin it on a Sunday. You know all too well that the Solar influence of the day does not \n\
+                    favor starting any new plan. Yet you also knox that the energy and dynamic nature of Mars is there to aid you, especially \n\
+                    since the circumstance that has forced you into this position is one that has angered you greatly. \n\
+                    You can feel the martial force urging you to begin your new plan during its influence. It power, overriding that of the Sun's \n\
+                    influence of the day by a factor of four, gives you the confidence to proceed. You further feel that the injustice of the situation \n\
+                    foisted upon you is also being met by the martial forces, and in your heart, you know your course of action is being set for \n\
+                    you by the very forces of the Tree. You start your program of inner development during this day's Mars Hour, and immediately begin \n\
+                    to direc your psychic energy at the root of the threat to its very cause. Path 22, with its downward flow from Mars into the Sun \n\
+                    aids you. Its force of justice opposes the threat, while balancing your psychic exercice in such a way that the full force of \n\
+                    equilibrium  and equity of this Path at first curbs, and then in the twinkling of an eye, dissolves the threat, while immobilizing \n\
+                    its very source. \n\
+                    Is all of this really possible? Can the influence of this planetary / Path combination aid you to such an extent in a matter in which \n\
+                    your are totally innocent and without blame? Oh yes, most definitely. This is a very strange Path, and one that is not \n\
+                    to be taken lightly. It has special uses as has been intimated here in this simple example, beyond its more mundane uses as \n\
+                    will be seen in Example for Use 2. Your further study of Kabbalah will reveal more of this Path's austere and justice-oriented \n\
+                    nature to you, while the force of the Path itself guides you in its righteous use. \n\
+                    \n\
+                    <br/><b>Exemple of Use 2:</b> You've been meaning to cut back on your alcohol consumption for some time now. Not that it's really \n\
+                    out of hand, but you have noticed that you usually have two drinks at lunch time -- or has it grown to three? -- and the 'after work' \n\
+                    cocktail has turned into four -- or is it five? -- over the course of the evening, whether you're simply watching television or finishing \n\
+                    that woodworking project in the basement. Comme to think of it, you once had a life during the weekdays. You normally only \n\
+                    'threw back a few' on the weekends while watching the games, or going out with so-and-so for a social evening. But never mind, \n\
+                    you're still at your job, well liked by everyone, and a pretty good 'Joe' or 'Cindy'. After all, life is tough, pressures abound from \n\
+                    all sides, and everyone's stress levels are more often than not off the scale. 'Still, maybe I'd better stop or at least cut way back...' \n\
+                    Your train of thought is suddenly broken by alternating blue and red flashing lights in the rearview mirror that are reflecting into \n\
+                    your eyes. The meaning of the lights hits you like a brick across your forehead. Before you can slow down, those lights become accompanied \n\
+                    by the wail of a siren. It's the police. You pull over to the side of the road, the officer emerges from his vehicle, stands off to the side \n\
+                    of your car door, and in a voice somewhere between somber and curious, says, 'Good evening sir (or madam)! I couldn't help notice you \n\
+                    swerved across the center lane a few times. Have you been drinking tonight?' Your heart -- now in your throat -- skews your normally \n\
+                    resonant voice. 'I've been at my friend's watching the game (or playing Canasta). I did have a dring or two, but that was hours ago. \n\
+                    I was thinking about something on the way home, and guess I wasn't watching where I was going! I'm sorry!'\n\
+                    The police officer looks you squarely in the eye and replies 'Please step out of your vehicle, sir (or madam)! I have to determine if you \n\
+                    are driving under the influence.' Shocked beyond belief, you comply. You know you had six drinks at least, and now the martial rage at \n\
+                    your own behavior is driving your blood pressure through the roof. You can feel the pulsing in you neck as the officer gives you a field \n\
+                    sobriety meter and asks you to blow into it. Your mind is racing, as feelings of guilt and fear course through your veins -- righ next to all \n\
+                    that alcohol. The officer takes the meter from you, shines his flashlight on it, and says, 'Well, it looks like this is your lucky night! \n\
+                    Your measure an alcohol level just .02 under the legal limit. If I were you, I'd get back in my car and head home immediately, and say a prayer. \n\
+                    Because I can tell you, from the way you were driving, I suspected you would read at least .15 on my meter. Take this as a warning, and learn \n\
+                    to control your drinking.'\n\
+                    When you get back home, after calming down, you happen to think of the cycles, and take a look at your lastest chart. To your absolute \n\
+                    disbelief, you find the cop stopped you during a Mars Hour on this Sunday, the flow down the Tree was with you, and you escaped a very \n\
+                    expensive and socially damning nightmare that could have ruined the rest of your life. But how could this be? How could the force of \n\
+                    Justice that lies behind the 22th Path have aided you? You were irresponsible in your drinking, and you know it. \n\
+                    But then, you were questioning yourself as you were driving home. You began to see what you were doing to yourself and to others through \n\
+                    your negligent behavior. Did the concept of Justice and balance behind this Path help you? What do you think? You will find many strange \n\
+                    and wonderful effects, and no end of guidance, through the diligent use of the Tree and its components. As your author, \n\
+                    I strongly suggest that you listen to that council closely, and give thanks for the blessings that the Tree can -- and will -- \n\
+                    confer upon you, when you work with it correctly, knowledgeably, and in good conscience.",
+                    22,
+                    11
+        ]);
+
         //Moon Day
         influences.push([   
                     9,
@@ -939,6 +1003,47 @@ The Head which is not; according to the Sepher Yetzirah, the Admirable of Hidden
                     19,
                     8
         ]);
+
+        influences.push([   
+                    5,
+                    6,
+                    "Negative",
+                    "<b>Exemple of Use 1:</b> You were about to embark on a new program designed to increase your psychic faculties. Yes, you were going to choose a more \n\
+                    obvious, favorable time in which to begin this lengthy program of inner self-development, but some circumstance or another \n\
+                    has literally forced you to begin it on a Tuesday. \n\
+                    You are tempted beyond belief to assume a defensive posture by using the influence of this 22nd Path of Justice. Or perhaps the idea \n\
+                    of using the full force of the Path offensively, to strike back at the source of the threat by beginning your new psychic development \n\
+                    program under its influence and directing the force toward the threat, has you by the throat. You know better, but your rage and fury -- \n\
+                    themselves the direct impulses of Mars pouring into you in an uncontrolled way through the upward flow of the Path -- have blinded your \n\
+                    better judgment, and you proceed during a Sun Hour. \n\
+                    The result? Imbalance all around. What you unleash will rebound upon you, adding immeasurably to the miseries of the threat, to bring you to \n\
+                    your figurative and literal knees. Once again you have a choice. Either learn to live and work in cooperation with the Laws  of the \n\
+                    Holy Tree of Life, or be damned by them. It is as straightforward as this. \n\
+                    <b>Exemple of Use 2:</b> You have even been questioning yourself about your drinking habits, when a flashing lights of the police car attracted \n\
+                    your attention. It's a Tuesday during a Sun hour. The flow is now up the Tree and the Tarot Trump of the 22nd Path is in reversed position: \n\
+                    imbalance, conflict, instability, and injustice abound. The raw aggressive energy of Mars is mediated by the Sun, yes, and by a factor of four.\n\
+                    But there is a grimness in the eightfold impact the Path is exerting in the matter. This time the officer is belligerent. Maybe he had a hard day, \n\
+                    and has had enough of drunks running around the highways, and has even targeted you. You wonder, as he puts the handcuffs on your wrists, if in his \n\
+                    foul mood he might have somehow made that sobriety meter read a little higher-like the 0.15 reading it regis¬tered this time, and which you certainly feel like inside. \n\
+                    There's no way out of it now. You are under arrest for DUI. You won't be arraigned until tomorrow morning, which means you'll spend the night in jail, \n\
+                    right alongside the dregs of society-and you are now one of them. You'll also miss work tomorrow, and everyone will soon know why. And what about the bail? \n\
+                    Who is going to put up the $5,000 to get you out of the cell you're sharing with that big fellow Bubba, who keeps staring at you so affection¬ately? \n\
+                    And where will the money come from for the lawyer fees? And of course, it will be in all the newspapers tomor¬row, under the 'Local Arrest' section. \n\
+                    What about jail time? It was only your first offense, but the Law has been crack¬ing down hard lately, especially in your town? Now what? \n\
+                    What happened? You had those same noble thoughts about cutting back or outright quitting your drinking that you would have had if the incident occurred \n\
+                    on a Sunday during a Mars Hour as given in the previous example. Why didn't it work for you this time? I'll tell you why. The properties of this Path are \n\
+                    very explicit here. In the case of reversed flow, imbalance, injustice, conflict and instability will dominate any situation, and as you found out, \n\
+                    that includes a feedback effect that this Path actually has on itself! That's right. Upward flow on this Path causes a reflection of the Path forces upon itself, \n\
+                    so that it destabi¬lizes its own effects when the card is in its reversed posi¬tion. It is as if it were a double-negative. And in fact-it is. \n\
+                    You're in for a bad time of it now, and the final conclusion to your DUI will be very severe indeed. You will be extremely fortunate if you do not have to serve any jail time, \n\
+                    because the influence of upward flow on this Path is merciless in the extreme, and that is as mild as I can put it. But look on the bright side. \n\
+                    If you ever needed a reason to give up the booze, now you have it.",
+                    22,
+                    11
+        ]);
+        
+
+
 
         //Mercury Day
         influences.push([   
