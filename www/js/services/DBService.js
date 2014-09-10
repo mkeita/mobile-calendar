@@ -720,39 +720,159 @@ The Head which is not; according to the Sepher Yetzirah, the Admirable of Hidden
         });
         
         var tarots = new Array();
+        tarots.push(["The Fool (O)",   
+                    11,
+                    "Foolhardiness in action; foolishness in thought and deed; wildly excessive behavior; extravagant behavior, thoughts, and proposi¬tions. A greatly exaggerated sense of one's own impor¬tance and position in life; fantastic ideas and speculations.",
+                    "trouble stemming from the ex¬travagances listed above. Also difficulties from indecision, vacillation, and irresolution.",
+                    ""
+        ]);
+        tarots.push(["The Magician (I)",   
+                    12,
+                    "power of the individual's resolve; appropriate skills to meet the task at hand; power of the will to effect the change desired; confidence in one's own ideas, abilities, and the determination to carry them through to completion.",
+                    "conceit; lack of appropriate skills for the task at hand; lack of self confidence; lack of will to effect the change(s) sought; lack of individual power and resolve to effect the ends desired",
+                    ""
+        ]);
+        tarots.push(["The High Priestess (II)",   
+                    13,
+                    "knowledge; deep thought; scientific thought, ideas, and all matters pertain¬ing to scientific education. Also, educational matters in general. Logical thought; rational thinking and cogent argument style; cognitive skills. ",
+                    "illiteracy; ignorance; shallowness of thought and idea; surface knowledge; a lack of structure of the knowledge one is seeking.",
+                    ""
+        ]);
+        tarots.push(["The Empress (III)",   
+                    14,
+                    "fecundity in all matters, prolific results; accomplishment; the act of doing, fruitful¬ness in all things; earthiness; creativity.",
+                    "dissipation of one's energy; loss of power in gen¬eral; incomplete results due to hesitancy, indecision, or irresolution in acting.",
+                    ""
+        ]);
+        tarots.push(["The Emperor (IV)",   
+                    15,
+                    "one's right or prerogative to rule or to determine for one's self; authority; command; control; domination; effective action; mastery; might; the power of reason; justification; the making of rationalizations that are right and just.",
+                    "juvenile, childish emotions and their display; loss of authority, control, and command. Blocked plans and schemes.",
+                    ""
+        ]);
+        tarots.push(["The Hierophant (V)",   
+                    16,
+                    "kindness; mercy; righ¬teousness; morality; virtue; the quality of goodness; a person who exhibits these high human qualities. ",
+                    "excessive kindness; excessive mercy; weakness resulting from such excess; the inability to dis¬cern such excess, due to a lack of emotional control. ",
+                    ""
+        ]);
         tarots.push(["The Lovers (VI)",   
                     17,
-                    "A trial in life or an experiment of a personal nature that you will successfully conclude; the emergence of \n\
-                    a new affection or object of devotion, whether it be a person or a new interest of some type.",
+                    "A trial in life or an experiment of a personal nature that you will successfully conclude; the emergence of a new affection or object of devotion, whether it be a person or a new interest of some type.",
                     "A failed life-trial or experiment; the loss of affection for a person or interest",
-                    ""]);
+                    ""
+        ]);
         tarots.push(["The Chariot (VII)",   
             18,
             "Victory, conquest, overcoming odds and obstructions, but only after battle.",
-            "Defeat after battle; obstructions to plans and actions; plans and actions defeated by either internal or external \n\
-            obstructions and obstacles, but once again, only after battle.",
-            "This card, and card XVI -- The tower, Path 27, Peh -- are the most difficult cards of the Greater Arcana. \n\
-            With either card, the plans made, the opportunities that arise, and the actions taken under their influence, \n\
-            have an extremely grim, major component to them. Of the two cards however, this card (VII) The Chariot, is \n\
-            perhaps surprisingly the hardest of the two to work with, even in its upright position, for it bespeaks \n\
-            of a long, arduous struggle which will take a heavt toll on the individual, even though he or she will become \n\
-            victorious (when it is in the upright position)."]);
+            "Defeat after battle; obstructions to plans and actions; plans and actions defeated by either internal or external obstructions and obstacles, but once again, only after battle.",
+            "This card, and card XVI -- The tower, Path 27, Peh -- are the most difficult cards of the Greater Arcana. With either card, the plans made, the opportunities that arise, and the actions taken under their influence, have an extremely grim, major component to them. Of the two cards however, this card (VII) The Chariot, is perhaps surprisingly the hardest of the two to work with, even in its upright position, for it bespeaks of a long, arduous struggle which will take a heavt toll on the individual, even though he or she will become victorious (when it is in the upright position)."
+        ]);
+
+        tarots.push(["Strength (VIII)",   
+            19,
+            "metaphysical or spiri¬tual force and strength; inner strength which overcomes danger and adversity. The strength through which the Holy warrior battles against overwhelming odds, and victoriously subdues and overcomes a great threat. Subju¬gation of opposition through spiritual power.",
+            "power and strength, but physical in nature. Endurance and determination in matters requiring physical strength, and the physical prowess through which these qualities are sustained.",
+            ""
+        ]);
         
-//        tarots[0] = [   
-//            0,
-//            "",
-//            "",
-//            ""];
-                    "name VARCHAR(100) NOT NULL, " +
-                    "path INTEGER NOT NULL, " + 
-                    "sensible_meaning_upward TEXT," + 
-                    "sensible_meaning_reversed TEXT,"+
-                    "commentary TEXT)";
+        tarots.push(["The Hermit (IX)",   
+            20,
+            "deliberation, due to watchful attention, or a feeling of caution; a warning, things are not as they seem. Also, the furthering of psychic growth. ",
+            "excessive self-admonition or over cautiousness in important matters; imprudent actions; ill-advised activities; indiscreet behavior.",
+            ""
+        ]);
+        
+        tarots.push(["The Wheel of Fortune (X)",   
+            21,
+            "beneficence; expansiveness; growth; money; good luck; good fortune; success.",
+            "ill fortune; the reversal of dame fortune; hardship; loss; contraction; struggle; failure.",
+            ""
+        ]);
+        
+        tarots.push(["Justice (XI)",   
+            22,
+            "harmony, justice, stability; poise; equilibrium; balance.",
+            "conflict, injustice; instability; imbalance, intolerance.",
+            ""
+        ]);
+        
+        tarots.push(["The Hanged Man (XII)",   
+            23,
+            "the acquisition of knowledge which eventually matures into wisdom. The process is slow however, and as with life in general, requires sacrifices on the part of the individual for that knowledge to ripen into wisdom.",
+            "self-centeredness; concern for one's self exclusively at the obvious expense of others; sly, deceptive behavior designed to have one accepted by the group or masses.",
+            ""
+        ]);
+        
+        tarots.push(["Death (XIII)",   
+            24,
+            "physical death; an end; a massive, nebulous change or transforma¬tion in the individual, comparable to the end of a part of the self as occurs-for example-in the Attainment of the K&C of the HGA. ",
+            "corruption; disintegration; decomposition through putrefaction; stasis. ",
+            "this Path is not as difficult as it sounds. In reality, its meanings usually refer to the evolution and development of the Self through the process of self¬growth, the means used to achieve this state notwithstand¬ing. It is a hard path in terms of process, but its end results are stunning and utterly glorious."
+        ]);
+        
+        tarots.push(["Temperance (XIV)",   
+            25,
+            "to unite or wed seemingly disparate concepts, ideas, or actions in a positive and beneficial way; the use of temperate or mea¬surable means and ways in thoughts and actions; a bal-anced approach to a problem, and the judicious implemen-tation of its solution. ",
+            "disparate concepts, ideas, or actions which cannot be conjoined or united; disagreement; loggerheads; an extreme approach to a problem and its unbalanced implementation, which not only does not resolve the original problem, but which creates additional problems as a result of the extreme mea¬sures employed.",
+            ""
+        ]);
+        
+        tarots.push(["The Devil (XV)",   
+            26,
+            "an eventual beneficial or favorable result arises from a seemingly deleterious event or situation.",
+            "that same situation produces a unfavorable or very unsatisfactory result, or is concluded in some negative and pos¬sibly harmful manner.",
+            ""
+        ]);
+        
+        tarots.push(["The Tower (XVI)",   
+            27,
+            "devolution; downfall; degeneration; decadence; disaster; calamity; tragedy; woes; catastrophe, disruption.",
+            "the same, but to a lesser degree.",
+            "this card, and card VII-The Chariot-along with their Paths, are by far the most difficult and dangerous Paths on the Tree. As you will see when working the Cycles System, their influence is to be watched for carefully at all times, and avoided if at all possible."
+        ]);
+        
+        tarots.push(["The Star (XVII)",   
+            28,
+            "happy expec¬tation; joyful expectancy; happy prospects; an exciting future filled with many possibilities. ",
+            "happy expectations and joyful expectancies are dis¬appointed or thwarted; emptiness; effeteness.",
+            ""
+        ]);
+        
+        tarots.push(["The Moon (XVIII)",   
+            29,
+            "secret ene¬mies; cunning on the part of others for their own ends; deceit; duplicity; concealed forces in operation; hidden enemies; conspiracies against the individual innocently involved in a matter or situation.",
+            "the same, but to a lesser extent.",
+            ""
+        ]);
+        
+        tarots.push(["The Sun (XIX)",   
+            30,
+            "bliss; happiness; con¬tentment; joy; desires and goals achieved; wants satisfied;appeasement in general. ",
+            "the same, but to a lesser extent.",
+            ""
+        ]);
+        
+        tarots.push(["The Last Judgment (XX)",   
+            31,
+            "rejuvenation; renewals of all types; outcomes reached; new beginnings; fresh starts. ",
+            "problems causing efforts to bog down; delays; reversals; cowardly behavior.",
+            ""
+        ]);
+        
+        tarots.push(["The World (XXI)",   
+            32,
+            "completion; assured success; compensation; remuneration; repayment; recompense; a prosperous or thriving conclusion.",
+            "stagnation, inertia; stasis; failed project or attempt; failure as a force, in general.",
+            ""
+        ]);
+        
+
         //fill the influences
         var name,path,sensible_meaning_upward,sensible_meaning_reversed,commentary;             
         this.db.transaction (function (transaction) 
         {
-            for (var i=0;i<influences.length;i++){
+            for (var i=0;i<tarots.length;i++){
                 name = tarots[i][0];
                 path = tarots[i][1];
                 sensible_meaning_upward = tarots[i][2];
@@ -893,17 +1013,70 @@ The Head which is not; according to the Sepher Yetzirah, the Admirable of Hidden
                     22,
                     11
         ]);
+        
+        influences.push([   
+                    6,
+                    7,
+                    "Negative",
+                    "<b>Exemple of Use 1:</b> The conditions of the above exam¬ple are in effect once again, except in this case, you returned home from some activity or other on a Sunday, during a Venus Hour. Flow is up the Tree, from the hour into the day, and hence the 13th Tarot card is in the reversed position: the forces of corruption, disintegration, decomposition through putrefaction, and stasis are in full effect. You walk in, find your partner watching television or otherwise occupying themselves, and begin the same meaningless diatribe that helped extinguish the fire your relationship once knew. Sooner than later, each of you is off on their own in the same house, doing what pleases each, and avoiding each other at all costs. This evening-like all other evenings¬passes uneventfully, and neither of you care. Sex is a thing of the past. Both of you receive more mental stimulation from watching the Weather Channel than you do from each other, and life drags on, and on, and on, and on. Stagnation and the putrefication it produces that leads to the complete decay of human feelings and joy, has destroyed both of you. But it has progressed so far, that neither of you care about ending it. Both of you have been engulfed by the miasma of complacency. There is nothing for either of you to look forward to except an old age that will finally-and mercifully-put both of you out of your joint misery. Notice how your fear of this card in its upright posi-tion-when flow is down the Tree from the Sun Hour into the Day of Friday-might have dwindled considerably within you as you read the above. Ask yourself this. Of the two examples given here for this card, which one would you rather experience? I bet I know, even if you are not yet ready to admit it to yourself.\n\
+                    <br/><b>Exemple of Use 2:</b> You're opening your new store in the last example on-of all days-a Sunday, during a Venus Hour. Of course, all that business consultation you paid for through the nose tells you that despite appear¬ances, people's last minute weekend buying habits are what you are going after to get your business off with a bang. As the months pass, you did everything that you did in the above example, but business has been slow. (static) No matter what you try, your sales limp along, allowing you to barely make your monthly business loan payments, your payroll, add some new merchandise here and there, and ever so slightly eke out the most marginal living for yourself. Eventually, the shifting scales will go completely against you, and your business will fail. There will be harsh consequences as a result, that will spread into your personal life as well, from which it will take you in all probability, years to recover. Such are the implications and effects arising from this card in the reversed position.",
+                    24,
+                    13
+        ]);
+        
+        
+        influences.push([   
+                    6,
+                    8,
+                    "Negative",
+                    "<b>Exemple of Use 1:</b> Remember that example in the earlier part of this chapter where the planetary force of Sunday put you in a growth mode? You took to working out the details during a Mercury Hour in that example, but accomplished very little on your goal during the ensuing week: each day had its particular limiting condition, as you'll recall. The following Sunday rolled around, you were painfully reminded of your failure to do something significant toward your goal during the past week, and started again in a new, bright-spirited way. No matter. Unless you apply your knowledge of the Kabbalistic Cycles on this next Sunday, you'll fail again because as you know by now, the problem was the flow on the Tree. During a Mercury Hour on Sunday in that example, flow was up the Tree, the card is reversed, and the negative influences of the Tarot in question manifest. In this case, card XV Devil meaning essentially, failure.\n\
+                    <br/><b>Exemple of Use 2: Quite simply, there aren't any for the reasons given above. A void this Path influence and of course, the planetary influences connected by it in this instance. It will bring you nothing but trouble.</b> ",
+                    26,
+                    15
+        ]);
+        
+        influences.push([   
+                    6,
+                    9,
+                    "Negative",
+                    "<b>Exemple of Use 1:</b> It's Sunday. That job interview you had last Friday has you nervous. This is your last chance to get a job in your area, and you've got to land it! You can't wait until tomorrow to ask your former employer for that letter of recommendation. So out of sheer anxiety, you give him a call during a Moon Hour, flow upward, from the hour into the Sun Day, and timidly ask if he will do you this favor, and that you need the letter for tomorrow. He feels guilty for having had to let you go, and so eagerly agrees to write the letter and has it ready for you by noon tomorrow. You pick up the sealed letter, take it to your prospec¬tive employer, and are asked to wait outside as before. Two hours later your soon to be new boss (you hope) comes out of his office and states, 'I'm sorry, Mike. While your letter of recommendation was good, it really only accents your machinist abilities and the talents that go with it. We just can't take a chance. Sorry. Good luck to you on your job hunt!' The effects of this Path in its upward flow have done it again: failed to unite conflicting opposites. And now you are stuck with the results.\n\
+                    <br/><b>Exemple of Use 2:</b> During a chance meeting with your boss at the local sports grill, while he was feeling no pain and was lucid enough to remember, you asked him for that raise as you did in the example above. But this time it was on a Sunday, during a Moon Hour, flow upward, the card Temperance reversed. Oh, he took your case to the higher-ups as he said he would, and after due considera¬tion they refuse your request. 'We have to look out for all of our employees' interests these days, not just Joe's alone,' your boss tells you when he delivers the bad news. 'Joe's interests are at odds with the company's right now. Maybe when things get better we'll consider it.' That was their final words. As usual, this Path's upward flow damned the reconciliation of opposing interests. It hap¬pens every time.",
+                    25,
+                    14
+        ]);
 
         //Moon Day
         influences.push([   
                     9,
                     6,
                     "Positive",
-                    "<b>Exemple of Use 1:</b> \n\
-                    <b>Exemple of Use 2:</b> .",
+                    "<b>Exemple of Use 1:</b> You've been laid off permanently, and have been searching for work without success, that is, until last Friday. You finally have a real chance to land a new job, but it's in a totally different field. The ten years you spent as a machinist are now past, and you're facing a new position as a satellite dish installer. This new company is desperate for people, and so they entertain your application. But desperate or not, they are reluctant to hire you outright, owing to the investment they must make by putting you though a six-month training program, and are somewhat worried that your past skills just won't cross over to their type of work. They want a letter of recom¬mendation from your former employer. It's now Monday, Sun Hour. Knowing the Path influ¬ence of this hour /Path combination, you approach your former employer for that letter during this Sun Hour and Moon Day. Flow is downward, from the hour into the day, and he agrees. You take your letter to your prospective employer, give it to him, and are asked to wait outside while he reviews it and discusses it with his plant superin¬tendent and his own boss. An hour or so later he emerges from his office, smiles broadly, extends his hand to you and says, 'Congratulations, Mike! You're just the kind of guy we've been looking! We had no idea that a machinist had such skills! Welcome aboard! Can you start tomor¬row?' What happened? This particular influence unites or weds seemingly disparate ideas, actions, or situations in a balanced, complimentary way. Your former employer wrote that letter stressing your mechanical skills, reasoning abilities, mental clarity and gift of logic, loyalty, deter¬mination, and agreeable nature in such a way, that this new company could not help but hire you. Impossible, you say? I have seen similar situations arise a thousand times under these influences. Such are the forces that emanate from the downward flow of this Path.\n\
+                    <br/><b>Exemple of Use 2:</b> You need a raise. The cost of living has gotten to you at last. You can barely meet your bills now, and are at your wit's end. But there is a wage freeze at your place of employment. Indeed, they have down¬sized, and those left feel fortunate they still have jobs. In short, your interests and those of your company's could not be more different. But you are forced to take a chance, and so during a Sun Hour on a Monday, with its down¬ward flow and upright 14th Tarot Card of Temperance, you approach your boss, plead your case, and remind him-nicely, of course-of all the overtime you gave, gratis, and the volume of work you have been putting out these past three months. He listens, says he will take it up with higher management, and summarily dismisses you. Two days later he calls you into his office, asks you to sit down, smiles, and delivers the verdict. 'Joe, I can't believe it myself, but you got that raise you need! I ex¬plained how well you've been doing, and what an asset you are to the company, and asked them to do their best to show their gratitude, even during these rough times. And they went for it! Your raise begins immediately, and will show up in your next paycheck! Congratulations!' As you can see, even extreme cases of disparate interests and con¬flicting desires can be reconciled through this 25th Path, if you know how to use it properly. And now you do!",
                     25,
                     14
         ]);
+        
+        
+        influences.push([   
+                    9,
+                    7,
+                    "Positive",
+                    "<b>Exemple of Use 1:</b> I'll bet the business that poor guy opened under the Death card's influence in Example 3 of Path 24 is still fresh in your mind. Good! Because if he would have opened that same business on a Monday during a Venus Hour so flow was down the Tree from the Hour into the Day, I could have guaranteed that poor guy his enterprise would have taken off like a rocket. And if his product line in any way appealed to women, was in edu-cation-as in books-or was in art supplies, paintings, or even a bookstore that carried a line of art and the more literary type of publications, or items that strictly appeal to one's sense of luxury and extravagance and not necessity¬that same individual would be a most happy business man (or woman) indeed!\n\
+                    <br/><b>Exemple of Use 2:</b> You've decided to pop the question. After years of the dating scene, you've had about all you care for of the empty-headed, gold-digging, utterly vain and absolutely egotistical, available women out there. Oh, they're available, as you come to realize in your thirtieth year of life. Available for a quick trip to the altar, a quicker trip to the divorce court, alimony, child support, and all of the other wage attachments that will have you living in a one-room efficiency apartment for the next twenty-odd years. But this last lady you've been seeing for the past year and a half is different. Very different. You both hit it off, and in every conceivable way are the compliment of each other. It couldn't be better if you designed it yourself. And you've been wondering about her little signals. Is she trying to tell you to either put up or shut up? (Ask me, you dummy, or just go away and let me move on!) Are these the meanings behind that coyness and those few slight remarks favoring marriage she has been making lately? Enough is enough, you make your decision, and on this Monday evening during a surprise dinner you take her to, you pop the question. Of course, it's a Venus Hour, and the flow is down the Tree. The result? Remem¬ber the endings to those delightful fairy tales you enjoyed so much as a kid? 'And they lived happily ever after.' Because if you propose during this influence, both of your lives will be long, fruitful, and very happy together. And I wouldn't make such a sweeping statement if I wasn't abso¬lutely certain of it.",
+                    28,
+                    17
+        ]);
+
+        influences.push([   
+                    9,
+                    8,
+                    "Positive",
+                    "<b>Exemple of Use 1:</b> For four long years-maybe longer depending upon your major and financial situation¬you've struggled to get through college, produced the GP A you needed to get into a good graduate school pro¬gram, and have all of those applications to grad school sitting on your desk, ready to be filled out. Of course, this means you'll no longer starve either, because a reasonable stipend goes along with your fully paid graduate educa-tion-right up to that Doctorate degree. I'll bet you know what is coming next. Yes, you guessed it. Be sure to fill out all of those applications during a Mercury Hour, on the day ruled by the Moon, when the flow is down the Tree. The influence of this 19th card that symbolizes the forces of this 30th Path, will truly produce happiness, con¬tentment and joy, and all of your desires and goals achieved. Don't be one bit surprised if all of the schools you apply to accept you, and even go out of their way to recruit you. They could even reach the point of fighting each other, offering you competitive package after pack¬age, just to make sure you come to their school. And why not? You deserve it. Just use this so very fortunate Path correctly, and you will be ever so very, very glad you did!\n\
+                    <br/><b>Exemple of Use 2:</b> Your company has called a very important business meeting, and you've been asked to 'fork out a new plan for increasing your own department's efficiency. But worse than that, the Vice President of Oper¬ations told you that it has to be extremely good. Why? Because they want to adapt it to the other departments as well. Since your department is leading the entire company in productivity right now, they figure you know some¬thing they don't, and want you to share it with the other department heads so the entire company will benefit. Work out your plan diligently, by all means. But if you have anything to say about it, schedule the meeting for a Monday, during a Mercury Hour, when you have the downward flow of the Tree with you. You'll be absolutely amazed how well your ideas will be received and imple-mented. And of course, you will receive some type of reward for it: whether a raise, a promotion with a sizeable increase, or a bigger expense account. You will benefit from this Path and its downward flow, and in a big way. So use it well.",
+                    30,
+                    19
+        ]);
+
 
         //Mars Day
         influences.push([   
@@ -1019,7 +1192,7 @@ The Head which is not; according to the Sepher Yetzirah, the Admirable of Hidden
                     The result? Imbalance all around. What you unleash will rebound upon you, adding immeasurably to the miseries of the threat, to bring you to \n\
                     your figurative and literal knees. Once again you have a choice. Either learn to live and work in cooperation with the Laws  of the \n\
                     Holy Tree of Life, or be damned by them. It is as straightforward as this. \n\
-                    <b>Exemple of Use 2:</b> You have even been questioning yourself about your drinking habits, when a flashing lights of the police car attracted \n\
+                    <br/><b>Exemple of Use 2:</b> You have even been questioning yourself about your drinking habits, when a flashing lights of the police car attracted \n\
                     your attention. It's a Tuesday during a Sun hour. The flow is now up the Tree and the Tarot Trump of the 22nd Path is in reversed position: \n\
                     imbalance, conflict, instability, and injustice abound. The raw aggressive energy of Mars is mediated by the Sun, yes, and by a factor of four.\n\
                     But there is a grimness in the eightfold impact the Path is exerting in the matter. This time the officer is belligerent. Maybe he had a hard day, \n\
@@ -1043,20 +1216,146 @@ The Head which is not; according to the Sepher Yetzirah, the Admirable of Hidden
         ]);
         
 
-
+        influences.push([   
+                    5,
+                    8,
+                    "Positive",
+                    "<b>Exemple of Use 1:</b> Your drive and determination to attain mastery in your special interest is there just as in the example above, \n\
+                    but with one very important exception: it has entered your mind and emotions during a Mars Day, during a Mercury Hour. Flow is up the Tree, \n\
+                    and the orien¬tation of Tarot Trump XII The Hanged Man, is in the reversed position. Will your praiseworthy desires and newly initiated attempts \n\
+                    utterly fail-this time? Not in the way you might think.\n\
+                    Due to the reversed flow, you will find yourself grad¬ually decreasing the demands you place on attaining mas¬tery. Little by little, you will \n\
+                    settle for less and less, so that the 'mastery' you eventually gain, will more or less resemble some state of proficiency, as opposed to the state \n\
+                    of mastery you originally intended to reach. Settling for less is a reflection of the general attitude of the masses in all things; those masses \n\
+                    that you might sneer at now, or even despise. Yet here you have adopted their justification in settling for scraps, and have rationalized away \n\
+                    your 'need' for mastery.\n\
+                    In effect, you have turned that need into the conve¬nience of proficiency. Neither will you gain any deep insight into your intellectual motives, \n\
+                    thinking processes, and reasoning abilities under this influence. Nor will there be any evidence of an improved memory, a heightened ability \n\
+                    to visualize images, or a clearer mind. No, there won't be any of these things. But then again, it may be all right after all. \n\
+                    It simply depends on who you are, and what you want to do with your life. Here's where that oft¬touted, never understood construct of Free Will, \n\
+                    will come to the fore. It will reassure you that your justifiable ratio¬nalization for settling for less makes perfect sense. Or does it? \n\
+                    But then after all, it really is up to you.\n\
+                    <b>Exemple of Use 2:</b> All original conditions remain the same, except that telephone call arrives during a Mars Day, Mercury Hour, and \n\
+                    flow is up the Tree. Hence the 23rd Tarot Trump is in the reversed position. Under this influ¬ence, the best you can expect is a shell of \n\
+                    the result achieved in Example of Use 3, above. Things will begin to go wrong immediately after you cut the check.\n\
+                    It could be that some other investors pull out at the last minute, requiring more investment from you than you feel comfortable with, \n\
+                    and you will have to back out. Or the scanty computer equipment needed to achieve the next level in growth is no longer available, \n\
+                    and requires newer teckie nonsense with all of its bells and whistles, along with high priced teckies to run it, who turn out to be modern day \n\
+                    'craftsmen' who can't even spell the word quality, let alone produce it. Or you could become greedy at the eleventh hour, and insist on this \n\
+                    or that which strains the relationship between the owner and you, or makes demands that in some way eventually causes a decrease in tl\e quality of the final product.\n\
+                    In the end, as an example, the publishing house decides to stop stitching the pages, and simply glues them to the cover like other trade \n\
+                    paperback houses do. Or they are forced to use cheaper ink, smaller type, or some varia¬tion that turns out a product that only the masses \n\
+                    will understand and appreciate. In the end, old customers will fade away, and orders will drop. But never fear! Those masses with their \n\
+                    teckie mentalities will replace them. Oh, you'll make some profit, but the intellectual and emotional gratification you receive will be worth \n\
+                    about as much as a two-dollar bill. Heed this example well. This is a very empty Path when flow is up the Tree, and I strongly advise you not \n\
+                    to do anything important when its influence is in effect.",
+                    23,
+                    12
+        ]);
 
         //Mercury Day
         influences.push([   
                     8,
-                    6,
+                    5,
                     "Positive",
-                    "<b>Exemple of Use 1:</b> \n\
-                    <b>Exemple of Use 2:</b> .",
-                    25,
-                    14
+                    "<b>Exemple of Use 1:</b> There's fire in your eyes, and a burning desire in your soul for that special knowledge \n\
+                    you've been trying to get all of your life. Maybe it's the mastery of advanced mathematics, physics, or chemistry. \n\
+                    Or maybe even getting serious about that amateur astron¬omy interest of yours that-as with that two thousand dollar \n\
+                    telescope you just couldn't live without two years ago-has been relegated to the back of your mind and its counterpart, \n\
+                    your closet. Or perhaps it's something as innocuous as getting that golf game of yours up to par where you want it. \n\
+                    Or maybe it's pushing past an obstacle in attaining a certain psychic or spiritual state through a special meditation \n\
+                    you've only been toying with thus far. Whatever the specifics, the Mercurial forces are prompting you to do something \n\
+                    serious about it on this Wednesday, and you notice that the Hour in which this burning ambition came to you is ruled by Mars, \n\
+                    and hence the energy behind your determination. Flow is down the Tree, from the Mars Hour into the Mercurial Day. \n\
+                    You can feel it surging within you. As you begin to set about get¬ting into that course of study, to meditate, \n\
+                    to grab that golf bag and head out to the course, or grab that telescope and start your trek to the darkest field \n\
+                    you can find, you feel somber. Not sad, but realistic in a fresh and insightful way. You know that all of those past \n\
+                    harebrained attempts at mastering this passion of yours were just insignificant ego-driven games, aimed at appeasing some \n\
+                    impulse that arose from who knows where. As the memory stream of broken self-promises flows smoothly past your mind, you vow \n\
+                    that this time you are not going to let yourself down. And under the aegis of this planetary /Path combination, you won't! \n\
+                    Because now, during this time, and under these particular influences, you realize that mastery means just that: the attainment \n\
+                    of knowledge and skill that far outdis¬tances mere proficiency. \n\
+                    Perhaps the first serious glimmers of wisdom are mak¬ing their way across the now receding ego-generated darkness of your mind. \n\
+                    You are slowly become aware that this effort will take time. It won't be accomplished in a day, a week, a month, or even a year. \n\
+                    Rather, it will require a constant, steady effort. You will have to give up other desires for this time, but you wisely understand \n\
+                    the neces¬sity of this. The going will be rough, as it is in attaining to all new knowledge or acquiring new abilities, but you are \n\
+                    intent on seeing it through this time. And as long as you begin your plan actively under these influences, you will attain that which \n\
+                    you desire. \n\
+                    Along the way, you will gain deep insight into your intellectual motives, thinking processes, and reasoning abilities. Along with \n\
+                    these benefits, don't be surprised to find that you have also acquired an improved memory, a heightened ability to visualize images, \n\
+                    and a clearer mind. Yes, you can put it all down to starting your activity under this Mars-Mercury-23rd Path influence-and you will \n\
+                    be glad you did!\n\
+                    <b>Exemple of Use 2:</b> You've been doing well lately, in all areas of your life, and especially in the financial arena. \n\
+                    Your job is secure despite the economic climate, you've made some investments that have paid off handsomely, and all in all, \n\
+                    you're enjoying your prosperity and the new life it has given you. You feel really good about yourself. Well, almost. \n\
+                    For some odd reason, you discover you have an altruistic component to your character, that out of necessity, you have been suppressing for years. \n\
+                    But now, since you're in a stable position, you are beginning to listen to it and have decided to follow its promptings. \n\
+                    You want to do something meaningful that stands out, even if only in some small way. But this must make a difference in an intellectually \n\
+                    satisfying and emotionally gratifying way, as opposed to just keeping the new drug design department of Eli Lilly & Company burning \n\
+                    their midnight oil in their 'noble' efforts to keep America healthy.\n\
+                    You initially tried to dismiss this desire as a purely ego-driven reaction to your financial success-a type of guilt reaction, \n\
+                    if you will-but it just won't go away. This inner need refuses to dry up and let you enjoy your quarterly dividends from those needless, \n\
+                    nonsensical invest¬ment norms of bigger, faster, more expensive, more of the same insanities that keep this great land of opportunity on themove.\n\
+                    You have been in love with books since you were a kid.\n\
+                    But more than this. You are fascinated by the printing pro¬cess and publishing business, having always considered them to be truly noble: \n\
+                    one of the highest expressions of humankind's activities. A few months ago, you hear about an investment opportunity in a small publishing house. \n\
+                    You investigated it thoroughly. It is old fashioned. Its small mechanical presses, skilled printing professionals, and hardheaded owner \n\
+                    still sew the pages before they put a cover on them. Although they only publish one hundred different titles and add a mere ten more a year \n\
+                    to their list, their reputation has grown over the past twenty-five years they have been in business, and their books sell as fast as \n\
+                    they can print them.\n\
+                    The owner would like to move up to the ranks of a medium-sized press, publishing between two hundred to three hundred books a year, \n\
+                    and adding as many as twenty new titles to his yearly credit. He realizes he will need new some computer aided equipment to do this, \n\
+                    but only so much as is absolutely necessary to make this upward move. He refuses to give in to the computer teckie irrationally driven \n\
+                    point-and-click mentality, and has drafted a business plan that not only keeps the press in the old fashioned mechanical type era, \n\
+                    but maintains a medium-publisher profile permanently.\n\
+                    You like everything about the company but just haven't given it much thought. It's a Wednesday, ruled by Mercury, the planet that governs \n\
+                    such matters so power¬fully, and the hour is ruled by Mars. You're aware of this as the telephone rings. Guess who? It's the owner of that \n\
+                    small publishing firm. \n\
+                    He asks you if you're interested, because he too wants to move on, with or without you. But you and he hit it off very well, and knowing \n\
+                    the hour and the Path influence, you agree, and write him your check for one-fifth ownership.\n\
+                    The result? You will not only be intellectually and emotionally gratified in the extreme by this decision and action, but will make \n\
+                    a handsome profit as well, over time. There won't be any quarterly dividends for awhile, and there will probably be an additional minor sum \n\
+                    you will have to contribute due to a sudden or surprise equipment cost increase. But besides the profit, you'll end up learning something about \n\
+                    the publishing game, because the owner and you will hit it off so well, he'll start to educate you about all ends of the business. \n\
+                    You will also acquire a deep appreciation for craftsmanship, and for the type of people who care about what they do for a living.\n\
+                    The interiorization of this experience will rub off on you, adding to your own further success in your own work. Your love for \n\
+                    the printed word and its manifestation in book form will skyrocket, bestowing an intellectual and emotional satisfaction that is so deep, \n\
+                    it may very well change the way you view yourself and the world around you. All of these things are not simply possible, but well nigh inevitable, \n\
+                    when the influence of the 23rd Path is applied to matters ruled by the joined Mars-Mercury plan¬etary pair.",
+                    23,
+                    12
         ]);
         
         
+        influences.push([   
+                    8,
+                    6,
+                    "Positive",
+                    "<b>Exemple of Use 1: This time, it's a Wednesday. You look at the your Kabbalistic Cycles chart, and see that the hour you wish to get that Sunday-designed plan of yours off the ground is a Sun Hour. That means flow is down the Tree, the Tarot card is upright, and all is well, but is it really? Consider the card's influences again, in both the upright and reversed positions. Unless you want to strug¬gle for a considerable length of time and have a real fight on your hands, and this, after getting more kicks in the teeth than you can count, don't use this Path of the Devil at all. It has its purpose in magical work, but for daily mun¬dane use, I strongly recommend you stay away from it regardless of its flow. It's just too difficult a Path to work with when it comes to normal, daily matters.</b> \n\
+                    <br/><b>Exemple of Use 2:</b> Quite simply, there aren't any for the reasons given above. A void this Path influence and of course, the planetary influences connected by it in this instance. It will bring you nothing but trouble.",
+                    26,
+                    15
+        ]);
+
+        influences.push([   
+                    8,
+                    7,
+                    "Positive",
+                    "As with card XV The Devil and its 26th Path, this 27th Path-and the planetary influ¬ences it connects during its rule-are to be strictly avoided. But unlike the 26th Path, the admonition given here is done so in the strongest possible sense. Anything done during either the upward or even downward flow of the Path governed by The Tower, will bring ruin to you, your work, and your plans. Simply reread the Commentary below, and learn from it. I cannot stress this enough! (Although for myself, I do not consider the Path of the Devil to be as severe in daily matters as those of the Tower and the Chariot, I yet place it here for other occult reasons that cannot be addressed in this book. For the reader's safety and peace of mind, then, I have listed the Tarot card of the Devil along with the Chariot and the Tower, for the rea¬sons just given.) Commentary: Card XVI-along with card VII The Chariot and card XV The Devil-and their Paths, are by far the most difficult and dangerous Paths on the Tree. As you will see when working the Cycles System, their influence is to be watched for carefully at all times, and absolutely avoided if at all possible! ",
+                    27,
+                    16
+        ]);
+        
+        influences.push([   
+                    8,
+                    9,
+                    "Negative",
+                    "<b>Exemple of Use 1:</b> The same as above, but due to one thing or another, you are forced to fill those applications out on a Wednesday, during a Moon Hour. However, flow will be up the Tree, and the 19th Tarot Trump, the Sun, will be in the reversed position, indicating happiness, joy and contentment to a lesser degree, but still, the receipt of your heart's desires. Will you have the same positive experiences as when the flow is down the Tree through this Path during a Mercury Hour and Moon Day? For all intents and purposes-yes! The schools may not fight over recruiting you, but their offers for funding your education and giving you a good stipend will be almost as good as in the previous example. In short, you'll be happy and con¬tent but to a lesser degree. Why is this? Because this 30th Path is the mirror image of the Path of the Tower. That 27th Path which is so hard regardless of the direction of flow, is offset completely by this wondrous, exciting, life¬sustaining and fulfilling connection between Mercury and the Moon. Don't miss out on using it, until your heart's content.\n\
+                    <br/><b>Exemple of Use 2:</b> The same demands are made upon you as above, but this time, whether due to others' scheduling or you being pushed, you have to schedule the meeting on a Wednesday during a Moon Hour and of course, flow is upward on the Tree, from the Hour into the Day. As in the above example, your results will be almost as good. There might be a little reserve at first in imple¬menting your ideas, a snag here, a catch there, but imple-mented they will be, and some 'lesser' reward will be given you as a result. Again, you simply cannot go astray when using the influences of this 30th Path.",
+                    30,
+                    19
+        ]);
+
         //Jupiter Day
         influences.push([   
                     4,
@@ -1219,6 +1518,37 @@ The Head which is not; according to the Sepher Yetzirah, the Admirable of Hidden
                     10
         ]);
 
+        influences.push([   
+                    7,
+                    6,
+                    "Positive",
+                    "<b>Exemple of Use 1:</b> It's a Friday, and the Sun is ruling the hour when you arrive home. Flow is down the Tree and positive. Likewise, the Tarot Trump XIII is in the up¬right position. As you approach the front door, you wish that when you walked inside, your wife, husband, or sig¬nificant other would be happy to see you, throw his or her arms around you, tell you how excited they are to have you all to themselves during the upcoming weekend, and then lay out a set of plans for the two of you that would have you jumping up in the air and clicking your heels. But you know better. The life you have been sharing for these past few years has been anything but happy. Where is the Sun's influence of Life, Light, and growth together, as a couple? Where is that Venus influence of unselfish¬ness, physical lovemaking, and luxury, the two of you shared throughout the first several years of your marriage or relationship? What has happened to all of those good times? As you walk through the door, you see the answer to all of these questions in the form of packed luggage piled neatly in the center of the living room. Before you can take stock of the situation, your partner emerges from the adjoining room, and says, 'It's best this way for both of us. I've had enough, and I think you have too! I'm leaving. My attorney will contact you on Monday, and we can start divorce proceedings,' or similar words depending upon the exact type of relationship the two of you had. Yes, the Sun's influence-so life-giving-and the force of Venus-so nurturing and pleasure seeking-have been scattered by the harsh realities of the 24th Path. You make a fainthearted attempt to stop him or her from leaving, but your former partner just throws a sideways glance at you as if to say, 'Please don't keep this charade up. It's over, and we both know it!' And so you step aside as the taxi pulls up to the front door, the driver puts the luggage into the cab, and you watch the most important part of your life disappear down the driveway, and out of sight. Between the tears, there is a deep, inner sense of relief, but something you just can't handle at the moment. So your let the immediacy of the situation's impact overtake you, and spend the weekend in your own type of hell. You are alone, unable or unwilling to speak to anyone about the shattered thing you now call your life. The months drag on, and your lawyers have been lining their pockets with you and your former partner's hard earned money, and you are still numb inside. A few more months pass, and something has hap¬pened. You've accepted the situation, and as your former partner's glance had conveyed to you, you now realize ending the relationship was the best thing for both of you. You start to live again, although the idea of dating just doesn't quite appeal to you yet. That is, not until that fateful Friday, during a Jupiter Hour with its downward flow, when the 21st Path's influence has you sitting in that restaurant with that self-help book, and that beautiful woman or handsome man approaches you with a few questions about that same book she or he is reading! See how it works? The Path of Death is indeed a hard one, and I am not trying to lighten it by painting some cheap, ego-bolstering rosy picture, painted with the sooth¬ing colors of lies. No, believe it or not, this is how the initial and final effects of this Path work out in the end. Something very good happens as a consequence of the 'death' of some situation or condition. And that something is always a new, life-enhancing experience that brings about magnificent personal growth for the individual. From your own hell to your own purgatory, and finally into your own heaven on earth, is the experience and reward of this Path. Don't fear it. Struggle with it, try to avoid it if you can and if you so choose. But equally, accept it when it strikes unexpectedly, and seems to kill your soul. Accept it because a new day will dawn, and it will once again be filled with the glories of the Sun and the joys of Venus, issuing forth in some unseen, hidden way.\n\
+                    <b>Exemple of Use 2:</b> It's a Friday, and knowing the planetary influence is favorable for succeeding in almost any activity, you decide to open the doors of your new busi¬ness. After all, it's the start of a busy, buying weekend, and you have your new store located in the very heart of the busiest section of the mall! What better time to start such an enterprise! Sure, you decided you're going to open during a Sun Hour. Flow will be down the Tree, the Tarot card will be in the upright position, and the 24th Path of Death will be invoked. Who cares? You have Free Will, remember? All that nonsense of Kabbalistic Cycles you unfortu¬nately read and became so angry over, doesn't mean a damn thing, and you know it! Just some jerk's stupid idea. 'Hell, I don't need any idiot telling me my marketing research and plans are dependent upon some ridiculous planet or Path scheme or whatever it was about anyway! I decide what I do, and take full responsibility for it!' Well, bully for you! because that's just what you must do when the business axe falls, and your new store-right in the center of the busiest section of the mall-fails big time! Oh, you'll scramble, change stock, sales people, give away door prizes and cut your prices to the bone-right before you close the doors and worry about facing the bank loan officer next week to tell him you can't make that business loan payment. Time will pass, and after much agony and soul searching, you'll eventually see something you completely missed before, or be offered to get in on a new venture, and-maybe even using this stupid Kabbalis¬tic Cycles System-will go in for it during a fortunate time. Surprisingly, the money for it will come out of nowhere, the new business will flourish, and after licking your wounds, you'll start making that profit you always dreamed of. Count on the essence of this experience happening, because it will.",
+                    24,
+                    13
+        ]);
+        
+        
+        influences.push([   
+                    7,
+                    8,
+                    "Negative",
+                    "As with card XV The Devil and its 26th Path, this 27th Path-and the planetary influ¬ences it connects during its rule-are to be strictly avoided. But unlike the 26th Path, the admonition given here is done so in the strongest possible sense. Anything done during either the upward or even downward flow of the Path governed by The Tower, will bring ruin to you, your work, and your plans. Simply reread the Commentary below, and learn from it. I cannot stress this enough! (Although for myself, I do not consider the Path of the Devil to be as severe in daily matters as those of the Tower and the Chariot, I yet place it here for other occult reasons that cannot be addressed in this book. For the reader's safety and peace of mind, then, I have listed the Tarot card of the Devil along with the Chariot and the Tower, for the rea¬sons just given.) Commentary: Card XVI-along with card VII The Chariot and card XV The Devil-and their Paths, are by far the most difficult and dangerous Paths on the Tree. As you will see when working the Cycles System, their influence is to be watched for carefully at all times, and absolutely avoided if at all possible! ",
+                    27,
+                    16
+        ]);
+        
+        influences.push([   
+                    7,
+                    9,
+                    "Negative",
+                    "<b>Exemple of Use 1:</b> Now, if that same aspiring busi¬nessman would have opened that business of his on a Friday during a Moon Hour, in which flow is upward on the Tree, to say that his happy expectations and joyful ex¬pectancies will soon be disappointed, would be to make an understatement. No matter how hard he tries, regardless of stocking his new store with the exact same merchandise as he did above, and which appeals to women, or contains a line of art and literary books, or items of pure luxury and extravagance, his venture will fail abysmally. The upward flow of this Path is very severe in its pronouncements. Additionally, one should use extreme care when deciding to simply be out and about for social reasons during this influence. It is extremely negative for indulging in any social matters whatsoever.\n\
+                    <br/><b>Exemple of Use 2:</b> It's a Friday, the hour of which is ruled by the Moon. Nevertheless, you can't really believe all the cycles stuff, and you ask her the big question. Sur¬prise! She accepts! See? All of that running the important affairs of your life by some insane idea some author cooked up to rationalize away his own life is just that: a bunch of nonsense, and you just proved it. The scene fades, and somewhere between the end of your first year to the middle of your third year of marriage, you're looking for a good divorce lawyer to protect you as much as possible, while trying to figure out how you will pay the child support and 'temporary' alimony, and keep body and soul together. Is this really possible? Are there such forces out there that can-that did!-effect your life so drastically simply because you ignored the times of their influence? Guess it's time to fall back on your Free Will rationalization, and think it through for yourself. After all, you'll have plenty of time, sitting alone in that one-room efficiency apartment. You certainly won't have any money to be out and about now, not with all that child support and 'temporary' alimony to pay.",
+                    28,
+                    17
+        ]);
+        
+        
         //Saturne Day
         influences.push([   
                     3,
