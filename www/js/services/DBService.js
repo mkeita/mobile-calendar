@@ -57,6 +57,7 @@
                             "number INTEGER NOT NULL, " + 
                             "primary_title VARCHAR(100), " +
                             "other_titles TEXT, " +
+                            "astrological_attribution VARCHAR(100), "+
                             "intelligible_qualities TEXT, " +
                             "human_experience TEXT, " +
                             "sensible_qualities TEXT, " +
@@ -84,7 +85,7 @@
                     "sephirah_1 INTEGER NOT NULL, " + 
                     "sephirah_2 INTEGER NOT NULL, " + 
                     "name VARCHAR(100) NOT NULL, " +
-                    "alphabet_position INTEGER, " +
+                    "alphabet_position VARCHAR(100), " +
                     "symbolic_meaning TEXT, " +
                     "occult_concept TEXT, " +
                     "attribute TEXT, " +
@@ -535,7 +536,7 @@ The Head which is not; according to the Sepher Yetzirah, the Admirable of Hidden
         
         
         //Here just put the data hardcoded..
-        var name,number,primary_title,other_titles,intelligible_qualities,
+        var name,number,primary_title,other_titles,astrological_attribution,intelligible_qualities,
                 human_experience,sensible_qualities,color_tree, color_scale,
                 elemental_attribution,polarity,tarot_card,commentary;
         
@@ -546,22 +547,23 @@ The Head which is not; according to the Sepher Yetzirah, the Admirable of Hidden
                 number = sephiroh[i][1];
                 primary_title = sephiroh[i][2];
                 other_titles = sephiroh[i][3];
-                intelligible_qualities = sephiroh[i][4];
-                human_experience = sephiroh[i][5];
-                sensible_qualities = sephiroh[i][6];
-                color_tree = sephiroh[i][7];
-                color_scale = sephiroh[i][8];
-                elemental_attribution = sephiroh[i][9];
-                polarity = sephiroh[i][10];
-                tarot_card = sephiroh[i][11];
-                commentary = sephiroh[i][12];
+                astrological_attribution = sephiroh[i][4];
+                intelligible_qualities = sephiroh[i][5];
+                human_experience = sephiroh[i][6];
+                sensible_qualities = sephiroh[i][7];
+                color_tree = sephiroh[i][8];
+                color_scale = sephiroh[i][9];
+                elemental_attribution = sephiroh[i][10];
+                polarity = sephiroh[i][11];
+                tarot_card = sephiroh[i][12];
+                commentary = sephiroh[i][13];
                 
-                var sql = "INSERT INTO sephirah (name, number,primary_title,other_titles,"+
+                var sql = "INSERT INTO sephirah (name, number,primary_title,other_titles,astrological_attribution,"+
                         "intelligible_qualities,human_experience,sensible_qualities,"+
                         "color_tree,color_scale,elemental_attribution,polarity,tarot_card,commentary"+
-                        ") VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)";
+                        ") VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
                 transaction.executeSql (sql, [name,number,primary_title,
-                                                other_titles,intelligible_qualities,
+                                                other_titles,astrological_attribution,intelligible_qualities,
                                                 human_experience,sensible_qualities,color_tree,
                                                 color_scale,elemental_attribution,polarity,tarot_card,commentary],ok, error);
             }                    
@@ -573,8 +575,8 @@ The Head which is not; according to the Sepher Yetzirah, the Admirable of Hidden
         path.push([11,
                     1,
                     2,
-                    "Aleph(A), meaning, the head of an Ox.",
-                    1,
+                    "Aleph (Hebrew letter, 'A'), meaning, the head of an Ox.",
+                    "1",
                     "The Scintillating Intelligence",
                     "the primeval movement of the Great, Creative Breath, spinning the chaos from the moment of Creation \n\
                     into a creative core.",
@@ -582,62 +584,237 @@ The Head which is not; according to the Sepher Yetzirah, the Admirable of Hidden
                     "Tarot Trump, Zero (O)-- The Fool"
                 ]);
                 
+
         path.push([12,
                     1,
                     3,
                     "Beth (B), meaning, House.",
-                    2,
+                    "2",
                     "The Transparent Intelligence",
-                    "the combined natures of the Sephiroth Chokmah and Hod are reflected by this Path. \n\
-                    Their properties are Mercurial, here, in an alchemical sense of Universal Mercury, \n\
-                    as hinted at in the section Hod. That is, due to the higher octave of this Path, \n\
-                    the Mercurial nature expressed herer is more in line with the Intelligible Quality found \n\
-                    in  the Mercury of the Philosophers, which can be reached through the higher aspects of \n\
-                    the Sensible Qualities of Hod; Initiated working in the realms of Philosophic and Laboratory \n\
-                    Alchemy. This Mercurial Principe is therefore that living ever-changing Principe of cohesive \n\
-                    force that holds all of Creation together, from the subtlest of matter to its most material form.",
+                    "the combined natures of the Sephiroth Chokmah and Hod are reflected by this Path. Their properties are Mercurial, here, in an alchemical sense of Universal Mercury, as hinted at in the section Hod. That is, due to the higher octave of this Path, the Mercurial nature expressed herer is more in line with the Intelligible Quality found in  the Mercury of the Philosophers, which can be reached through the higher aspects of the Sensible Qualities of Hod; Initiated working in the realms of Philosophic and Laboratory Alchemy. This Mercurial Principe is therefore that living ever-changing Principe of cohesive force that holds all of Creation together, from the subtlest of matter to its most material form.",
                     "the planet, Mercury, nut with the understanding given above.",
                     "Tarot Trump, One(I) --- The Magician."
                 ]);
 
+        path.push([13,
+                    1,
+                    6,
+                    "Gimel (Hebrew letter, 'G'), meaning Camel.",
+                    "3",
+                    "The Uniting Intelligence.",
+                    "The portal of entry into an Inner Magical Sanctum or College of the Masters, as understood by advanced practi¬tioners of Magic",
+                    "the 'planet' Moon",
+                    "Tarot Trump, Two (II)¬The High Priestess. "
+                ]);
 
+        path.push([14,
+                    2,
+                    3,
+                    "Daleth (Hebrew letter 'D'), meaning, Door.",
+                    "4",
+                    "The Luminous Intelligence",
+                    "The force by which opposites are attracted to each other. Due to the Basal Attribute assigned to rhis Path, the implication is one of Love, although in a higher aspect. In this instance, a Love whose end result of uniting the oppo¬sites, produces a mystical creation and experience through the act of union",
+                    "the planet, Venus",
+                    "Tarot Trump, Three (III)¬The Empress."
+                ]);
 
+        path.push([15,
+                    2,
+                    6,
+                    "Heh (Hebrew letter 'H'), meaning, Window",
+                    "5",
+                    "The Constituting Intelligence.",
+                    "Although many martial characteristics are applied to this Path due to its Basal Attribution, the higher aspect of this Path is of more interest and use to us here. This Path is associated with the alchemical Principle of the Sulphur, itself a fire related concept exhibiting energy, and the pene¬trative dynamics of the mind, the mental dynamics being equally fiery when used properly. Why this latter corre¬spondence? Because to those initiated into Alchemy, the alchemical Sulphur possesses a physical vehicle, the exact nature of which depends upon which of the Three King¬doms of Nature from which it is extracted. It is this vehicle which embodies and actually contains the consciousness of the substance being worked upon alchemically. ",
+                    "the Zodiacal Sign of Aries",
+                    "Tarot Trump, Four (IV)-The Emperor"
+                ]);
+
+        path.push([16,
+                    2,
+                    4,
+                    "Vav (Hebrew letter 'V'), meaning, a Nail",
+                    "6",
+                    "The Son of Tetragrammaton",
+                    "In its higher aspects, this Path is symbolic of the act of Redemp¬tion, and the Joy that issues from that redemption..",
+                    "the Zodiacal Sign of Taurus",
+                    "Tarot Trump, Five (V)-The Hierophant"
+                ]);
+                
         path.push([17,
                     3,
                     6,
-                    "Beth (B), meaning, House.",
-                    2,
-                    "The Transparent Intelligence",
-                    "the combined natures of the Sephiroth Chokmah and Hod are reflected by this Path. \n\
-                    Their properties are Mercurial, here, in an alchemical sense of Universal Mercury, \n\
-                    as hinted at in the section Hod. That is, due to the higher octave of this Path, \n\
-                    the Mercurial nature expressed herer is more in line with the Intelligible Quality found \n\
-                    in  the Mercury of the Philosophers, which can be reached through the higher aspects of \n\
-                    the Sensible Qualities of Hod; Initiated working in the realms of Philosophic and Laboratory \n\
-                    Alchemy. This Mercurial Principe is therefore that living ever-changing Principe of cohesive \n\
-                    force that holds all of Creation together, from the subtlest of matter to its most material form.",
-                    "the planet, Mercury, nut with the understanding given above.",
-                    "Tarot Trump, One(I) --- The Magician."
+                    "Zayin (Hebrew letter 'Z'), meaning, Sword",
+                    "7",
+                    "The Disposing Intelligence",
+                    "Again, in its higher aspects, this Path is symbolic of the Primal Force behind all of the fabricating and forging forces within Nature, and is symbolic of the depths of the consciousness of Nature itself.",
+                    "The Zodiacal Sign of Gemini.",
+                    "Tarot Trump Six (VI)-The Lovers"
                 ]);
 
         path.push([18,
                     3,
                     5,
-                    "Beth (B), meaning, House.",
-                    2,
-                    "The Transparent Intelligence",
-                    "the combined natures of the Sephiroth Chokmah and Hod are reflected by this Path. \n\
-                    Their properties are Mercurial, here, in an alchemical sense of Universal Mercury, \n\
-                    as hinted at in the section Hod. That is, due to the higher octave of this Path, \n\
-                    the Mercurial nature expressed herer is more in line with the Intelligible Quality found \n\
-                    in  the Mercury of the Philosophers, which can be reached through the higher aspects of \n\
-                    the Sensible Qualities of Hod; Initiated working in the realms of Philosophic and Laboratory \n\
-                    Alchemy. This Mercurial Principe is therefore that living ever-changing Principe of cohesive \n\
-                    force that holds all of Creation together, from the subtlest of matter to its most material form.",
-                    "the planet, Mercury, nut with the understanding given above.",
-                    "Tarot Trump, One(I) --- The Magician."
+                    "Cheth, pronounced using the guttural 'Ck' sound made in pronouncing the word 'rock' (Hebrew letter 'CH'), meaning, Fence",
+                    "8",
+                    "The House of Influence",
+                    "The process by which accomplishing the Great Work itself. Also the Work, Devotion, Dedication, Com¬prehension and Understanding, by which one comes to grasp the reality of Kether, through the Accomplishment Kabbalistic Cycles and the Mastery of Life of the Great Work. Occult Concept of Path: the first step of the process in the Attainment of the Great Work, which is the Attainment of the Knowledge and Conversation (K&C) of the Holy Guardian Angel (HGA).",
+                    "the Zodiacal Sign of Cancer.",
+                    "Tarot Trump Seven (VII)-The Chariot."
                 ]);
 
+        path.push([19,
+                    4,
+                    5,
+                    "Teth (Hebrew letter 'T'), meaning, Serpent",
+                    "9",
+                    "I refer to this Path as 'The Alternate Path,' uniting the opposites of the male potency of Chesed, with the female potency of Geburah; the Path joining the opposites of Mercy and Severity, as shown by the Chesedian-place¬ment on the Pillar of Mercy, and the Geburahian-situated Sephirah on the Pillar of Severity.",
+                    "Although the Serpent is assigned to this Path due to its association with Teth, the Lion is also a corollary of this connecting pathway between Chesed and Geburah. In the higher aspects of this Path's meaning, it is the Lion which is of interest here, having a very special meaning in Alchemy: the production of-at first a menstrum-termed the 'Green Lion,' from which the Stone of the Wise is eventually produced. By allegory, it also has implication for that psycho-spiritual process of self-transformation through which the 'lead' of Man's lower nature is trans¬muted and united with the Higher Nature that dwells within the deepest recesses of the Self. ",
+                    "the Zodiacal Sign of Leo.",
+                    "Tarot Trump, Eight (VIII)-Strength"
+                ]);
+
+        path.push([20,
+                    4,
+                    6,
+                    "Yod (Hebrew letters 'I', 'Y'), meaning, a Hand, but with the index finger pointing, and the other fingers closed, forming a Fist, which is also the meaning of this Path",
+                    "10",
+                    "'The Forceful Intelligence' as I term this Path, owing to the nature of its higher meaning, as given in the Occult Concept",
+                    "The movement of the One Consciousness through which the forces of the universe have been set in motion.",
+                    "the Zodiacal Sign of Virgo",
+                    "Nine (IX)-The Hermit"
+                ]);
+
+        path.push([21,
+                    4,
+                    7,
+                    "Kaph (Hebrew letter 'K'), meaning, a cupped hand, or spoon.",
+                    "11(20)",
+                    "The Conciliatory Intelligence",
+                    "With its higher aspects through its Intelligible Quality of the pure, expansive, open nature of Chesed to its Sensible Jupiteranean influ¬ence which is eventually united or conciliated with the Intelligible Quality of Netzach, being the Vision of Beauty, it is then expressed in the World of Malkuth through the Venusian Sensible Quality of Love. In effect, a conciliation occurs between the Sensible Qualities projected by the planetary attributions of these two Sephiroth into the lower worlds. Yet, this same act of conciliation also occurs between the higher aspects of these two Sephiroth. What we have as a result of this conciliatory act is a balance between the Intelligible and Sensible Qualities of these spheres, each on their own plane, yet complementing each other on their respective planes of existence through the nature of this Path",
+                    "the planet, Jupiter.",
+                    "Tarot Trump, Ten (X)¬The Wheel of Fortune."
+                ]);
+
+        path.push([22,
+                    5,
+                    6,
+                    "Lamed (Hebrew letter 'L'), meaning, a Whip",
+                    "12(30)",
+                    "The Faithful Intelligence",
+                    "This Path has a combined meaning, much as did Kaph. Here we find the higher aspects of balance, justice, equity, and law, but ruling not only in the higher realms, but dispensing its lawful decrees in the world of Men through action/reaction. In this way, the Path exerts a leveling influence on the actions of mankind through a cause/effect relationship. The results stemming directly from those actions are thus brought about without regard to emotional appeal, social convention, or excuse.",
+                    "the Zodiacal Sign of Libra.",
+                    "Tarot Trump, Eleven (XI)-Justice"
+                ]);
+
+        path.push([23,
+                    5,
+                    8,
+                    "Mem (Hebrew letter 'M'), meaning, Water",
+                    "13(40)",
+                    "The Stable Intelligence",
+                    "The higher aspects of this Path refers to Mankind in a state of sin, unredeemed, but possessing that spiritual nature which will lead him to his ultimate Salvation.",
+                    "the Element, Water.",
+                    "Tarot Trump, Twelve (XII)-The Hanged Man."
+                ]);
+
+        path.push([24,
+                    6,
+                    7,
+                    "Nun (Hebrew letter 'N'), meaning, Fish",
+                    "14(50)",
+                    "The Imaginative Intelligence",
+                    "The higher aspects of this Path have a two¬fold attribution. The first is reflective of the alchemical process of Putrefaction that leads to the stage of Regenera¬tion. In this case, reference is made to the Work on the Stone of the Wise. Through this process, the former physi¬cal, putrefied base material is exalted through a spiritual unfoldment and psychic development on the part of the alchemist, eventually leading to the physical manifestation of the Philosophic Substance in the laboratory. This is a highly elevated activity of the Sensible Qualities of this Path. It is this laboratory operation that combines the unfoldment of the alchemist with the 'first part' of the laboratory alchemical act-using the 'First Trinity Process' as I term it-of Maceration, Digestion, and Cohoba¬tion, to produce the Black Dragon. This seemingly dead substance is then used to produce the Philosophic Sub¬stance through the 'Second Trinity Process' of Separation, Purification, and Cohobation. The second meaning of this Path is its reference to the spiritual process which mirrors the laboratory process exactly: The Dark Night of the Soul, a time in which the individual undergoes the stages of Separation, Purification, and Cohobation, but within his or her own nature, so that the Light of the Spirit within them becomes manifest throughout their entire nature: physical, psychic, and spiritual.",
+                    "the Zodiacal Sign of Scorpio.",
+                    "Tarot Trump, Thirteen (XIII)-Death. "
+                ]);
+
+        path.push([25,
+                    6,
+                    9,
+                    "Samech (Hebrew letter 'S'), meaning, Prop.",
+                    "15(60)",
+                    "The Tentative Intelligence",
+                    "Once again, in its higher aspect, the individual's ascent to the Holy Guardian Angel is implied by this Path. Notice the 'upward' movement from Yesod into Tiphareth: the latter being the realm of the HGA. The ascent is thereby through the world of Yesod, the foundation for all magic that is to have an effect in the world of Malkuth (See entry under Yesod in the section on the Sephiroth.) Yesod also takes the correspondence of the unconscious mind, that gateway leading to the realm of ritual and ceremonial magic, and through them, upward toward the HGA.",
+                    "the Zodiacal Sign of Sagittarius.",
+                    "Tarot Trump, Fourteen (XIV)-Temperance."
+                ]);
+
+        path.push([26,
+                    6,
+                    8,
+                    "Ayin (Hebrew letter, 'O' (nasal), meaning, an Eye.",
+                    "16(70)",
+                    "The Renovating Intelligence",
+                    "The higher aspect of this Path is indicative of that creative, innate spiritual power of God existing within the individual. If this God-power actually manifests itself within the individual, that person becomes as a semi-divine being, partaking of both the nature of a man and a God. He or she knows their True Will, is exalted thereby, and begins the arduous process of liberating the world through the exercise of that True Will in the world of mankind.",
+                    "the Zodiacal Sign of Capricorn.",
+                    "Tarot Trump, Fifteen (XV)-The Devil."
+                ]);
+
+        path.push([27,
+                    7,
+                    8,
+                    "Peh (Hebrew letter 'P'), meaning, Mouth.",
+                    "17(80)",
+                    "The Exciting Intelligence",
+                    "This Path exhibits the correspondence of Mars by virtue of its Basal Attribute, and consequently of the Sephirah Geburah in general, but in a more mundane manner. That is, it represents raw force, which although destructive in nature, yet has an implication in terms of a higher aspect in that it leads to a position of exalted spiri¬tual, psychic and magical power, by he or she who sur¬vives the test of its raw, destructive force. Additionally, in a purely mystical sense, it endows every being in existence with spirit and movement, thereby giving motion to all life. ",
+                    "The planet Mars.",
+                    "Tarot Trump, Sixteen (XVI)-The Tower."
+                ]);
+
+        path.push([28,
+                    7,
+                    9,
+                    "Tzaddi (Hebrew letters 'Ts' or 'Tz'), mean¬ing, a Hook, or a Fish Hook.",
+                    "18(90)",
+                    "The Natural Intelligence.",
+                    "The feminine aspects of both the Moon and Venus which correspond to the two Sephiroth so joined by this Path, indicate the fem¬inine nature of this Path as well. Through its creative im¬pulses of this Path, Creation throughout the natural world is perfected and made whole.",
+                    "the Zodiacal Sign of Aquarius, though an Air Sign, is attributed to this Path, owing to its Water-Bearer symbology.",
+                    "Tarot Trump, Seventeen (XVII)-The Star."
+                ]);
+
+        path.push([29,
+                    7,
+                    10,
+                    "Qoph (Hebrew letter 'Q'), meaning, the Back of the Head.",
+                    "19(100)",
+                    "The Corporeal Intelligence.",
+                    "While there are a host of attributions and correspondences assigned to this Path, none of them truly explain its nature. My own metaphysical and magical investigations of this Path have shown it to be a type of channel in the Astral Light through which those spiritual, psychic, and material desires and wants of the individual are made manifest. Specifically, I am referring to those magical acts that are intended to produce an effect in the physical world. It does not matter what Sephirah the magician may be working with-the role of Yesod as the foundation for all manifes¬tations of metaphysical, mystical, and magical work being taken into account, of course-it nevertheless appears that this Path is invoked automatically in translating those manifestations into physical form. It is a very powerful Path in this regard, and one that is all too often overlooked in magical work in particular, and in occult work in gen-eral. The meanings of the two Sephiroth involved, and this Path's effects, should be carefully studied by the modern occult and magical practitioner. ",
+                    "the negative, or feminine, polarity: watery, Zodiacal Sign Pisces.",
+                    "Tarot Trump, Eighteen (XVIII)-The Moon. (Notice the watery, female, creative aspects of the card in reference to the Occult Concept of the Path. Also, the reader would do well to consider the Lunar nature of this card as being the Planetary Attribution of Y esod, and the characteristic of this Path as a channel for material manifestation, as explained above.)"
+                ]);
+
+        path.push([30,
+                    8,
+                    9,
+                    "Resh (Hebrew letter 'R'), meaning, a Head",
+                    "20(200)",
+                    "The Collecting Intelligence",
+                    "All of the attributions of this Path are strictly solar. As such, they refer to the attributes and correspondences assigned to the Sephirah Tiphareth, and to its Sensible Qualities produced and governed by the Sun. It is therefore a Path that 'collects' the attributes of the Sun such as Light, Life, Love, and Growth of every type, as well as the attributes of Hod, and combines them with foundational characteristics of Yesod discussed earlier in preparation for bringing them down into Malkuth through the Thirty-Second Path. This part of the process of manifes¬tation in Malkuth-here, through Path 30-occurs in a masculine, fiery, and dynamic way, owing to the solar forces involved, as contrasted to the watery, passive, fem¬inine process used by the Path 28, Tzaddi (the Feminine, Passive nature of the Pillar of Severity of which Hod is a part notwithstanding.)",
+                    "the First Planet of the Ancients, the Sun.",
+                    "Tarot Trump, Nineteen (XIX)-The Sun."
+                ]);
+
+        path.push([31,
+                    8,
+                    10,
+                    "Shin (Hebrew letter 'Sh'), meaning a Tooth.",
+                    "21(300)",
+                    "The Perpetual Intelligence",
+                    "The fiery descent of Divine Wisdom and the dedication to live that state in the world of mankind. An example which conveys the princi¬ples behind such an awakening is found in the descent of the Holy Ghost upon the Apostles, enlightening them, and bringing about the resolve within each of them necessary to take the teachings of the Divine Christ to the people of the world, amidst the hostile Roman and Pagan forces that pressed upon them from every side. Recall also the Occult Concept of Path 30 as well, and its implication in this Hod¬to-Yesod and Hod-to-Malkuth connection.",
+                    "the Element, Fire.",
+                    "Tarot Trump, Twenty (XX)-The Last Judgment."
+                ]);
+
+        path.push([32,
+                    9,
+                    10,
+                    "Tav (Hebrew letter 'T'), meaning, a Cross, and specifically a three-armed cross. That is, a cross shaped as the letter 'T.'",
+                    "22(400)",
+                    "The Administrative Intelligence",
+                    "Besides the implication of the purpose of this 32nd Path given in the discussion for Path 30, Path 32 possesses a bittersweet characteristic, but only owing to the 'higher¬minded' of the Kabbalists who translated such a bitter¬sweet necessity as 'evil.' This 32nd Path is that portal or channel which allows the coarsest matter of the Astral Plane to enter the world of Malkuth, while also represent¬ing all existing intelligences throughout Creation at the same time. My personal experience of this Path has shown it to be, in reality, the Path that governs the mechanics of physical existence, which can be pointedly summed up as providing a common plane for the existence and expres¬sion of both good and evil, all at the same time. Thus, it is a stage wherein the drama of daily material, psychic, and spiritual life unfolds, grows, expands, interacts, and devel¬ops, with each of these facets of Creation set up according to its own rules and laws. ",
+                    "The planet, Saturn",
+                    "Tarot Trump, Twenty-One (XXI)-The World."
+                ]);
 
 
        var number,sephirah_1,sephirah_2,name,alphabet_position,
@@ -1388,7 +1565,7 @@ The Head which is not; according to the Sepher Yetzirah, the Admirable of Hidden
         influences.push([   
                     4,
                     6,
-                    "Positive",
+                    "Negative",
                     "<b>Exemple of Use 1:</b> You have been looking for a chance to get in on the ground floor of a new business, or jump \n\
                     to a new position in your firm, or go off on your own and found your own company. Or maybe you have an opportunity \n\
                     to unload that old building or acre of ground that has been in your family for generations, and is now yours to do with \n\
@@ -1694,10 +1871,7 @@ The Head which is not; according to the Sepher Yetzirah, the Admirable of Hidden
         return;
     };
     
-    DBService.prototype.updateInfluence = function (daySephirah, hourSephirah, callback){
-        jQuery('#influence').html("");
-                
-                
+    DBService.prototype.getInfluence = function (daySephirah, hourSephirah, callback){                
         console.log(daySephirah + " --- " + hourSephirah);     
         this.db.transaction (function (transaction) 
         {
@@ -1713,7 +1887,57 @@ The Head which is not; according to the Sepher Yetzirah, the Admirable of Hidden
         });
         return;
     };
-        
+    
+    DBService.prototype.getTarot = function (path, callback){                
+
+        this.db.transaction (function (transaction) 
+        {
+            var sql = "SELECT * FROM tarots WHERE path=?";
+
+            transaction.executeSql (sql, [path],
+            function(transaction, result){
+                if (result.rows.length){
+                    var tarot = result.rows.item(0);
+                    callback(tarot);
+                }
+            }, error);
+        });
+        return;
+    };
+    
+    DBService.prototype.getPath = function (pathNumber, callback){                
+
+        this.db.transaction (function (transaction) 
+        {
+            var sql = "SELECT * FROM path WHERE number=?";
+
+            transaction.executeSql (sql, [pathNumber],
+            function(transaction, result){
+                if (result.rows.length){
+                    var path = result.rows.item(0);
+                    callback(path);
+                }
+            }, error);
+        });
+        return;
+    };
+    
+    DBService.prototype.getSephirah = function (sephirahNumber, callback){                
+
+        this.db.transaction (function (transaction) 
+        {
+            var sql = "SELECT * FROM sephirah WHERE number=?";
+
+            transaction.executeSql (sql, [sephirahNumber],
+            function(transaction, result){
+                if (result.rows.length){
+                    var sephirah = result.rows.item(0);
+                    callback(sephirah);
+                }
+            }, error);
+        });
+        return;
+    };
     
     // export as AMD module / Node module / browser variable
     if (typeof define === 'function' && define.amd) define(DBService);

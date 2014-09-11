@@ -166,8 +166,65 @@ function refresh() {
     hourSepheroth["Venus"]=7;
     hourSepheroth["Saturn"]=3;
     
-    db.updateInfluence(daySephiroth[calculationDay],hourSepheroth[hourSephirahRuler],function(influence){
-      jQuery('#exemples_content').html('<b>'+influence.polarity+'</b><br/>'+influence.description); 
+    jQuery('#influence').html("");
+    jQuery('#tarot_content').html("");
+    jQuery('#path_content').html("");
+    jQuery('#hour_sephirah_content').html("");
+    jQuery('#day_sephirah_content').html("");
+    
+    var daySephirah = daySephiroth[calculationDay];
+    var hourSephirah = hourSepheroth[hourSephirahRuler];
+    
+    db.getInfluence(daySephirah,hourSephirah,function(influence){
+      jQuery('#exemples_content').html('<b>'+influence.polarity+'</b><br/>'+influence.description);
+      
+      db.getTarot(influence.path,function(tarot){
+        jQuery('#tarot_content').append('<tr><td>Name : </td><td>'+tarot.name+'</td></tr>');
+        jQuery('#tarot_content').append('<tr><td>Sensible meaning upward : </td><td>'+tarot.sensible_meaning_upward+'</td></tr>');
+        jQuery('#tarot_content').append('<tr><td>Sensible meaning reversed : </td><td>'+tarot.sensible_meaning_reversed+'</td></tr>');
+        jQuery('#tarot_content').append('<tr><td>Commentary : </td><td>'+tarot.commentary+'</td></tr>');
+      });
+      
+      db.getPath(influence.path,function(path){
+        jQuery('#path_content').append('<tr><td>Number : </td><td>'+path.number+'</td></tr>');
+        jQuery('#path_content').append('<tr><td>Name : </td><td>'+path.name+'</td></tr>');
+        jQuery('#path_content').append('<tr><td>Symbolic meaning : </td><td>'+path.symbolic_meaning+'</td></tr>');
+        jQuery('#path_content').append('<tr><td>Occult Concept : </td><td>'+path.occult_concept+'</td></tr>');
+        jQuery('#path_content').append('<tr><td>Attribute : </td><td>'+path.attribute+'</td></tr>');
+        jQuery('#path_content').append('<tr><td>Tarot : </td><td>'+path.tarot_attribution+'</td></tr>');
+      });
+      
+      db.getSephirah(hourSephirah,function(sephirah){
+        jQuery('#hour_sephirah_content').append('<tr><td>Number : </td><td>'+sephirah.number+'</td></tr>');
+        jQuery('#hour_sephirah_content').append('<tr><td>Name : </td><td>'+sephirah.name+'</td></tr>');
+        jQuery('#hour_sephirah_content').append('<tr><td>Primary Title : </td><td>'+sephirah.primary_title+'</td></tr>');
+        jQuery('#hour_sephirah_content').append('<tr><td>Other Titles: </td><td>'+sephirah.other_titles+'</td></tr>');
+        jQuery('#hour_sephirah_content').append('<tr><td>Intelligible Qualities : </td><td>'+sephirah.intelligible_qualities+'</td></tr>');
+        jQuery('#hour_sephirah_content').append('<tr><td>Human Experience : </td><td>'+sephirah.human_experience+'</td></tr>');
+        jQuery('#hour_sephirah_content').append('<tr><td>Sensible Qualities : </td><td>'+sephirah.sensible_qualities+'</td></tr>');
+        jQuery('#hour_sephirah_content').append('<tr><td>Color Tree : </td><td>'+sephirah.color_tree+'</td></tr>');
+        jQuery('#hour_sephirah_content').append('<tr><td>Color Scale : </td><td>'+sephirah.color_scale+'</td></tr>');
+        jQuery('#hour_sephirah_content').append('<tr><td>Elemental Attribution : </td><td>'+sephirah.elemental_attribution+'</td></tr>');
+        jQuery('#hour_sephirah_content').append('<tr><td>Polarity : </td><td>'+sephirah.polarity+'</td></tr>');
+        jQuery('#hour_sephirah_content').append('<tr><td>Tarot Card : </td><td>'+sephirah.tarot_card+'</td></tr>');
+        jQuery('#hour_sephirah_content').append('<tr><td>Commentary : </td><td>'+sephirah.commentary+'</td></tr>');
+      });
+      
+      db.getSephirah(daySephirah,function(sephirah){
+        jQuery('#day_sephirah_content').append('<tr><td>Number : </td><td>'+sephirah.number+'</td></tr>');
+        jQuery('#day_sephirah_content').append('<tr><td>Name : </td><td>'+sephirah.name+'</td></tr>');
+        jQuery('#day_sephirah_content').append('<tr><td>Primary Title : </td><td>'+sephirah.primary_title+'</td></tr>');
+        jQuery('#day_sephirah_content').append('<tr><td>Other Titles: </td><td>'+sephirah.other_titles+'</td></tr>');
+        jQuery('#day_sephirah_content').append('<tr><td>Intelligible Qualities : </td><td>'+sephirah.intelligible_qualities+'</td></tr>');
+        jQuery('#day_sephirah_content').append('<tr><td>Human Experience : </td><td>'+sephirah.human_experience+'</td></tr>');
+        jQuery('#day_sephirah_content').append('<tr><td>Sensible Qualities : </td><td>'+sephirah.sensible_qualities+'</td></tr>');
+        jQuery('#day_sephirah_content').append('<tr><td>Color Tree : </td><td>'+sephirah.color_tree+'</td></tr>');
+        jQuery('#day_sephirah_content').append('<tr><td>Color Scale : </td><td>'+sephirah.color_scale+'</td></tr>');
+        jQuery('#day_sephirah_content').append('<tr><td>Elemental Attribution : </td><td>'+sephirah.elemental_attribution+'</td></tr>');
+        jQuery('#day_sephirah_content').append('<tr><td>Polarity : </td><td>'+sephirah.polarity+'</td></tr>');
+        jQuery('#day_sephirah_content').append('<tr><td>Tarot Card : </td><td>'+sephirah.tarot_card+'</td></tr>');
+        jQuery('#day_sephirah_content').append('<tr><td>Commentary : </td><td>'+sephirah.commentary+'</td></tr>');
+      });
     });
     
     
