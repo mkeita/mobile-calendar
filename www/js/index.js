@@ -41,7 +41,25 @@ jQuery(document).ready(function() {
         
 });
 
+function goToInfluence(event){
+    // Prevent the usual navigation behavior
+        //event.preventDefault();
+        // Get the filename of the next page. We stored that in the data-next
+        // attribute in the original markup.
+        jQuery.mobile.navigate("#influences");
+}
+
+function goToMainPage(event){
+       // Prevent the usual navigation behavior
+       //event.preventDefault();
+       jQuery.mobile.navigate("#main_page");
+}
+
 function onDeviceReady() {
+    
+    jQuery('#main_page').on('swipeleft',goToInfluence);     
+    jQuery('#influences').on('swiperight',goToMainPage);
+
     
     var db = new DBService(true);
    
@@ -309,27 +327,27 @@ function showAbout() {
 }
 
 // Navigate to the next page on swipeleft
-jQuery(document).on( "swipeleft", ".ui-page", function( event ) {
-
-    // Prevent the usual navigation behavior
-    event.preventDefault();
-
-    // Get the filename of the next page. We stored that in the data-next
-    // attribute in the original markup.
-    var next = jQuery( this ).jqmData( "next" );
-
-    jQuery.mobile.navigate("#"+next);
-
-});
+//jQuery(document).on( "swipeleft", ".ui-page", function( event ) {
+//
+//    // Prevent the usual navigation behavior
+//    event.preventDefault();
+//
+//    // Get the filename of the next page. We stored that in the data-next
+//    // attribute in the original markup.
+//    var next = jQuery( this ).jqmData( "next" );
+//
+//    jQuery.mobile.navigate("#"+next);
+//
+//});
 
 // The same for the navigating to the previous page
-jQuery( document ).on( "swiperight", ".ui-page", function( event ) {
-
-     // Prevent the usual navigation behavior
-    event.preventDefault();
-    var prev = jQuery( this ).jqmData( "prev" );
-
-    jQuery.mobile.navigate("#"+prev);
-
-});
+//jQuery(document).on( "swiperight", ".ui-page", function( event ) {
+//
+//     // Prevent the usual navigation behavior
+//    event.preventDefault();
+//    var prev = jQuery( this ).jqmData( "prev" );
+//
+//    jQuery.mobile.navigate("#"+prev);
+//
+//});
     

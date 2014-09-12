@@ -20,14 +20,31 @@
 <html>
     <head>
         <meta charset="utf-8" />
+        <title>Tree of Life</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="format-detection" content="telephone=no" />
         <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
         <!--meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" /-->
         <link rel="stylesheet" type="text/css" href="css/index.css" />
         <link rel="stylesheet" href="js/jquery.mobile/jquery.mobile-1.4.3.min.css"/>
+        <link rel="stylesheet" href="js/pickdate/themes/default.css"/>
+        <link rel="stylesheet" href="js/pickdate/themes/default.date.css"/>
+        <link rel="stylesheet" href="js/pickdate/themes/default.time.css"/>
 
         <script type="text/javascript" src="js/jquery/jquery-2.1.1.min.js"></script>
+        <script>
+            $(document).bind("mobileinit", function(){
+                $.event.special.swipe.scrollSupressionThreshold = 10; // More than this horizontal displacement, and we will suppress scrolling.
+                $.event.special.swipe.horizontalDistanceThreshold = 30; // Swipe horizontal displacement must be more than this.
+                $.event.special.swipe.durationThreshold = 500;  // More time than this, and it isn't a swipe.
+                $.event.special.swipe.verticalDistanceThreshold = 75; // Swipe vertical displacement must be less than this.            
+            });
+        </script>
         <script type="text/javascript" src="js/jquery.mobile/jquery.mobile-1.4.3.min.js"></script>
+        
+        <script type="text/javascript" src="js/pickdate/picker.js"></script>
+        <script type="text/javascript" src="js/pickdate/picker.date.js"></script>
+        <script type="text/javascript" src="js/pickdate/picker.time.js"></script>
         
         <script type="text/javascript" src="js/services/prototype.js"></script>
         <script type="text/javascript" src="js/services/DBService.js"></script>
@@ -41,18 +58,20 @@
 
         -->
         
-        <title>Tree of Life</title>
     </head>
+    
     <body>
         
-        <div data-dom-cache="false" data-role="page" id="mylocation">
-            <div data-role="header" data-theme="b">
-                <h1 id="header">Day Influences</h1>
+        <div data-dom-cache="false" data-role="page" id="main_page" data-prev="influences" data-next="influences">
+            <div data-role="header">
+                <h1>Day Influences</h1>
                 <a data-role="button" class="ui-btn-left" onclick="refresh()">Refresh</a>
                 <a data-role="button" class="ui-btn-right" onclick="showAbout()">About</a>
             </div>
             
-            <div data-role="content" style="padding:0;">
+            <div  role="main" class="ui-content">
+                <input id="datepicker" type="text">
+                <input id="timepicker" type="text">
                 <h3><label id="currentDate"></label></h3>
                 <h4><label id="dayRuler"></label></h4>
                 <table>
@@ -68,10 +87,73 @@
                     </tbody>
                 </table>
             </div>
-            <div data-role="footer" data-theme="b" data-position="fixed" >
-                <h4>Influences</h4>
+            <div data-role="footer" data-position="fixed" >
+                <div data-role="navbar">
+                    <ul>
+                            <li></li>
+                            <li></li>
+                            <li><a href="#influences">Influences</a></li>
+                    </ul>
+                </div><!-- /navbar -->
             </div>
         </div>
+        
+        <div data-dom-cache="false" data-role="page" id="influences" data-prev="main_page" data-next="main_page">
+            <div data-role="header">
+                <h1>Influences</h1>
+            </div>
+            
+            <div role="main" class="ui-content">
+                <div data-role="collapsibleset" data-inset="false">
+                    <div data-role="collapsible" data-collapsed="false">
+                        <h3>Exemples</h3>
+                        <p id="exemples_content">I'm the collapsible content for section 1</p>
+                    </div>
+                    <div data-role="collapsible">
+                        <h3>Tarot</h3>
+                        <table>                            
+                            <tbody id="tarot_content">
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <div data-role="collapsible">
+                        <h3>Path (x8)</h3>
+                        <table>                            
+                            <tbody id="path_content">
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <div data-role="collapsible">
+                        <h3>Hour Sephirah (x4)</h3>
+                        <table>                            
+                            <tbody id="hour_sephirah_content">
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <div data-role="collapsible">
+                        <h3>Day Sephirah</h3>
+                        <table>                            
+                            <tbody id="day_sephirah_content">
+
+                            </tbody>
+                        </table>        
+                    </div>
+                </div>
+            </div>
+            <div data-role="footer" data-position="fixed" >
+                <div data-role="navbar">
+                    <ul>
+                            <li><a href="#main_page">Hours</a></li>
+                            <li></li>
+                            <li></li>
+                    </ul>
+                </div><!-- /navbar -->
+            </div>
+        </div>
+        
         <div data-dom-cache="false" data-role="page" id="about">
             <div data-role="header" data-theme="b">
                 <a data-role="button" data-rel="back" href="#mylocation" data-icon="arrow-l" data-iconpos="left" class="ui-btn-left">Back</a>

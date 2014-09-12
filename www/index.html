@@ -20,6 +20,8 @@
 <html>
     <head>
         <meta charset="utf-8" />
+        <title>Tree of Life</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="format-detection" content="telephone=no" />
         <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
         <!--meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" /-->
@@ -30,6 +32,14 @@
         <link rel="stylesheet" href="js/pickdate/themes/default.time.css"/>
 
         <script type="text/javascript" src="js/jquery/jquery-2.1.1.min.js"></script>
+        <script>
+            $(document).bind("mobileinit", function(){
+                $.event.special.swipe.scrollSupressionThreshold = 10; // More than this horizontal displacement, and we will suppress scrolling.
+                $.event.special.swipe.horizontalDistanceThreshold = 30; // Swipe horizontal displacement must be more than this.
+                $.event.special.swipe.durationThreshold = 500;  // More time than this, and it isn't a swipe.
+                $.event.special.swipe.verticalDistanceThreshold = 75; // Swipe vertical displacement must be less than this.            
+            });
+        </script>
         <script type="text/javascript" src="js/jquery.mobile/jquery.mobile-1.4.3.min.js"></script>
         
         <script type="text/javascript" src="js/pickdate/picker.js"></script>
@@ -48,12 +58,11 @@
 
         -->
         
-        <title>Tree of Life</title>
     </head>
     
     <body>
         
-        <div data-dom-cache="false" data-role="page" id="main_page" data-prev="" data-next="influences">
+        <div data-dom-cache="false" data-role="page" id="main_page" data-prev="influences" data-next="influences">
             <div data-role="header">
                 <h1>Day Influences</h1>
                 <a data-role="button" class="ui-btn-left" onclick="refresh()">Refresh</a>
@@ -79,10 +88,17 @@
                 </table>
             </div>
             <div data-role="footer" data-position="fixed" >
+                <div data-role="navbar">
+                    <ul>
+                            <li></li>
+                            <li></li>
+                            <li><a href="#influences">Influences</a></li>
+                    </ul>
+                </div><!-- /navbar -->
             </div>
         </div>
         
-        <div data-dom-cache="false" data-role="page" id="influences" data-prev="main_page" data-next="">
+        <div data-dom-cache="false" data-role="page" id="influences" data-prev="main_page" data-next="main_page">
             <div data-role="header">
                 <h1>Influences</h1>
             </div>
@@ -128,6 +144,13 @@
                 </div>
             </div>
             <div data-role="footer" data-position="fixed" >
+                <div data-role="navbar">
+                    <ul>
+                            <li><a href="#main_page">Hours</a></li>
+                            <li></li>
+                            <li></li>
+                    </ul>
+                </div><!-- /navbar -->
             </div>
         </div>
         
