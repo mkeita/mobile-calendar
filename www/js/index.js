@@ -27,6 +27,11 @@ var watchID;
 var lat = 4.333;
 var lng = 44.333;
 
+var datepicker;
+var timepicker;
+var currentDate = new Date();
+
+
 document.addEventListener("deviceready", onDeviceReady, false);
 
 jQuery(document).ready(function() {
@@ -48,13 +53,48 @@ function onDeviceReady() {
         alert('code: '    + error.code    + '\n' +
               'message: ' + error.message + '\n');
     });
+    
+    jQuery('#datepicker').attr("data-value","-");
+    jQuery('#timepicker').attr("data-value","-");
+    
+    var $dateInput = jQuery('#datepicker').pickadate({
+        onSet: function(context) {
+            var time = timepicker.get('select');
+            var date = datepicker.get('select');
+            
+            currentDate = new Date(date.pick);
+            currentDate.setHours(time.hour);
+            currentDate.setMinutes(time.mins);
+            refresh();
+        }
+    });
+            
+    datepicker = $dateInput.pickadate('picker');
+        
+    var $timeInput = jQuery('#timepicker').pickatime({
+        format:'H:i',
+        formatSubmit: 'H:i',
+        onSet: function(context) {
+            var time = timepicker.get('select');
+            var date = datepicker.get('select');
+            
+            currentDate = new Date(date.pick);
+            currentDate.setHours(time.hour);
+            currentDate.setMinutes(time.mins);
+            refresh();
+        }
+    });
+    
+    timepicker = $timeInput.pickatime('picker');
+
+    //timepicker.set('select',[currentDate.getHours(),currentDate.getMinutes()]);
+
 }
 
 
 // Method to open the About dialog
 function refresh() {
     //var currentDate = new Date(2014,8,6,3,15,0);
-    var currentDate = new Date();
     var calculationUTCDate = new Date(  currentDate.getFullYear(), 
                                     currentDate.getMonth(), 
                                     currentDate.getDate(),
@@ -166,7 +206,7 @@ function refresh() {
     hourSepheroth["Venus"]=7;
     hourSepheroth["Saturn"]=3;
     
-    jQuery('#influence').html("");
+    jQuery('#exemples_content').html("");
     jQuery('#tarot_content').html("");
     jQuery('#path_content').html("");
     jQuery('#hour_sephirah_content').html("");
@@ -174,8 +214,9 @@ function refresh() {
     
     var daySephirah = daySephiroth[calculationDay];
     var hourSephirah = hourSepheroth[hourSephirahRuler];
-    
+
     db.getInfluence(daySephirah,hourSephirah,function(influence){
+      
       jQuery('#exemples_content').html('<b>'+influence.polarity+'</b><br/>'+influence.description);
       
       db.getTarot(influence.path,function(tarot){

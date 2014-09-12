@@ -25,9 +25,16 @@
         <!--meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" /-->
         <link rel="stylesheet" type="text/css" href="css/index.css" />
         <link rel="stylesheet" href="js/jquery.mobile/jquery.mobile-1.4.3.min.css"/>
+        <link rel="stylesheet" href="js/pickdate/themes/default.css"/>
+        <link rel="stylesheet" href="js/pickdate/themes/default.date.css"/>
+        <link rel="stylesheet" href="js/pickdate/themes/default.time.css"/>
 
         <script type="text/javascript" src="js/jquery/jquery-2.1.1.min.js"></script>
         <script type="text/javascript" src="js/jquery.mobile/jquery.mobile-1.4.3.min.js"></script>
+        
+        <script type="text/javascript" src="js/pickdate/picker.js"></script>
+        <script type="text/javascript" src="js/pickdate/picker.date.js"></script>
+        <script type="text/javascript" src="js/pickdate/picker.time.js"></script>
         
         <script type="text/javascript" src="js/services/prototype.js"></script>
         <script type="text/javascript" src="js/services/DBService.js"></script>
@@ -54,6 +61,8 @@
             </div>
             
             <div  role="main" class="ui-content">
+                <input id="datepicker" type="text">
+                <input id="timepicker" type="text">
                 <h3><label id="currentDate"></label></h3>
                 <h4><label id="dayRuler"></label></h4>
                 <table>

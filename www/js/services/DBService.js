@@ -1071,14 +1071,8 @@ The Head which is not; according to the Sepher Yetzirah, the Admirable of Hidden
                     6,
                     3,
                     "Positive",
-                    "<b>Exemple of Use 1</b>: You are looking to make a real estate investment. Someone approaches you out of the blue, \n\
-                    on -- curiously enough -- a Sunday, during a Saturn Hour with what sounds like a ideal offer. Should you take it? \n\
-                    Yes! The downward flow of the heavy-handed but stabilizing influence of Saturn will blend with the growth desires \n\
-                    stimulated by the Sun, to make this a very profitable investment indeed. The Path's influence will powerfully serve \n\
-                    to bring about a very sucessful conclusio to the transaction, one you will long remember and grateful for. <br/>\n\
-                    <b>Exemple of Use 2:</b>  You make a plan for personal growth. You can use the heavy-handed, stabilizing influence of \n\
-                    the Saturn Hour during this new Sunday to not only detail your plans, but to set down the steps necessary to hurl \n\
-                    them at the world during the upcoming week. And you will succeed. Take that to the bank!",
+                    "<b>Exemple of Use 1</b>: You are looking to make a real estate investment. Someone approaches you out of the blue, on -- curiously enough -- a Sunday, during a Saturn Hour with what sounds like a ideal offer. Should you take it? Yes! The downward flow of the heavy-handed but stabilizing influence of Saturn will blend with the growth desires stimulated by the Sun, to make this a very profitable investment indeed. The Path's influence will powerfully serve to bring about a very sucessful conclusio to the transaction, one you will long remember and grateful for. <br/>\n\
+                    <br/><b>Exemple of Use 2:</b>  You make a plan for personal growth. You can use the heavy-handed, stabilizing influence of the Saturn Hour during this new Sunday to not only detail your plans, but to set down the steps necessary to hurl them at the world during the upcoming week. And you will succeed. Take that to the bank!",
                     17,
                     6
         ]);
@@ -1087,42 +1081,8 @@ The Head which is not; according to the Sepher Yetzirah, the Admirable of Hidden
                     6,
                     4,
                     "Positive",
-                    "<b>Exemple of Use 1:</b> You have been looking for a chance to get in on the ground floor of a new business, or jump \n\
-                    to a new position in your firm, or go off on your own and found your own company. Or maybe you have an opportunity \n\
-                    to unload that old building or acre of ground that has been in your family for generations, and is now yours to do with \n\
-                    as you please. It's a Sunday, and although no one usually concerns themselves with such matters on this day, a situation \n\
-                    arises during the Jupiter Hour that will enable you to get started in this new direction you want to take. You have to deal \n\
-                    with another individual to do so however, and a meeting is set between the two of you during a Sun Hour later in the \n\
-                    evening, and the 20th Path of the Hermit is invoked thereby (because the issue began in a Jupiter hour.)\n\
-                    What can you expect? First of all, your sense of caution will be alerted. It may be a tone in the other person's voice; or a \n\
-                    slight skepticism you thought you noticed when you told him the price for the old building, or piece of ground; \n\
-                    or that you are interested in jumping to the new position in the firm; or the like. The two of you finally meet \n\
-                    during the Sun Hour, and both of you are a bit edgy: him for his reasons, you for yours. The meeting seems to go \n\
-                    well, and you walk away content. Have you succeeded? I mean, have you gotten your way fully? Will your way \n\
-                    truly work out in your best interests? The answer? Yes, to all. \n\
-                    In fact, when you look back over the situation, you will see that it was your very caution that prompted you to act \n\
-                    this way or that, say just the right thing or keep your mouth shut at just the right moment, or in some manner communicate \n\
-                    a non-verbal message, in a certain way, that brought you the success you wanted in the matter. Count on it. You have a new \n\
-                    desirable situation on your hands now, and one that will bear the mark of permanency. \n\
-                    <br/><b>Exemple of Use 2:</b> Your've let it be known that you're interest in running for a local office, or for a position \n\
-                    in your hobby club, church, or some organization in which you sincerely feel you can do more good than the individual who \n\
-                    now occupies that chair. Nothing has come of your declaration over the months, and you've all but forgotten about it. \n\
-                    Suddenly, on a Sunday evening, during a Jupiter Hour, you get a telephone call from the chief organizer or head of your group, \n\
-                    organization, church or town council.\n\
-                    Unknown to you, the right people have decided that you are the right man or woman for the job, and the voice on the other \n\
-                    end of the telephone asks you to write a letter to so-and-so tonight, formally stating your qualifications, and outlining \n\
-                    your plans for improving the club or organization. A note of caution rears up in your mind, principally because no one \n\
-                    made you aware that they took the statements you made months ago seriously. But you are also aware of the planetary and Path \n\
-                    influences, and that while such matters are typically negative under a Sun Day influence, this influence is moderated by the \n\
-                    authority of the Jupiter Hour to a fourfold extent, while the Path influence provides an eightfold positive effect on the \n\
-                    issue because of the Tarot Trump IX being in the upright position. \n\
-                    So you courteously thank the caller, hang up, and set to work under this hour to produce the best written proposal that \n\
-                    you can. Never mind it takes you half the night. The important thing is that you began the action under this influence, \n\
-                    and as such, your written declaration will carry the imprint of the influence being exerted at this time. Will you get the \n\
-                    position? Without question. In fact, it is amazing to note that your writing exercice will be coolly directed by the cautionary \n\
-                    notee this Path influence produces. That is, the Path influence will act in such a way as to others, and that they ring true \n\
-                    about who you are and what you have accomplished to date. And always, your projected image will be in the best possible light. \n\
-                    In fact you will find that you are appointed to the position in question.",
+                    "<b>Exemple of Use 1:</b> You have been looking for a chance to get in on the ground floor of a new business, or jump to a new position in your firm, or go off on your own and found your own company. Or maybe you have an opportunity to unload that old building or acre of ground that has been in your family for generations, and is now yours to do with as you please. It's a Sunday, and although no one usually concerns themselves with such matters on this day, a situation arises during the Jupiter Hour that will enable you to get started in this new direction you want to take. You have to deal with another individual to do so however, and a meeting is set between the two of you during a Sun Hour later in the evening, and the 20th Path of the Hermit is invoked thereby (because the issue began in a Jupiter hour.) What can you expect? First of all, your sense of caution will be alerted. It may be a tone in the other person's voice; or a slight skepticism you thought you noticed when you told him the price for the old building, or piece of ground; or that you are interested in jumping to the new position in the firm; or the like. The two of you finally meet during the Sun Hour, and both of you are a bit edgy: him for his reasons, you for yours. The meeting seems to go well, and you walk away content. Have you succeeded? I mean, have you gotten your way fully? Will your way truly work out in your best interests? The answer? Yes, to all. In fact, when you look back over the situation, you will see that it was your very caution that prompted you to act this way or that, say just the right thing or keep your mouth shut at just the right moment, or in some manner communicate a non-verbal message, in a certain way, that brought you the success you wanted in the matter. Count on it. You have a new desirable situation on your hands now, and one that will bear the mark of permanency. \n\
+                    <br/><b>Exemple of Use 2:</b> Your've let it be known that you're interest in running for a local office, or for a position in your hobby club, church, or some organization in which you sincerely feel you can do more good than the individual who now occupies that chair. Nothing has come of your declaration over the months, and you've all but forgotten about it. Suddenly, on a Sunday evening, during a Jupiter Hour, you get a telephone call from the chief organizer or head of your group,organization, church or town council.Unknown to you, the right people have decided that you are the right man or woman for the job, and the voice on the other end of the telephone asks you to write a letter to so-and-so tonight, formally stating your qualifications, and outlining your plans for improving the club or organization. A note of caution rears up in your mind, principally because no one made you aware that they took the statements you made months ago seriously. But you are also aware of the planetary and Path influences, and that while such matters are typically negative under a Sun Day influence, this influence is moderated by the authority of the Jupiter Hour to a fourfold extent, while the Path influence provides an eightfold positive effect on the issue because of the Tarot Trump IX being in the upright position. So you courteously thank the caller, hang up, and set to work under this hour to produce the best written proposal that you can. Never mind it takes you half the night. The important thing is that you began the action under this influence, and as such, your written declaration will carry the imprint of the influence being exerted at this time. Will you get the position? Without question. In fact, it is amazing to note that your writing exercice will be coolly directed by the cautionary notee this Path influence produces. That is, the Path influence will act in such a way as to others, and that they ring true about who you are and what you have accomplished to date. And always, your projected image will be in the best possible light. In fact you will find that you are appointed to the position in question.",
                     20,
                     9
         ]);
@@ -1132,65 +1092,21 @@ The Head which is not; according to the Sepher Yetzirah, the Admirable of Hidden
                     6,
                     5,
                     "Positive",
-                    "<b>Exemple of Use 1:</b><i> Note: Please pay special attention to this example. It contians a number of elements that are all too \n\
-                    often found in challenging life-situations. While the example might sound obtuse at first, your careful study of it will probably \n\
-                    reveal that it is more characteristic of 'sudden happenings' than you might like to readily admit. Be aware also, that  the general \n\
-                    components of this example are applicable to many different situations in which you are forced to cooperate or act, usually \n\
-                    against your will or better judgment.</i> \n\
-                    You were about to embark on a new program designed to increase your psychic faculties. Yes, you were going to choose a more \n\
-                    obvious, favorable time in which to begin this lengthy program of inner self-development, but some circumstance or another \n\
-                    has literally forced you to begin it on a Sunday. You know all too well that the Solar influence of the day does not \n\
-                    favor starting any new plan. Yet you also knox that the energy and dynamic nature of Mars is there to aid you, especially \n\
-                    since the circumstance that has forced you into this position is one that has angered you greatly. \n\
-                    You can feel the martial force urging you to begin your new plan during its influence. It power, overriding that of the Sun's \n\
-                    influence of the day by a factor of four, gives you the confidence to proceed. You further feel that the injustice of the situation \n\
-                    foisted upon you is also being met by the martial forces, and in your heart, you know your course of action is being set for \n\
-                    you by the very forces of the Tree. You start your program of inner development during this day's Mars Hour, and immediately begin \n\
-                    to direc your psychic energy at the root of the threat to its very cause. Path 22, with its downward flow from Mars into the Sun \n\
-                    aids you. Its force of justice opposes the threat, while balancing your psychic exercice in such a way that the full force of \n\
-                    equilibrium  and equity of this Path at first curbs, and then in the twinkling of an eye, dissolves the threat, while immobilizing \n\
-                    its very source. \n\
-                    Is all of this really possible? Can the influence of this planetary / Path combination aid you to such an extent in a matter in which \n\
-                    your are totally innocent and without blame? Oh yes, most definitely. This is a very strange Path, and one that is not \n\
-                    to be taken lightly. It has special uses as has been intimated here in this simple example, beyond its more mundane uses as \n\
-                    will be seen in Example for Use 2. Your further study of Kabbalah will reveal more of this Path's austere and justice-oriented \n\
-                    nature to you, while the force of the Path itself guides you in its righteous use. \n\
-                    \n\
-                    <br/><b>Exemple of Use 2:</b> You've been meaning to cut back on your alcohol consumption for some time now. Not that it's really \n\
-                    out of hand, but you have noticed that you usually have two drinks at lunch time -- or has it grown to three? -- and the 'after work' \n\
-                    cocktail has turned into four -- or is it five? -- over the course of the evening, whether you're simply watching television or finishing \n\
-                    that woodworking project in the basement. Comme to think of it, you once had a life during the weekdays. You normally only \n\
-                    'threw back a few' on the weekends while watching the games, or going out with so-and-so for a social evening. But never mind, \n\
-                    you're still at your job, well liked by everyone, and a pretty good 'Joe' or 'Cindy'. After all, life is tough, pressures abound from \n\
-                    all sides, and everyone's stress levels are more often than not off the scale. 'Still, maybe I'd better stop or at least cut way back...' \n\
-                    Your train of thought is suddenly broken by alternating blue and red flashing lights in the rearview mirror that are reflecting into \n\
-                    your eyes. The meaning of the lights hits you like a brick across your forehead. Before you can slow down, those lights become accompanied \n\
-                    by the wail of a siren. It's the police. You pull over to the side of the road, the officer emerges from his vehicle, stands off to the side \n\
-                    of your car door, and in a voice somewhere between somber and curious, says, 'Good evening sir (or madam)! I couldn't help notice you \n\
-                    swerved across the center lane a few times. Have you been drinking tonight?' Your heart -- now in your throat -- skews your normally \n\
-                    resonant voice. 'I've been at my friend's watching the game (or playing Canasta). I did have a dring or two, but that was hours ago. \n\
-                    I was thinking about something on the way home, and guess I wasn't watching where I was going! I'm sorry!'\n\
-                    The police officer looks you squarely in the eye and replies 'Please step out of your vehicle, sir (or madam)! I have to determine if you \n\
-                    are driving under the influence.' Shocked beyond belief, you comply. You know you had six drinks at least, and now the martial rage at \n\
-                    your own behavior is driving your blood pressure through the roof. You can feel the pulsing in you neck as the officer gives you a field \n\
-                    sobriety meter and asks you to blow into it. Your mind is racing, as feelings of guilt and fear course through your veins -- righ next to all \n\
-                    that alcohol. The officer takes the meter from you, shines his flashlight on it, and says, 'Well, it looks like this is your lucky night! \n\
-                    Your measure an alcohol level just .02 under the legal limit. If I were you, I'd get back in my car and head home immediately, and say a prayer. \n\
-                    Because I can tell you, from the way you were driving, I suspected you would read at least .15 on my meter. Take this as a warning, and learn \n\
-                    to control your drinking.'\n\
-                    When you get back home, after calming down, you happen to think of the cycles, and take a look at your lastest chart. To your absolute \n\
-                    disbelief, you find the cop stopped you during a Mars Hour on this Sunday, the flow down the Tree was with you, and you escaped a very \n\
-                    expensive and socially damning nightmare that could have ruined the rest of your life. But how could this be? How could the force of \n\
-                    Justice that lies behind the 22th Path have aided you? You were irresponsible in your drinking, and you know it. \n\
-                    But then, you were questioning yourself as you were driving home. You began to see what you were doing to yourself and to others through \n\
-                    your negligent behavior. Did the concept of Justice and balance behind this Path help you? What do you think? You will find many strange \n\
-                    and wonderful effects, and no end of guidance, through the diligent use of the Tree and its components. As your author, \n\
-                    I strongly suggest that you listen to that council closely, and give thanks for the blessings that the Tree can -- and will -- \n\
-                    confer upon you, when you work with it correctly, knowledgeably, and in good conscience.",
+                    "<b>Exemple of Use 1:</b><i> Note: Please pay special attention to this example. It contians a number of elements that are all too often found in challenging life-situations. While the example might sound obtuse at first, your careful study of it will probably reveal that it is more characteristic of 'sudden happenings' than you might like to readily admit. Be aware also, that  the general components of this example are applicable to many different situations in which you are forced to cooperate or act, usually against your will or better judgment.</i> You were about to embark on a new program designed to increase your psychic faculties. Yes, you were going to choose a more obvious, favorable time in which to begin this lengthy program of inner self-development, but some circumstance or another has literally forced you to begin it on a Sunday. You know all too well that the Solar influence of the day does not favor starting any new plan. Yet you also knox that the energy and dynamic nature of Mars is there to aid you, especially since the circumstance that has forced you into this position is one that has angered you greatly. You can feel the martial force urging you to begin your new plan during its influence. It power, overriding that of the Sun's influence of the day by a factor of four, gives you the confidence to proceed. You further feel that the injustice of the situation foisted upon you is also being met by the martial forces, and in your heart, you know your course of action is being set for you by the very forces of the Tree. You start your program of inner development during this day's Mars Hour, and immediately begin to direc your psychic energy at the root of the threat to its very cause. Path 22, with its downward flow from Mars into the Sun aids you. Its force of justice opposes the threat, while balancing your psychic exercice in such a way that the full force of equilibrium  and equity of this Path at first curbs, and then in the twinkling of an eye, dissolves the threat, while immobilizing its very source. Is all of this really possible? Can the influence of this planetary / Path combination aid you to such an extent in a matter in which your are totally innocent and without blame? Oh yes, most definitely. This is a very strange Path, and one that is not to be taken lightly. It has special uses as has been intimated here in this simple example, beyond its more mundane uses as will be seen in Example for Use 2. Your further study of Kabbalah will reveal more of this Path's austere and justice-oriented nature to you, while the force of the Path itself guides you in its righteous use. \n\
+                    <br/><b>Exemple of Use 2:</b> You've been meaning to cut back on your alcohol consumption for some time now. Not that it's really out of hand, but you have noticed that you usually have two drinks at lunch time -- or has it grown to three? -- and the 'after work' cocktail has turned into four -- or is it five? -- over the course of the evening, whether you're simply watching television or finishing that woodworking project in the basement. Comme to think of it, you once had a life during the weekdays. You normally only 'threw back a few' on the weekends while watching the games, or going out with so-and-so for a social evening. But never mind, you're still at your job, well liked by everyone, and a pretty good 'Joe' or 'Cindy'. After all, life is tough, pressures abound from all sides, and everyone's stress levels are more often than not off the scale. 'Still, maybe I'd better stop or at least cut way back...'Your train of thought is suddenly broken by alternating blue and red flashing lights in the rearview mirror that are reflecting into your eyes. The meaning of the lights hits you like a brick across your forehead. Before you can slow down, those lights become accompanied by the wail of a siren. It's the police. You pull over to the side of the road, the officer emerges from his vehicle, stands off to the side of your car door, and in a voice somewhere between somber and curious, says, 'Good evening sir (or madam)! I couldn't help notice you swerved across the center lane a few times. Have you been drinking tonight?' Your heart -- now in your throat -- skews your normally resonant voice. 'I've been at my friend's watching the game (or playing Canasta). I did have a dring or two, but that was hours ago. I was thinking about something on the way home, and guess I wasn't watching where I was going! I'm sorry!'The police officer looks you squarely in the eye and replies 'Please step out of your vehicle, sir (or madam)! I have to determine if you are driving under the influence.' Shocked beyond belief, you comply. You know you had six drinks at least, and now the martial rage at your own behavior is driving your blood pressure through the roof. You can feel the pulsing in you neck as the officer gives you a field sobriety meter and asks you to blow into it. Your mind is racing, as feelings of guilt and fear course through your veins -- righ next to all that alcohol. The officer takes the meter from you, shines his flashlight on it, and says, 'Well, it looks like this is your lucky night! Your measure an alcohol level just .02 under the legal limit. If I were you, I'd get back in my car and head home immediately, and say a prayer. Because I can tell you, from the way you were driving, I suspected you would read at least .15 on my meter. Take this as a warning, and learn to control your drinking.'When you get back home, after calming down, you happen to think of the cycles, and take a look at your lastest chart. To your absolute disbelief, you find the cop stopped you during a Mars Hour on this Sunday, the flow down the Tree was with you, and you escaped a very expensive and socially damning nightmare that could have ruined the rest of your life. But how could this be? How could the force of Justice that lies behind the 22th Path have aided you? You were irresponsible in your drinking, and you know it. But then, you were questioning yourself as you were driving home. You began to see what you were doing to yourself and to others through your negligent behavior. Did the concept of Justice and balance behind this Path help you? What do you think? You will find many strange and wonderful effects, and no end of guidance, through the diligent use of the Tree and its components. As your author, I strongly suggest that you listen to that council closely, and give thanks for the blessings that the Tree can -- and will -- confer upon you, when you work with it correctly, knowledgeably, and in good conscience.",
                     22,
                     11
         ]);
-        
+
+        influences.push([   
+                    6,
+                    6,
+                    "Positive/Negative",
+                    "How do you use the combined influence that arises when the same planet is ruling both the day and the hour you are interested in? Say, on a Thursday ruled by Jupiter, during an hour ruled by Jupiter? Or a Friday, during a Venus Hour? That's easy. Don't! As it turns out, this double effect is very deleterious to all issues governed by the ruling planet. It is curious in the extreme, but instead of this combined influ-ence strengthening the force exerted on the matter by the planet, it actually provides a destabilizing effect. Does this instability hold throughout the entire hourly period in question? No. It oscillates between a very positive and very negative effect, but at different times during that hour. Since you will never know when the positive or negative effect is dominant unless you test it out, you are better off waiting for another hour. If you enjoy intelligent experimenting as I do however, go ahead and use this powerful, unstable influence. I assure you, you will learn much!",
+                    -1,
+                    -1
+        ]);
+
         influences.push([   
                     6,
                     7,
@@ -1225,6 +1141,33 @@ The Head which is not; according to the Sepher Yetzirah, the Admirable of Hidden
         //Moon Day
         influences.push([   
                     9,
+                    3,
+                    "-",
+                    "Where there are no Paths connecting the Planet ruling the Day with a Planet ruling any given Hour, there is a very easy rule you will learn later on, that works every time. Here it is. On any given day, when the hour you are interested in is not connected to the ruler of that day by a Path, simply use the influence of the hour in question. For example. It's a Thursday, ruled by Jupiter. The hour however is ruled by Mercury, and a business, academic, or mystical issue arises. Should you wait for another time to act on or evaluate the issue? Of course not! Simply use the influ¬ence of the hour in question, since the hour's influence moderates the effect of the planet ruling the day by a factor of four.",
+                    -1,
+                    -1
+        ]);
+        
+        influences.push([   
+                    9,
+                    4,
+                    "-",
+                    "Where there are no Paths connecting the Planet ruling the Day with a Planet ruling any given Hour, there is a very easy rule you will learn later on, that works every time. Here it is. On any given day, when the hour you are interested in is not connected to the ruler of that day by a Path, simply use the influence of the hour in question. For example. It's a Thursday, ruled by Jupiter. The hour however is ruled by Mercury, and a business, academic, or mystical issue arises. Should you wait for another time to act on or evaluate the issue? Of course not! Simply use the influ¬ence of the hour in question, since the hour's influence moderates the effect of the planet ruling the day by a factor of four.",
+                    -1,
+                    -1
+        ]);
+
+        influences.push([   
+                    9,
+                    5,
+                    "-",
+                    "Where there are no Paths connecting the Planet ruling the Day with a Planet ruling any given Hour, there is a very easy rule you will learn later on, that works every time. Here it is. On any given day, when the hour you are interested in is not connected to the ruler of that day by a Path, simply use the influence of the hour in question. For example. It's a Thursday, ruled by Jupiter. The hour however is ruled by Mercury, and a business, academic, or mystical issue arises. Should you wait for another time to act on or evaluate the issue? Of course not! Simply use the influ¬ence of the hour in question, since the hour's influence moderates the effect of the planet ruling the day by a factor of four.",
+                    -1,
+                    -1
+        ]);
+        
+        influences.push([   
+                    9,
                     6,
                     "Positive",
                     "<b>Exemple of Use 1:</b> You've been laid off permanently, and have been searching for work without success, that is, until last Friday. You finally have a real chance to land a new job, but it's in a totally different field. The ten years you spent as a machinist are now past, and you're facing a new position as a satellite dish installer. This new company is desperate for people, and so they entertain your application. But desperate or not, they are reluctant to hire you outright, owing to the investment they must make by putting you though a six-month training program, and are somewhat worried that your past skills just won't cross over to their type of work. They want a letter of recom¬mendation from your former employer. It's now Monday, Sun Hour. Knowing the Path influ¬ence of this hour /Path combination, you approach your former employer for that letter during this Sun Hour and Moon Day. Flow is downward, from the hour into the day, and he agrees. You take your letter to your prospective employer, give it to him, and are asked to wait outside while he reviews it and discusses it with his plant superin¬tendent and his own boss. An hour or so later he emerges from his office, smiles broadly, extends his hand to you and says, 'Congratulations, Mike! You're just the kind of guy we've been looking! We had no idea that a machinist had such skills! Welcome aboard! Can you start tomor¬row?' What happened? This particular influence unites or weds seemingly disparate ideas, actions, or situations in a balanced, complimentary way. Your former employer wrote that letter stressing your mechanical skills, reasoning abilities, mental clarity and gift of logic, loyalty, deter¬mination, and agreeable nature in such a way, that this new company could not help but hire you. Impossible, you say? I have seen similar situations arise a thousand times under these influences. Such are the forces that emanate from the downward flow of this Path.\n\
@@ -1252,6 +1195,15 @@ The Head which is not; according to the Sepher Yetzirah, the Admirable of Hidden
                     <br/><b>Exemple of Use 2:</b> Your company has called a very important business meeting, and you've been asked to 'fork out a new plan for increasing your own department's efficiency. But worse than that, the Vice President of Oper¬ations told you that it has to be extremely good. Why? Because they want to adapt it to the other departments as well. Since your department is leading the entire company in productivity right now, they figure you know some¬thing they don't, and want you to share it with the other department heads so the entire company will benefit. Work out your plan diligently, by all means. But if you have anything to say about it, schedule the meeting for a Monday, during a Mercury Hour, when you have the downward flow of the Tree with you. You'll be absolutely amazed how well your ideas will be received and imple-mented. And of course, you will receive some type of reward for it: whether a raise, a promotion with a sizeable increase, or a bigger expense account. You will benefit from this Path and its downward flow, and in a big way. So use it well.",
                     30,
                     19
+        ]);
+
+        influences.push([   
+                    9,
+                    9,
+                    "Positive/Negative",
+                    "How do you use the combined influence that arises when the same planet is ruling both the day and the hour you are interested in? Say, on a Thursday ruled by Jupiter, during an hour ruled by Jupiter? Or a Friday, during a Venus Hour? That's easy. Don't! As it turns out, this double effect is very deleterious to all issues governed by the ruling planet. It is curious in the extreme, but instead of this combined influ-ence strengthening the force exerted on the matter by the planet, it actually provides a destabilizing effect. Does this instability hold throughout the entire hourly period in question? No. It oscillates between a very positive and very negative effect, but at different times during that hour. Since you will never know when the positive or negative effect is dominant unless you test it out, you are better off waiting for another hour. If you enjoy intelligent experimenting as I do however, go ahead and use this powerful, unstable influence. I assure you, you will learn much!",
+                    -1,
+                    -1
         ]);
 
 
@@ -1356,6 +1308,15 @@ The Head which is not; according to the Sepher Yetzirah, the Admirable of Hidden
 
         influences.push([   
                     5,
+                    5,
+                    "Positive/Negative",
+                    "How do you use the combined influence that arises when the same planet is ruling both the day and the hour you are interested in? Say, on a Thursday ruled by Jupiter, during an hour ruled by Jupiter? Or a Friday, during a Venus Hour? That's easy. Don't! As it turns out, this double effect is very deleterious to all issues governed by the ruling planet. It is curious in the extreme, but instead of this combined influ-ence strengthening the force exerted on the matter by the planet, it actually provides a destabilizing effect. Does this instability hold throughout the entire hourly period in question? No. It oscillates between a very positive and very negative effect, but at different times during that hour. Since you will never know when the positive or negative effect is dominant unless you test it out, you are better off waiting for another hour. If you enjoy intelligent experimenting as I do however, go ahead and use this powerful, unstable influence. I assure you, you will learn much!",
+                    -1,
+                    -1
+        ]);
+
+        influences.push([   
+                    5,
                     6,
                     "Negative",
                     "<b>Exemple of Use 1:</b> You were about to embark on a new program designed to increase your psychic faculties. Yes, you were going to choose a more \n\
@@ -1391,7 +1352,15 @@ The Head which is not; according to the Sepher Yetzirah, the Admirable of Hidden
                     22,
                     11
         ]);
-        
+
+        influences.push([   
+                    5,
+                    7,
+                    "-",
+                    "Where there are no Paths connecting the Planet ruling the Day with a Planet ruling any given Hour, there is a very easy rule you will learn later on, that works every time. Here it is. On any given day, when the hour you are interested in is not connected to the ruler of that day by a Path, simply use the influence of the hour in question. For example. It's a Thursday, ruled by Jupiter. The hour however is ruled by Mercury, and a business, academic, or mystical issue arises. Should you wait for another time to act on or evaluate the issue? Of course not! Simply use the influ¬ence of the hour in question, since the hour's influence moderates the effect of the planet ruling the day by a factor of four.",
+                    -1,
+                    -1
+        ]);        
 
         influences.push([   
                     5,
@@ -1429,8 +1398,35 @@ The Head which is not; according to the Sepher Yetzirah, the Admirable of Hidden
                     23,
                     12
         ]);
+        
+        influences.push([   
+                    5,
+                    9,
+                    "-",
+                    "Where there are no Paths connecting the Planet ruling the Day with a Planet ruling any given Hour, there is a very easy rule you will learn later on, that works every time. Here it is. On any given day, when the hour you are interested in is not connected to the ruler of that day by a Path, simply use the influence of the hour in question. For example. It's a Thursday, ruled by Jupiter. The hour however is ruled by Mercury, and a business, academic, or mystical issue arises. Should you wait for another time to act on or evaluate the issue? Of course not! Simply use the influ¬ence of the hour in question, since the hour's influence moderates the effect of the planet ruling the day by a factor of four.",
+                    -1,
+                    -1
+        ]);        
 
         //Mercury Day
+        influences.push([   
+                    8,
+                    3,
+                    "-",
+                    "Where there are no Paths connecting the Planet ruling the Day with a Planet ruling any given Hour, there is a very easy rule you will learn later on, that works every time. Here it is. On any given day, when the hour you are interested in is not connected to the ruler of that day by a Path, simply use the influence of the hour in question. For example. It's a Thursday, ruled by Jupiter. The hour however is ruled by Mercury, and a business, academic, or mystical issue arises. Should you wait for another time to act on or evaluate the issue? Of course not! Simply use the influ¬ence of the hour in question, since the hour's influence moderates the effect of the planet ruling the day by a factor of four.",
+                    -1,
+                    -1
+        ]);
+
+        influences.push([   
+                    8,
+                    4,
+                    "-",
+                    "Where there are no Paths connecting the Planet ruling the Day with a Planet ruling any given Hour, there is a very easy rule you will learn later on, that works every time. Here it is. On any given day, when the hour you are interested in is not connected to the ruler of that day by a Path, simply use the influence of the hour in question. For example. It's a Thursday, ruled by Jupiter. The hour however is ruled by Mercury, and a business, academic, or mystical issue arises. Should you wait for another time to act on or evaluate the issue? Of course not! Simply use the influ¬ence of the hour in question, since the hour's influence moderates the effect of the planet ruling the day by a factor of four.",
+                    -1,
+                    -1
+        ]);
+        
         influences.push([   
                     8,
                     5,
@@ -1524,6 +1520,16 @@ The Head which is not; according to the Sepher Yetzirah, the Admirable of Hidden
         ]);
         
         influences.push([   
+                8,
+                8,
+                "Positive/Negative",
+                "How do you use the combined influence that arises when the same planet is ruling both the day and the hour you are interested in? Say, on a Thursday ruled by Jupiter, during an hour ruled by Jupiter? Or a Friday, during a Venus Hour? That's easy. Don't! As it turns out, this double effect is very deleterious to all issues governed by the ruling planet. It is curious in the extreme, but instead of this combined influ-ence strengthening the force exerted on the matter by the planet, it actually provides a destabilizing effect. Does this instability hold throughout the entire hourly period in question? No. It oscillates between a very positive and very negative effect, but at different times during that hour. Since you will never know when the positive or negative effect is dominant unless you test it out, you are better off waiting for another hour. If you enjoy intelligent experimenting as I do however, go ahead and use this powerful, unstable influence. I assure you, you will learn much!",
+                -1,
+                -1
+        ]);
+
+        
+        influences.push([   
                     8,
                     9,
                     "Negative",
@@ -1534,6 +1540,24 @@ The Head which is not; according to the Sepher Yetzirah, the Admirable of Hidden
         ]);
 
         //Jupiter Day
+        influences.push([   
+                    4,
+                    3,
+                    "-",
+                    "Where there are no Paths connecting the Planet ruling the Day with a Planet ruling any given Hour, there is a very easy rule you will learn later on, that works every time. Here it is. On any given day, when the hour you are interested in is not connected to the ruler of that day by a Path, simply use the influence of the hour in question. For example. It's a Thursday, ruled by Jupiter. The hour however is ruled by Mercury, and a business, academic, or mystical issue arises. Should you wait for another time to act on or evaluate the issue? Of course not! Simply use the influ¬ence of the hour in question, since the hour's influence moderates the effect of the planet ruling the day by a factor of four.",
+                    -1,
+                    -1
+        ]);
+        
+        influences.push([   
+                    4,
+                    4,
+                    "Positive/Negative",
+                    "How do you use the combined influence that arises when the same planet is ruling both the day and the hour you are interested in? Say, on a Thursday ruled by Jupiter, during an hour ruled by Jupiter? Or a Friday, during a Venus Hour? That's easy. Don't! As it turns out, this double effect is very deleterious to all issues governed by the ruling planet. It is curious in the extreme, but instead of this combined influ-ence strengthening the force exerted on the matter by the planet, it actually provides a destabilizing effect. Does this instability hold throughout the entire hourly period in question? No. It oscillates between a very positive and very negative effect, but at different times during that hour. Since you will never know when the positive or negative effect is dominant unless you test it out, you are better off waiting for another hour. If you enjoy intelligent experimenting as I do however, go ahead and use this powerful, unstable influence. I assure you, you will learn much!",
+                    -1,
+                    -1
+        ]);
+        
         influences.push([   
                     4,
                     5,
@@ -1640,8 +1664,35 @@ The Head which is not; according to the Sepher Yetzirah, the Admirable of Hidden
                     10
         ]);
 
+        influences.push([   
+                    4,
+                    8,
+                    "-",
+                    "Where there are no Paths connecting the Planet ruling the Day with a Planet ruling any given Hour, there is a very easy rule you will learn later on, that works every time. Here it is. On any given day, when the hour you are interested in is not connected to the ruler of that day by a Path, simply use the influence of the hour in question. For example. It's a Thursday, ruled by Jupiter. The hour however is ruled by Mercury, and a business, academic, or mystical issue arises. Should you wait for another time to act on or evaluate the issue? Of course not! Simply use the influ¬ence of the hour in question, since the hour's influence moderates the effect of the planet ruling the day by a factor of four.",
+                    -1,
+                    -1
+        ]);
+
+        influences.push([   
+                    4,
+                    9,
+                    "-",
+                    "Where there are no Paths connecting the Planet ruling the Day with a Planet ruling any given Hour, there is a very easy rule you will learn later on, that works every time. Here it is. On any given day, when the hour you are interested in is not connected to the ruler of that day by a Path, simply use the influence of the hour in question. For example. It's a Thursday, ruled by Jupiter. The hour however is ruled by Mercury, and a business, academic, or mystical issue arises. Should you wait for another time to act on or evaluate the issue? Of course not! Simply use the influ¬ence of the hour in question, since the hour's influence moderates the effect of the planet ruling the day by a factor of four.",
+                    -1,
+                    -1
+        ]);
+
 
         //Venus Day
+        influences.push([   
+                    7,
+                    3,
+                    "-",
+                    "Where there are no Paths connecting the Planet ruling the Day with a Planet ruling any given Hour, there is a very easy rule you will learn later on, that works every time. Here it is. On any given day, when the hour you are interested in is not connected to the ruler of that day by a Path, simply use the influence of the hour in question. For example. It's a Thursday, ruled by Jupiter. The hour however is ruled by Mercury, and a business, academic, or mystical issue arises. Should you wait for another time to act on or evaluate the issue? Of course not! Simply use the influ¬ence of the hour in question, since the hour's influence moderates the effect of the planet ruling the day by a factor of four.",
+                    -1,
+                    -1
+        ]);        
+        
         influences.push([   
                     7,
                     4,
@@ -1697,6 +1748,15 @@ The Head which is not; according to the Sepher Yetzirah, the Admirable of Hidden
 
         influences.push([   
                     7,
+                    5,
+                    "-",
+                    "Where there are no Paths connecting the Planet ruling the Day with a Planet ruling any given Hour, there is a very easy rule you will learn later on, that works every time. Here it is. On any given day, when the hour you are interested in is not connected to the ruler of that day by a Path, simply use the influence of the hour in question. For example. It's a Thursday, ruled by Jupiter. The hour however is ruled by Mercury, and a business, academic, or mystical issue arises. Should you wait for another time to act on or evaluate the issue? Of course not! Simply use the influ¬ence of the hour in question, since the hour's influence moderates the effect of the planet ruling the day by a factor of four.",
+                    -1,
+                    -1
+        ]);
+
+        influences.push([   
+                    7,
                     6,
                     "Positive",
                     "<b>Exemple of Use 1:</b> It's a Friday, and the Sun is ruling the hour when you arrive home. Flow is down the Tree and positive. Likewise, the Tarot Trump XIII is in the up¬right position. As you approach the front door, you wish that when you walked inside, your wife, husband, or sig¬nificant other would be happy to see you, throw his or her arms around you, tell you how excited they are to have you all to themselves during the upcoming weekend, and then lay out a set of plans for the two of you that would have you jumping up in the air and clicking your heels. But you know better. The life you have been sharing for these past few years has been anything but happy. Where is the Sun's influence of Life, Light, and growth together, as a couple? Where is that Venus influence of unselfish¬ness, physical lovemaking, and luxury, the two of you shared throughout the first several years of your marriage or relationship? What has happened to all of those good times? As you walk through the door, you see the answer to all of these questions in the form of packed luggage piled neatly in the center of the living room. Before you can take stock of the situation, your partner emerges from the adjoining room, and says, 'It's best this way for both of us. I've had enough, and I think you have too! I'm leaving. My attorney will contact you on Monday, and we can start divorce proceedings,' or similar words depending upon the exact type of relationship the two of you had. Yes, the Sun's influence-so life-giving-and the force of Venus-so nurturing and pleasure seeking-have been scattered by the harsh realities of the 24th Path. You make a fainthearted attempt to stop him or her from leaving, but your former partner just throws a sideways glance at you as if to say, 'Please don't keep this charade up. It's over, and we both know it!' And so you step aside as the taxi pulls up to the front door, the driver puts the luggage into the cab, and you watch the most important part of your life disappear down the driveway, and out of sight. Between the tears, there is a deep, inner sense of relief, but something you just can't handle at the moment. So your let the immediacy of the situation's impact overtake you, and spend the weekend in your own type of hell. You are alone, unable or unwilling to speak to anyone about the shattered thing you now call your life. The months drag on, and your lawyers have been lining their pockets with you and your former partner's hard earned money, and you are still numb inside. A few more months pass, and something has hap¬pened. You've accepted the situation, and as your former partner's glance had conveyed to you, you now realize ending the relationship was the best thing for both of you. You start to live again, although the idea of dating just doesn't quite appeal to you yet. That is, not until that fateful Friday, during a Jupiter Hour with its downward flow, when the 21st Path's influence has you sitting in that restaurant with that self-help book, and that beautiful woman or handsome man approaches you with a few questions about that same book she or he is reading! See how it works? The Path of Death is indeed a hard one, and I am not trying to lighten it by painting some cheap, ego-bolstering rosy picture, painted with the sooth¬ing colors of lies. No, believe it or not, this is how the initial and final effects of this Path work out in the end. Something very good happens as a consequence of the 'death' of some situation or condition. And that something is always a new, life-enhancing experience that brings about magnificent personal growth for the individual. From your own hell to your own purgatory, and finally into your own heaven on earth, is the experience and reward of this Path. Don't fear it. Struggle with it, try to avoid it if you can and if you so choose. But equally, accept it when it strikes unexpectedly, and seems to kill your soul. Accept it because a new day will dawn, and it will once again be filled with the glories of the Sun and the joys of Venus, issuing forth in some unseen, hidden way.\n\
@@ -1705,6 +1765,15 @@ The Head which is not; according to the Sepher Yetzirah, the Admirable of Hidden
                     13
         ]);
         
+        influences.push([   
+                    7,
+                    7,
+                    "Positive/Negative",
+                    "How do you use the combined influence that arises when the same planet is ruling both the day and the hour you are interested in? Say, on a Thursday ruled by Jupiter, during an hour ruled by Jupiter? Or a Friday, during a Venus Hour? That's easy. Don't! As it turns out, this double effect is very deleterious to all issues governed by the ruling planet. It is curious in the extreme, but instead of this combined influ-ence strengthening the force exerted on the matter by the planet, it actually provides a destabilizing effect. Does this instability hold throughout the entire hourly period in question? No. It oscillates between a very positive and very negative effect, but at different times during that hour. Since you will never know when the positive or negative effect is dominant unless you test it out, you are better off waiting for another hour. If you enjoy intelligent experimenting as I do however, go ahead and use this powerful, unstable influence. I assure you, you will learn much!",
+                    -1,
+                    -1
+        ]);
+
         
         influences.push([   
                     7,
@@ -1727,6 +1796,25 @@ The Head which is not; according to the Sepher Yetzirah, the Admirable of Hidden
         
         
         //Saturne Day
+        influences.push([   
+                    3,
+                    3,
+                    "Positive/Negative",
+                    "How do you use the combined influence that arises when the same planet is ruling both the day and the hour you are interested in? Say, on a Thursday ruled by Jupiter, during an hour ruled by Jupiter? Or a Friday, during a Venus Hour? That's easy. Don't! As it turns out, this double effect is very deleterious to all issues governed by the ruling planet. It is curious in the extreme, but instead of this combined influ-ence strengthening the force exerted on the matter by the planet, it actually provides a destabilizing effect. Does this instability hold throughout the entire hourly period in question? No. It oscillates between a very positive and very negative effect, but at different times during that hour. Since you will never know when the positive or negative effect is dominant unless you test it out, you are better off waiting for another hour. If you enjoy intelligent experimenting as I do however, go ahead and use this powerful, unstable influence. I assure you, you will learn much!",
+                    -1,
+                    -1
+        ]);
+        
+        influences.push([   
+                    3,
+                    4,
+                    "-",
+                    "Where there are no Paths connecting the Planet ruling the Day with a Planet ruling any given Hour, there is a very easy rule you will learn later on, that works every time. Here it is. On any given day, when the hour you are interested in is not connected to the ruler of that day by a Path, simply use the influence of the hour in question. For example. It's a Thursday, ruled by Jupiter. The hour however is ruled by Mercury, and a business, academic, or mystical issue arises. Should you wait for another time to act on or evaluate the issue? Of course not! Simply use the influ¬ence of the hour in question, since the hour's influence moderates the effect of the planet ruling the day by a factor of four.",
+                    -1,
+                    -1
+        ]);
+        
+        
         influences.push([   
                     3,
                     5,
@@ -1759,20 +1847,38 @@ The Head which is not; according to the Sepher Yetzirah, the Admirable of Hidden
                     3,
                     6,
                     "Negative",
-                    "Exemple of Use 1: You are looking to make a real estate investment. Someone approaches you out of the blue, \n\
-                    on -- curiously enough -- a Saterday, during a Sun Hour with what sounds like a ideal offer. \n\
-                    The flow is up the Tree, and hence the Tarot Card, the Lovers, is reversed. Should you now enter into this deal? \n\
-                    Run from this offer as fast as you can because some new variable will be operating in the background that will bring \n\
-                    total and complete failure to the venture, and total loss of your investment. <br/>\n\
-                    Exemple of Use 2: You make plans for personal growth and go to work on them during a Saturday during an hour ruled \n\
-                    by the Sun. See the problem? Of course you do. There is an upward flow from the planet ruling the hour, into the planet \n\
-                    ruling the day. Result: about as good as when you evolved your ideas during the Mercury Hour of this day, which was \n\
-                    another upward flow. They will fail, for one reaon or another.",
+                    "<b>Exemple of Use 1:</b> You are looking to make a real estate investment. Someone approaches you out of the blue, on -- curiously enough -- a Saterday, during a Sun Hour with what sounds like a ideal offer. The flow is up the Tree, and hence the Tarot Card, the Lovers, is reversed. Should you now enter into this deal? Run from this offer as fast as you can because some new variable will be operating in the background that will bring total and complete failure to the venture, and total loss of your investment. \n\
+                    <br/><b>Exemple of Use 2:</b> You make plans for personal growth and go to work on them during a Saturday during an hour ruled by the Sun. See the problem? Of course you do. There is an upward flow from the planet ruling the hour, into the planet ruling the day. Result: about as good as when you evolved your ideas during the Mercury Hour of this day, which was another upward flow. They will fail, for one reaon or another.",
                     17,
                     6
         ]);
         
+        influences.push([   
+                    3,
+                    7,
+                    "-",
+                    "Where there are no Paths connecting the Planet ruling the Day with a Planet ruling any given Hour, there is a very easy rule you will learn later on, that works every time. Here it is. On any given day, when the hour you are interested in is not connected to the ruler of that day by a Path, simply use the influence of the hour in question. For example. It's a Thursday, ruled by Jupiter. The hour however is ruled by Mercury, and a business, academic, or mystical issue arises. Should you wait for another time to act on or evaluate the issue? Of course not! Simply use the influ¬ence of the hour in question, since the hour's influence moderates the effect of the planet ruling the day by a factor of four.",
+                    -1,
+                    -1
+        ]);
+
+        influences.push([   
+                    3,
+                    8,
+                    "-",
+                    "Where there are no Paths connecting the Planet ruling the Day with a Planet ruling any given Hour, there is a very easy rule you will learn later on, that works every time. Here it is. On any given day, when the hour you are interested in is not connected to the ruler of that day by a Path, simply use the influence of the hour in question. For example. It's a Thursday, ruled by Jupiter. The hour however is ruled by Mercury, and a business, academic, or mystical issue arises. Should you wait for another time to act on or evaluate the issue? Of course not! Simply use the influ¬ence of the hour in question, since the hour's influence moderates the effect of the planet ruling the day by a factor of four.",
+                    -1,
+                    -1
+        ]);
         
+        influences.push([   
+                    3,
+                    9,
+                    "-",
+                    "Where there are no Paths connecting the Planet ruling the Day with a Planet ruling any given Hour, there is a very easy rule you will learn later on, that works every time. Here it is. On any given day, when the hour you are interested in is not connected to the ruler of that day by a Path, simply use the influence of the hour in question. For example. It's a Thursday, ruled by Jupiter. The hour however is ruled by Mercury, and a business, academic, or mystical issue arises. Should you wait for another time to act on or evaluate the issue? Of course not! Simply use the influ¬ence of the hour in question, since the hour's influence moderates the effect of the planet ruling the day by a factor of four.",
+                    -1,
+                    -1
+        ]);
 
 //        influences[1] = [   
 //                    3,
